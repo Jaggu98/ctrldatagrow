@@ -1,0 +1,364 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/BeyondClassroom.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b2f98eab"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=b2f98eab"; const useState = __vite__cjsImport3_react["useState"];
+import { Check, Sparkles, Filter, ArrowUpRight } from "/node_modules/.vite/deps/lucide-react.js?v=b2f98eab";
+export const BeyondClassroom = ({
+  onSelectCategory,
+  onExploreExperts
+}) => {
+  _s();
+  const [activeFilter, setActiveFilter] = useState("Domain");
+  const [selectedDomain, setSelectedDomain] = useState(null);
+  const domains = [
+    { name: "Technology & Engineering", color: "#1769AA", sub: "Cloud, Systems & Architecture" },
+    { name: "Data Analytics & AI", color: "#138A9E", sub: "LLMs, Vector DBs & MLOps" },
+    { name: "Business & Management", color: "#2BAE66", sub: "Agile Strategy & Product Scale" },
+    { name: "Finance & Economics", color: "#0B1F33", sub: "FinTech, Algorithmic Systems" },
+    { name: "Marketing & Consumer Insights", color: "#1769AA", sub: "Growth Funnels & User Analytics" },
+    { name: "Retail & E-commerce", color: "#138A9E", sub: "Supply Chain, Platforms & UX" },
+    { name: "HR & Leadership", color: "#2BAE66", sub: "Org Culture & Talent Pipelines" },
+    { name: "Entrepreneurship & Innovation", color: "#0B1F33", sub: "0-to-1 Venture Building" },
+    { name: "Career Development", color: "#1769AA", sub: "Placement Mastery & Engineering Roadmaps" },
+    { name: "Emerging Technologies", color: "#138A9E", sub: "Web3, Robotics, Quantum & Edge" }
+  ];
+  const handleDomainClick = (domainName) => {
+    setSelectedDomain(domainName === selectedDomain ? null : domainName);
+    if (onSelectCategory) {
+      onSelectCategory(domainName);
+    }
+  };
+  return /* @__PURE__ */ jsxDEV("section", { id: "domains", className: "py-20 md:py-28 bg-[#EAF6FA] border-b border-[#D7EAF3] relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-gradient-to-tl from-[#138A9E]/10 to-transparent blur-3xl" }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+      lineNumber: 58,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "text-left mb-12 sm:mb-16", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#D7EAF3] text-[#138A9E] text-xs font-bold tracking-widest uppercase mb-3 shadow-sm", children: [
+          /* @__PURE__ */ jsxDEV(Sparkles, { className: "w-3.5 h-3.5" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 65,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: "Curriculum & Disciplines" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 66,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+          lineNumber: 64,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("h2", { className: "text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B1F33] tracking-tight", children: [
+          "Experiences that go ",
+          /* @__PURE__ */ jsxDEV("span", { className: "text-[#138A9E]", children: "beyond the classroom" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 69,
+            columnNumber: 33
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+          lineNumber: 68,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "text-sm sm:text-base text-[#4A6D88] mt-3 max-w-2xl font-normal", children: "Cross-functional industry tracks aligned with both contemporary student aspirations and university board-of-studies syllabi." }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+          lineNumber: 71,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+        lineNumber: 63,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-8", children: domains.map((item) => {
+        const isSelected = selectedDomain === item.name;
+        return /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => handleDomainClick(item.name),
+            className: "group relative rounded-2xl p-5 text-left text-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between min-h-[110px] cursor-pointer",
+            style: { backgroundColor: item.color },
+            children: [
+              /* @__PURE__ */ jsxDEV("div", { children: [
+                /* @__PURE__ */ jsxDEV("h3", { className: "font-bold text-sm sm:text-[15px] leading-snug tracking-tight", children: item.name }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 88,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { className: "text-[11px] text-white/75 mt-1 block font-normal", children: item.sub }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 91,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 87,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center justify-between mt-3 pt-2 border-t border-white/20 text-[11px] font-semibold text-white/90", children: [
+                /* @__PURE__ */ jsxDEV("span", { children: isSelected ? "Selected" : "View Experts" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 97,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 98,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 96,
+                columnNumber: 17
+              }, this)
+            ]
+          },
+          item.name,
+          true,
+          {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 81,
+            columnNumber: 15
+          },
+          this
+        );
+      }) }, void 0, false, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+        lineNumber: 77,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#D7EAF3] shadow-sm flex flex-col justify-between", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 text-xs font-bold tracking-widest text-[#138A9E] uppercase mb-4", children: [
+              /* @__PURE__ */ jsxDEV(Filter, { className: "w-3.5 h-3.5" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 112,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { children: "Program Filters" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 113,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 111,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-2 gap-3 mb-4", children: ["Domain", "Audience", "Format", "Duration"].map(
+              (filterName) => /* @__PURE__ */ jsxDEV(
+                "button",
+                {
+                  onClick: () => setActiveFilter(filterName),
+                  className: `px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all border text-center ${activeFilter === filterName ? "bg-[#1769AA] text-white border-[#1769AA] shadow-sm" : "bg-[#F4F9FC] text-[#0B1F33] border-[#C5E2EC] hover:border-[#138A9E]"}`,
+                  children: filterName
+                },
+                filterName,
+                false,
+                {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 119,
+                  columnNumber: 17
+                },
+                this
+              )
+            ) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 117,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 110,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-[#527793] font-medium pt-2 border-t border-[#EAF4F8]", children: [
+            "Narrow the catalogue in a click. Selected filter: ",
+            /* @__PURE__ */ jsxDEV("span", { className: "font-bold text-[#0B1F33]", children: activeFilter }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 135,
+              columnNumber: 65
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 134,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+          lineNumber: 109,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#D7EAF3] shadow-sm flex flex-col justify-between", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-bold tracking-widest text-[#138A9E] uppercase mb-4", children: /* @__PURE__ */ jsxDEV("span", { children: "Every Category Links To" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 143,
+              columnNumber: 17
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 142,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ jsxDEV("ul", { className: "space-y-3.5", children: [
+              /* @__PURE__ */ jsxDEV("li", { className: "flex items-center gap-3 text-xs sm:text-sm text-[#0B1F33] font-medium", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "w-5 h-5 rounded-full bg-[#2BAE66]/15 flex items-center justify-center text-[#2BAE66] flex-shrink-0", children: /* @__PURE__ */ jsxDEV(Check, { className: "w-3.5 h-3.5" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 149,
+                  columnNumber: 21
+                }, this) }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 148,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: "Relevant verified industry experts & lead architects" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 151,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 147,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("li", { className: "flex items-center gap-3 text-xs sm:text-sm text-[#0B1F33] font-medium", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "w-5 h-5 rounded-full bg-[#138A9E]/15 flex items-center justify-center text-[#138A9E] flex-shrink-0", children: /* @__PURE__ */ jsxDEV(Check, { className: "w-3.5 h-3.5" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 156,
+                  columnNumber: 21
+                }, this) }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 155,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: "Matching syllabus-aligned session programs & workshops" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 158,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 154,
+                columnNumber: 17
+              }, this),
+              /* @__PURE__ */ jsxDEV("li", { className: "flex items-center gap-3 text-xs sm:text-sm text-[#0B1F33] font-medium", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "w-5 h-5 rounded-full bg-[#1769AA]/15 flex items-center justify-center text-[#1769AA] flex-shrink-0", children: /* @__PURE__ */ jsxDEV(Check, { className: "w-3.5 h-3.5" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 163,
+                  columnNumber: 21
+                }, this) }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 162,
+                  columnNumber: 19
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: "Upcoming public campus keynotes, hackathons and insights" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 165,
+                  columnNumber: 19
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                lineNumber: 161,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 146,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 141,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "pt-4 border-t border-[#EAF4F8] flex justify-end", children: /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              onClick: onExploreExperts,
+              className: "inline-flex items-center gap-2 text-xs font-bold text-[#138A9E] hover:text-[#0E6D82] transition-colors",
+              children: [
+                /* @__PURE__ */ jsxDEV("span", { children: "Browse full expert catalogue" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 175,
+                  columnNumber: 17
+                }, this),
+                /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-4 h-4" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+                  lineNumber: 176,
+                  columnNumber: 17
+                }, this)
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+              lineNumber: 171,
+              columnNumber: 15
+            },
+            this
+          ) }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+            lineNumber: 170,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+          lineNumber: 140,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+        lineNumber: 106,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+      lineNumber: 60,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx",
+    lineNumber: 56,
+    columnNumber: 5
+  }, this);
+};
+_s(BeyondClassroom, "0sb4t6iEGs3ZoXTKGueP4S032n8=");
+_c = BeyondClassroom;
+var _c;
+$RefreshReg$(_c, "BeyondClassroom");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BeyondClassroom.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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SUFBQSIsIm5hbWVzIjpbInVzZVN0YXRlIiwiQ2hlY2siLCJTcGFya2xlcyIsIkZpbHRlciIsIkFycm93VXBSaWdodCIsIkJleW9uZENsYXNzcm9vbSIsIm9uU2VsZWN0Q2F0ZWdvcnkiLCJvbkV4cGxvcmVFeHBlcnRzIiwiX3MiLCJhY3RpdmVGaWx0ZXIiLCJzZXRBY3RpdmVGaWx0ZXIiLCJzZWxlY3RlZERvbWFpbiIsInNldFNlbGVjdGVkRG9tYWluIiwiZG9tYWlucyIsIm5hbWUiLCJjb2xvciIsInN1YiIsImhhbmRsZURvbWFpbkNsaWNrIiwiZG9tYWluTmFtZSIsIm1hcCIsIml0ZW0iLCJpc1NlbGVjdGVkIiwiYmFja2dyb3VuZENvbG9yIiwiZmlsdGVyTmFtZSIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkJleW9uZENsYXNzcm9vbS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQ2hlY2ssIFNwYXJrbGVzLCBGaWx0ZXIsIEFycm93VXBSaWdodCB9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7XG5cbmludGVyZmFjZSBCZXlvbmRDbGFzc3Jvb21Qcm9wcyB7XG4gIG9uU2VsZWN0Q2F0ZWdvcnk/OiAoY2F0ZWdvcnk6IHN0cmluZykgPT4gdm9pZDtcbiAgb25FeHBsb3JlRXhwZXJ0cz86ICgpID0+IHZvaWQ7XG59XG5cbmV4cG9ydCBjb25zdCBCZXlvbmRDbGFzc3Jvb206IFJlYWN0LkZDPEJleW9uZENsYXNzcm9vbVByb3BzPiA9ICh7XG4gIG9uU2VsZWN0Q2F0ZWdvcnksXG4gIG9uRXhwbG9yZUV4cGVydHNcbn0pID0+IHtcbiAgY29uc3QgW2FjdGl2ZUZpbHRlciwgc2V0QWN0aXZlRmlsdGVyXSA9IHVzZVN0YXRlPCdEb21haW4nIHwgJ0F1ZGllbmNlJyB8ICdGb3JtYXQnIHwgJ0R1cmF0aW9uJz4oJ0RvbWFpbicpO1xuICBjb25zdCBbc2VsZWN0ZWREb21haW4sIHNldFNlbGVjdGVkRG9tYWluXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpO1xuXG4gIGNvbnN0IGRvbWFpbnMgPSBbXG4gICAgeyBuYW1lOiAnVGVjaG5vbG9neSAmIEVuZ2luZWVyaW5nJywgY29sb3I6ICcjMTc2OUFBJywgc3ViOiAnQ2xvdWQsIFN5c3RlbXMgJiBBcmNoaXRlY3R1cmUnIH0sXG4gICAgeyBuYW1lOiAnRGF0YSBBbmFseXRpY3MgJiBBSScsIGNvbG9yOiAnIzEzOEE5RScsIHN1YjogJ0xMTXMsIFZlY3RvciBEQnMgJiBNTE9wcycgfSxcbiAgICB7IG5hbWU6ICdCdXNpbmVzcyAmIE1hbmFnZW1lbnQnLCBjb2xvcjogJyMyQkFFNjYnLCBzdWI6ICdBZ2lsZSBTdHJhdGVneSAmIFByb2R1Y3QgU2NhbGUnIH0sXG4gICAgeyBuYW1lOiAnRmluYW5jZSAmIEVjb25vbWljcycsIGNvbG9yOiAnIzBCMUYzMycsIHN1YjogJ0ZpblRlY2gsIEFsZ29yaXRobWljIFN5c3RlbXMnIH0sXG4gICAgeyBuYW1lOiAnTWFya2V0aW5nICYgQ29uc3VtZXIgSW5zaWdodHMnLCBjb2xvcjogJyMxNzY5QUEnLCBzdWI6ICdHcm93dGggRnVubmVscyAmIFVzZXIgQW5hbHl0aWNzJyB9LFxuICAgIHsgbmFtZTogJ1JldGFpbCAmIEUtY29tbWVyY2UnLCBjb2xvcjogJyMxMzhBOUUnLCBzdWI6ICdTdXBwbHkgQ2hhaW4sIFBsYXRmb3JtcyAmIFVYJyB9LFxuICAgIHsgbmFtZTogJ0hSICYgTGVhZGVyc2hpcCcsIGNvbG9yOiAnIzJCQUU2NicsIHN1YjogJ09yZyBDdWx0dXJlICYgVGFsZW50IFBpcGVsaW5lcycgfSxcbiAgICB7IG5hbWU6ICdFbnRyZXByZW5ldXJzaGlwICYgSW5ub3ZhdGlvbicsIGNvbG9yOiAnIzBCMUYzMycsIHN1YjogJzAtdG8tMSBWZW50dXJlIEJ1aWxkaW5nJyB9LFxuICAgIHsgbmFtZTogJ0NhcmVlciBEZXZlbG9wbWVudCcsIGNvbG9yOiAnIzE3NjlBQScsIHN1YjogJ1BsYWNlbWVudCBNYXN0ZXJ5ICYgRW5naW5lZXJpbmcgUm9hZG1hcHMnIH0sXG4gICAgeyBuYW1lOiAnRW1lcmdpbmcgVGVjaG5vbG9naWVzJywgY29sb3I6ICcjMTM4QTlFJywgc3ViOiAnV2ViMywgUm9ib3RpY3MsIFF1YW50dW0gJiBFZGdlJyB9LFxuICBdO1xuXG4gIGNvbnN0IGhhbmRsZURvbWFpbkNsaWNrID0gKGRvbWFpbk5hbWU6IHN0cmluZykgPT4ge1xuICAgIHNldFNlbGVjdGVkRG9tYWluKGRvbWFpbk5hbWUgPT09IHNlbGVjdGVkRG9tYWluID8gbnVsbCA6IGRvbWFpbk5hbWUpO1xuICAgIGlmIChvblNlbGVjdENhdGVnb3J5KSB7XG4gICAgICBvblNlbGVjdENhdGVnb3J5KGRvbWFpbk5hbWUpO1xuICAgIH1cbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGlkPVwiZG9tYWluc1wiIGNsYXNzTmFtZT1cInB5LTIwIG1kOnB5LTI4IGJnLVsjRUFGNkZBXSBib3JkZXItYiBib3JkZXItWyNEN0VBRjNdIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgey8qIERlY29yYXRpdmUgYmFja2dyb3VuZCBjdXJ2ZSAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicG9pbnRlci1ldmVudHMtbm9uZSBhYnNvbHV0ZSAtYm90dG9tLTI0IC1yaWdodC0yNCB3LTk2IGgtOTYgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLXRsIGZyb20tWyMxMzhBOUVdLzEwIHRvLXRyYW5zcGFyZW50IGJsdXItM3hsXCIgLz5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy1bMTI0MHB4XSBteC1hdXRvIHB4LTQgc206cHgtNiBsZzpweC04IHJlbGF0aXZlIHotMTBcIj5cbiAgICAgICAgXG4gICAgICAgIHsvKiBTZWN0aW9uIEhlYWRpbmcgKi99XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1sZWZ0IG1iLTEyIHNtOm1iLTE2XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcHgtMy41IHB5LTEuNSByb3VuZGVkLWZ1bGwgYmctd2hpdGUgYm9yZGVyIGJvcmRlci1bI0Q3RUFGM10gdGV4dC1bIzEzOEE5RV0gdGV4dC14cyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHVwcGVyY2FzZSBtYi0zIHNoYWRvdy1zbVwiPlxuICAgICAgICAgICAgPFNwYXJrbGVzIGNsYXNzTmFtZT1cInctMy41IGgtMy41XCIgLz5cbiAgICAgICAgICAgIDxzcGFuPkN1cnJpY3VsdW0gJiBEaXNjaXBsaW5lczwvc3Bhbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC0zeGwgc206dGV4dC00eGwgbWQ6dGV4dC01eGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzBCMUYzM10gdHJhY2tpbmctdGlnaHRcIj5cbiAgICAgICAgICAgIEV4cGVyaWVuY2VzIHRoYXQgZ28gPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1bIzEzOEE5RV1cIj5iZXlvbmQgdGhlIGNsYXNzcm9vbTwvc3Bhbj5cbiAgICAgICAgICA8L2gyPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gc206dGV4dC1iYXNlIHRleHQtWyM0QTZEODhdIG10LTMgbWF4LXctMnhsIGZvbnQtbm9ybWFsXCI+XG4gICAgICAgICAgICBDcm9zcy1mdW5jdGlvbmFsIGluZHVzdHJ5IHRyYWNrcyBhbGlnbmVkIHdpdGggYm90aCBjb250ZW1wb3Jhcnkgc3R1ZGVudCBhc3BpcmF0aW9ucyBhbmQgdW5pdmVyc2l0eSBib2FyZC1vZi1zdHVkaWVzIHN5bGxhYmkuXG4gICAgICAgICAgPC9wPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogMTAgU29saWQgQ29sb3JlZCBEb21haW4gQmxvY2tzICg1IENvbHVtbnMgeCAyIFJvd3Mgb24gRGVza3RvcCkgKi99XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMSBzbTpncmlkLWNvbHMtMiBtZDpncmlkLWNvbHMtMyBsZzpncmlkLWNvbHMtNSBnYXAtMy41IHNtOmdhcC00IG1iLThcIj5cbiAgICAgICAgICB7ZG9tYWlucy5tYXAoKGl0ZW0pID0+IHtcbiAgICAgICAgICAgIGNvbnN0IGlzU2VsZWN0ZWQgPSBzZWxlY3RlZERvbWFpbiA9PT0gaXRlbS5uYW1lO1xuICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIGtleT17aXRlbS5uYW1lfVxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZURvbWFpbkNsaWNrKGl0ZW0ubmFtZSl9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiZ3JvdXAgcmVsYXRpdmUgcm91bmRlZC0yeGwgcC01IHRleHQtbGVmdCB0ZXh0LXdoaXRlIHNoYWRvdy1tZCBob3ZlcjpzaGFkb3cteGwgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIHRyYW5zZm9ybSBob3ZlcjotdHJhbnNsYXRlLXktMSBmbGV4IGZsZXgtY29sIGp1c3RpZnktYmV0d2VlbiBtaW4taC1bMTEwcHhdIGN1cnNvci1wb2ludGVyXCJcbiAgICAgICAgICAgICAgICBzdHlsZT17eyBiYWNrZ3JvdW5kQ29sb3I6IGl0ZW0uY29sb3IgfX1cbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwiZm9udC1ib2xkIHRleHQtc20gc206dGV4dC1bMTVweF0gbGVhZGluZy1zbnVnIHRyYWNraW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICAgICAgICAgIHtpdGVtLm5hbWV9XG4gICAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1bMTFweF0gdGV4dC13aGl0ZS83NSBtdC0xIGJsb2NrIGZvbnQtbm9ybWFsXCI+XG4gICAgICAgICAgICAgICAgICAgIHtpdGVtLnN1Yn1cbiAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuIG10LTMgcHQtMiBib3JkZXItdCBib3JkZXItd2hpdGUvMjAgdGV4dC1bMTFweF0gZm9udC1zZW1pYm9sZCB0ZXh0LXdoaXRlLzkwXCI+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj57aXNTZWxlY3RlZCA/ICdTZWxlY3RlZCcgOiAnVmlldyBFeHBlcnRzJ308L3NwYW4+XG4gICAgICAgICAgICAgICAgICA8QXJyb3dVcFJpZ2h0IGNsYXNzTmFtZT1cInctMy41IGgtMy41IHRyYW5zaXRpb24tdHJhbnNmb3JtIGdyb3VwLWhvdmVyOnRyYW5zbGF0ZS14LTAuNSBncm91cC1ob3ZlcjotdHJhbnNsYXRlLXktMC41XCIgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICApO1xuICAgICAgICAgIH0pfVxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogQm90dG9tIER1YWwgUGFuZWxzOiBQcm9ncmFtIEZpbHRlcnMgJiBFdmVyeSBDYXRlZ29yeSBMaW5rcyBUbyAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0xIGxnOmdyaWQtY29scy0xMiBnYXAtNiBpdGVtcy1zdHJldGNoXCI+XG4gICAgICAgICAgXG4gICAgICAgICAgey8qIExlZnQgUGFuZWw6IFByb2dyYW0gRmlsdGVycyAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTYgYmctd2hpdGUgcm91bmRlZC0yeGwgcC02IHNtOnAtNyBib3JkZXIgYm9yZGVyLVsjRDdFQUYzXSBzaGFkb3ctc20gZmxleCBmbGV4LWNvbCBqdXN0aWZ5LWJldHdlZW5cIj5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC14cyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHRleHQtWyMxMzhBOUVdIHVwcGVyY2FzZSBtYi00XCI+XG4gICAgICAgICAgICAgICAgPEZpbHRlciBjbGFzc05hbWU9XCJ3LTMuNSBoLTMuNVwiIC8+XG4gICAgICAgICAgICAgICAgPHNwYW4+UHJvZ3JhbSBGaWx0ZXJzPC9zcGFuPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICB7LyogNCBQaWxsIEJ1dHRvbnMgaW4gMngyIEdyaWQgKi99XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMiBnYXAtMyBtYi00XCI+XG4gICAgICAgICAgICAgICAgeyhbJ0RvbWFpbicsICdBdWRpZW5jZScsICdGb3JtYXQnLCAnRHVyYXRpb24nXSBhcyBjb25zdCkubWFwKChmaWx0ZXJOYW1lKSA9PiAoXG4gICAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICAgIGtleT17ZmlsdGVyTmFtZX1cbiAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gc2V0QWN0aXZlRmlsdGVyKGZpbHRlck5hbWUpfVxuICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2BweC00IHB5LTIuNSByb3VuZGVkLWZ1bGwgdGV4dC14cyBzbTp0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgdHJhbnNpdGlvbi1hbGwgYm9yZGVyIHRleHQtY2VudGVyICR7XG4gICAgICAgICAgICAgICAgICAgICAgYWN0aXZlRmlsdGVyID09PSBmaWx0ZXJOYW1lXG4gICAgICAgICAgICAgICAgICAgICAgICA/ICdiZy1bIzE3NjlBQV0gdGV4dC13aGl0ZSBib3JkZXItWyMxNzY5QUFdIHNoYWRvdy1zbSdcbiAgICAgICAgICAgICAgICAgICAgICAgIDogJ2JnLVsjRjRGOUZDXSB0ZXh0LVsjMEIxRjMzXSBib3JkZXItWyNDNUUyRUNdIGhvdmVyOmJvcmRlci1bIzEzOEE5RV0nXG4gICAgICAgICAgICAgICAgICAgIH1gfVxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICB7ZmlsdGVyTmFtZX1cbiAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtWyM1Mjc3OTNdIGZvbnQtbWVkaXVtIHB0LTIgYm9yZGVyLXQgYm9yZGVyLVsjRUFGNEY4XVwiPlxuICAgICAgICAgICAgICBOYXJyb3cgdGhlIGNhdGFsb2d1ZSBpbiBhIGNsaWNrLiBTZWxlY3RlZCBmaWx0ZXI6IDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LVsjMEIxRjMzXVwiPnthY3RpdmVGaWx0ZXJ9PC9zcGFuPlxuICAgICAgICAgICAgPC9wPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgey8qIFJpZ2h0IFBhbmVsOiBFdmVyeSBDYXRlZ29yeSBMaW5rcyBUbyAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTYgYmctd2hpdGUgcm91bmRlZC0yeGwgcC02IHNtOnAtNyBib3JkZXIgYm9yZGVyLVsjRDdFQUYzXSBzaGFkb3ctc20gZmxleCBmbGV4LWNvbCBqdXN0aWZ5LWJldHdlZW5cIj5cbiAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyBmb250LWJvbGQgdHJhY2tpbmctd2lkZXN0IHRleHQtWyMxMzhBOUVdIHVwcGVyY2FzZSBtYi00XCI+XG4gICAgICAgICAgICAgICAgPHNwYW4+RXZlcnkgQ2F0ZWdvcnkgTGlua3MgVG88L3NwYW4+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJzcGFjZS15LTMuNVwiPlxuICAgICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyB0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1bIzBCMUYzM10gZm9udC1tZWRpdW1cIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy01IGgtNSByb3VuZGVkLWZ1bGwgYmctWyMyQkFFNjZdLzE1IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtWyMyQkFFNjZdIGZsZXgtc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICAgICAgPENoZWNrIGNsYXNzTmFtZT1cInctMy41IGgtMy41XCIgLz5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPHNwYW4+UmVsZXZhbnQgdmVyaWZpZWQgaW5kdXN0cnkgZXhwZXJ0cyAmYW1wOyBsZWFkIGFyY2hpdGVjdHM8L3NwYW4+XG4gICAgICAgICAgICAgICAgPC9saT5cblxuICAgICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyB0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1bIzBCMUYzM10gZm9udC1tZWRpdW1cIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy01IGgtNSByb3VuZGVkLWZ1bGwgYmctWyMxMzhBOUVdLzE1IGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRleHQtWyMxMzhBOUVdIGZsZXgtc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICAgICAgPENoZWNrIGNsYXNzTmFtZT1cInctMy41IGgtMy41XCIgLz5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPHNwYW4+TWF0Y2hpbmcgc3lsbGFidXMtYWxpZ25lZCBzZXNzaW9uIHByb2dyYW1zICZhbXA7IHdvcmtzaG9wczwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2xpPlxuXG4gICAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHRleHQteHMgc206dGV4dC1zbSB0ZXh0LVsjMEIxRjMzXSBmb250LW1lZGl1bVwiPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUgaC01IHJvdW5kZWQtZnVsbCBiZy1bIzE3NjlBQV0vMTUgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdGV4dC1bIzE3NjlBQV0gZmxleC1zaHJpbmstMFwiPlxuICAgICAgICAgICAgICAgICAgICA8Q2hlY2sgY2xhc3NOYW1lPVwidy0zLjUgaC0zLjVcIiAvPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8c3Bhbj5VcGNvbWluZyBwdWJsaWMgY2FtcHVzIGtleW5vdGVzLCBoYWNrYXRob25zIGFuZCBpbnNpZ2h0czwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtNCBib3JkZXItdCBib3JkZXItWyNFQUY0RjhdIGZsZXgganVzdGlmeS1lbmRcIj5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9e29uRXhwbG9yZUV4cGVydHN9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiaW5saW5lLWZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHRleHQteHMgZm9udC1ib2xkIHRleHQtWyMxMzhBOUVdIGhvdmVyOnRleHQtWyMwRTZEODJdIHRyYW5zaXRpb24tY29sb3JzXCJcbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDxzcGFuPkJyb3dzZSBmdWxsIGV4cGVydCBjYXRhbG9ndWU8L3NwYW4+XG4gICAgICAgICAgICAgICAgPEFycm93VXBSaWdodCBjbGFzc05hbWU9XCJ3LTQgaC00XCIgLz5cbiAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8L2Rpdj5cblxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuICApO1xufTtcbiJdLCJmaWxlIjoiQzovVXNlcnMvTW9oaXRoc2FpIE1hbGxhL09uZURyaXZlL0Rlc2t0b3AvY3RybCtkYXRhK2dyb3cvc3JjL2NvbXBvbmVudHMvQmV5b25kQ2xhc3Nyb29tLnRzeCJ9

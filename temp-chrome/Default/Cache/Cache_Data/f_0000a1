@@ -1,0 +1,1143 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/HackathonSponsorship.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b2f98eab"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=b2f98eab"; const useState = __vite__cjsImport3_react["useState"];
+import {
+  Trophy,
+  Rocket,
+  Code2,
+  DollarSign,
+  Cpu,
+  Users,
+  Building2,
+  CheckCircle2,
+  Sparkles,
+  Send,
+  ShieldCheck,
+  Briefcase
+} from "/node_modules/.vite/deps/lucide-react.js?v=b2f98eab";
+export const HackathonSponsorship = ({
+  onRequestSponsorship
+}) => {
+  _s();
+  const [activeTab, setActiveTab] = useState("colleges");
+  const [inquiryModalOpen, setInquiryModalOpen] = useState(false);
+  const [inquiryType, setInquiryType] = useState("college");
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    organization: "",
+    hackathonName: "",
+    expectedStudents: "300-500",
+    budgetRange: "₹50,000 - ₹1,00,000",
+    notes: ""
+  });
+  const handleOpenInquiry = (type) => {
+    setInquiryType(type);
+    setFormSubmitted(false);
+    setInquiryModalOpen(true);
+  };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
+  return /* @__PURE__ */ jsxDEV("section", { id: "hackathons", className: "py-20 bg-gradient-to-b from-[#0B1F33] via-[#0d233a] to-[#0B1F33] text-white relative overflow-hidden", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "absolute top-0 left-1/4 w-96 h-96 bg-[#1769AA]/15 rounded-full blur-3xl pointer-events-none" }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "absolute bottom-0 right-1/4 w-96 h-96 bg-[#2BAE66]/10 rounded-full blur-3xl pointer-events-none" }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "absolute inset-0 bg-[radial-gradient(#1769AA_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 74,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "text-center max-w-3xl mx-auto mb-14", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#2BAE66]/20 text-[#6ee7b7] border border-[#2BAE66]/40 uppercase tracking-widest mb-4", children: [
+          /* @__PURE__ */ jsxDEV(Trophy, { className: "w-3.5 h-3.5 text-[#2BAE66]" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 80,
+            columnNumber: 13
+          }, this),
+          "CDG Hackathon Ecosystem & Sponsorship"
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 79,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("h2", { className: "text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight", children: [
+          "Powering Next-Gen Hackathons ",
+          /* @__PURE__ */ jsxDEV("br", { className: "hidden sm:block" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 84,
+            columnNumber: 42
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-[#60A5FA] via-[#2DD4BF] to-[#4ADE80]", children: "With Grants, Problem Statements & Sponsors" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 85,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 83,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "mt-4 text-base sm:text-lg text-gray-300 leading-relaxed", children: "We bridge college hackathons with corporate tech sponsors. Whether you are a college club seeking co-sponsorship or a brand looking to recruit the top 1% builders, CDG is your growth partner." }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 89,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "mt-8 inline-flex p-1.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg", children: [
+          /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              onClick: () => setActiveTab("colleges"),
+              className: `px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer flex items-center gap-2 ${activeTab === "colleges" ? "bg-gradient-to-r from-[#1769AA] to-[#138A9E] text-white shadow-md" : "text-gray-300 hover:text-white"}`,
+              children: [
+                /* @__PURE__ */ jsxDEV(Rocket, { className: "w-4 h-4" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 103,
+                  columnNumber: 15
+                }, this),
+                "For Colleges & Hackathon Organizers"
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 95,
+              columnNumber: 13
+            },
+            this
+          ),
+          /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              onClick: () => setActiveTab("corporates"),
+              className: `px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer flex items-center gap-2 ${activeTab === "corporates" ? "bg-gradient-to-r from-[#2BAE66] to-[#138A9E] text-white shadow-md" : "text-gray-300 hover:text-white"}`,
+              children: [
+                /* @__PURE__ */ jsxDEV(Building2, { className: "w-4 h-4" }, void 0, false, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 114,
+                  columnNumber: 15
+                }, this),
+                "For Corporate Sponsors & Hiring Brands"
+              ]
+            },
+            void 0,
+            true,
+            {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 106,
+              columnNumber: 13
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 94,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+        lineNumber: 78,
+        columnNumber: 9
+      }, this),
+      activeTab === "colleges" && /* @__PURE__ */ jsxDEV("div", { className: "animate-in fade-in duration-300 space-y-12", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#1769AA]/60 hover:bg-white/[0.08] transition-all group", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-12 h-12 rounded-xl bg-[#1769AA]/20 text-[#60A5FA] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform", children: /* @__PURE__ */ jsxDEV(DollarSign, { className: "w-6 h-6" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 127,
+              columnNumber: 19
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 126,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-bold text-white mb-2", children: "₹25K – ₹2L Co-Sponsorship" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 129,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-xs sm:text-sm text-gray-300 leading-relaxed", children: "Direct cash prize pool support and co-sponsorship funds for verified college hackathons across South India." }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 132,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 125,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#2BAE66]/60 hover:bg-white/[0.08] transition-all group", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-12 h-12 rounded-xl bg-[#2BAE66]/20 text-[#4ADE80] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform", children: /* @__PURE__ */ jsxDEV(Code2, { className: "w-6 h-6" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 139,
+              columnNumber: 19
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 138,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-bold text-white mb-2", children: "Industry Problem Statements" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 141,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-xs sm:text-sm text-gray-300 leading-relaxed", children: "Real enterprise AI, Fintech, Agentic systems, and Data pipelines problems designed by practitioners from Microsoft, Amazon, and unicorns." }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 144,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 137,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#D6A84F]/60 hover:bg-white/[0.08] transition-all group", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-12 h-12 rounded-xl bg-[#D6A84F]/20 text-[#F5C26B] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform", children: /* @__PURE__ */ jsxDEV(Cpu, { className: "w-6 h-6" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 151,
+              columnNumber: 19
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 150,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-bold text-white mb-2", children: "Cloud & GenAI API Grants" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 153,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-xs sm:text-sm text-gray-300 leading-relaxed", children: "Sponsored API credits (Gemini, Groq, Supabase, Modal) and developer sandboxes for every participating student team." }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 156,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 149,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#138A9E]/60 hover:bg-white/[0.08] transition-all group", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-12 h-12 rounded-xl bg-[#138A9E]/20 text-[#2DD4BF] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform", children: /* @__PURE__ */ jsxDEV(Users, { className: "w-6 h-6" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 163,
+              columnNumber: 19
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 162,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h3", { className: "text-lg font-bold text-white mb-2", children: "Senior Mentors & Jury" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 165,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-xs sm:text-sm text-gray-300 leading-relaxed", children: "Industry VPs, Engineering Directors, and Principal Architects fly down or join live to mentor and judge the grand finale." }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 168,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 161,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 124,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "p-8 rounded-3xl bg-gradient-to-r from-[#1769AA]/30 via-[#0B1F33] to-[#138A9E]/20 border border-[#1769AA]/40 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "space-y-2 text-center lg:text-left", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "text-xs font-bold text-[#F5C26B] uppercase tracking-wider flex items-center justify-center lg:justify-start gap-1.5", children: [
+              /* @__PURE__ */ jsxDEV(Sparkles, { className: "w-4 h-4" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 178,
+                columnNumber: 19
+              }, this),
+              "College Hackathon Grants 2026-27"
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 177,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("h4", { className: "text-2xl sm:text-3xl font-extrabold text-white", children: "Organizing a Hackathon on Your Campus?" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 181,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("p", { className: "text-sm text-gray-300 max-w-2xl leading-relaxed", children: "Apply with your college proposal. We evaluate the scale, student footfall, and tracks to provide co-sponsorship grants within 5 working days." }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 184,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 176,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "flex flex-col sm:flex-row gap-3 shrink-0", children: [
+            /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: () => handleOpenInquiry("college"),
+                className: "px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#2BAE66] to-[#138A9E] text-white font-bold text-sm shadow-lg hover:shadow-emerald-500/30 hover:scale-[1.02] transition-all cursor-pointer flex items-center justify-center gap-2",
+                children: [
+                  /* @__PURE__ */ jsxDEV(Rocket, { className: "w-4 h-4" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 193,
+                    columnNumber: 19
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Apply for Hackathon Co-Sponsorship" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 194,
+                    columnNumber: 19
+                  }, this)
+                ]
+              },
+              void 0,
+              true,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 189,
+                columnNumber: 17
+              },
+              this
+            ),
+            onRequestSponsorship && /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: onRequestSponsorship,
+                className: "px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition-all cursor-pointer",
+                children: "Campus Session Booking"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 197,
+                columnNumber: 15
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 188,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 175,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+        lineNumber: 122,
+        columnNumber: 9
+      }, this),
+      activeTab === "corporates" && /* @__PURE__ */ jsxDEV("div", { className: "animate-in fade-in duration-300 space-y-12", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-gray-300/40 transition-all flex flex-col justify-between", children: [
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-bold text-gray-400 uppercase tracking-widest mb-1", children: "Track Sponsor" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 216,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { className: "text-2xl font-black text-white", children: "₹50,000" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 219,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-gray-300 mt-2", children: "Sponsor a dedicated problem track (e.g., Best AI Agent, Best Open Source Hack)." }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 220,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "mt-5 space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 225,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Custom problem statement & branding" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 226,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 224,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 229,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Access to top 10 finalist resumes" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 230,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 228,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 233,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Logo on all banners, certificates & website" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 234,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 232,
+                  columnNumber: 21
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 223,
+                columnNumber: 19
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 215,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: () => handleOpenInquiry("sponsor"),
+                className: "mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors cursor-pointer",
+                children: "Sponsor a Track"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 238,
+                columnNumber: 17
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 214,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "p-7 rounded-2xl bg-gradient-to-b from-[#1769AA]/40 to-[#0B1F33] border-2 border-[#60A5FA] relative flex flex-col justify-between shadow-2xl", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#D6A84F] to-[#F5C26B] text-[#0B1F33] text-[11px] font-extrabold uppercase tracking-wide shadow-md", children: "Most Popular For Hiring" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 248,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-bold text-[#60A5FA] uppercase tracking-widest mb-1", children: "Premier Co-Sponsor" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 252,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { className: "text-2xl font-black text-white", children: "₹1,50,000" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 255,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-gray-200 mt-2", children: "Full recruitment access, jury seat, keynote slot, and top-tier brand placement." }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 256,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "mt-5 space-y-2.5 text-xs text-gray-200 border-t border-white/20 pt-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#4ADE80] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 261,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Direct hiring rights for top 50 engineering participants" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 262,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 260,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#4ADE80] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 265,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Keynote / Tech talk slot before hackathon kickoff" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 266,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 264,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#4ADE80] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 269,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Seat on the Grand Finale evaluation jury panel" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 270,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 268,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#4ADE80] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 273,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Official brand booth / recruitment lounge at venue" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 274,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 272,
+                  columnNumber: 21
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 259,
+                columnNumber: 19
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 251,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: () => handleOpenInquiry("sponsor"),
+                className: "mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-[#1769AA] via-[#138A9E] to-[#2BAE66] hover:brightness-110 text-white text-xs font-extrabold shadow-lg transition-all cursor-pointer",
+                children: "Become Premier Co-Sponsor"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 278,
+                columnNumber: 17
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 247,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "p-7 rounded-2xl bg-white/5 border border-white/10 hover:border-gray-300/40 transition-all flex flex-col justify-between", children: [
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "text-xs font-bold text-gray-400 uppercase tracking-widest mb-1", children: "API & Developer Tool Sponsor" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 289,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { className: "text-2xl font-black text-white", children: "In-Kind / Credits" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 292,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-gray-300 mt-2", children: "Provide cloud credits, API keys, or developer tooling for students to build on your platform." }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 293,
+                columnNumber: 19
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "mt-5 space-y-2.5 text-xs text-gray-300 border-t border-white/10 pt-4", children: [
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 298,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Mass adoption: 500+ students integrate your API" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 299,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 297,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 302,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "'Best Project built on [Your Tool]' award category" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 303,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 301,
+                  columnNumber: 21
+                }, this),
+                /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+                  /* @__PURE__ */ jsxDEV(CheckCircle2, { className: "w-4 h-4 text-[#2BAE66] shrink-0" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 306,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("span", { children: "Live product demo workshop before hacking begins" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 307,
+                    columnNumber: 23
+                  }, this)
+                ] }, void 0, true, {
+                  fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                  lineNumber: 305,
+                  columnNumber: 21
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 296,
+                columnNumber: 19
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 288,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "button",
+              {
+                onClick: () => handleOpenInquiry("sponsor"),
+                className: "mt-6 w-full py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors cursor-pointer",
+                children: "Offer Developer Credits"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 311,
+                columnNumber: 17
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 287,
+            columnNumber: 15
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 212,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "p-6 rounded-2xl bg-[#0d2a45] border border-[#1769AA]/40 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-300", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxDEV(Briefcase, { className: "w-6 h-6 text-[#D6A84F] shrink-0" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 323,
+              columnNumber: 17
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: [
+              /* @__PURE__ */ jsxDEV("strong", { children: "Why Brands Sponsor with CDG:" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 325,
+                columnNumber: 19
+              }, this),
+              " Save 70% in campus recruitment costs by identifying vetted, code-tested engineers through high-stakes hackathons across 50+ universities."
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 324,
+              columnNumber: 17
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 322,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "button",
+            {
+              onClick: () => handleOpenInquiry("sponsor"),
+              className: "shrink-0 px-4 py-2 rounded-lg bg-[#D6A84F] hover:bg-[#b88c3a] text-[#0B1F33] font-bold transition-colors cursor-pointer",
+              children: "Download Sponsor Deck"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 328,
+              columnNumber: 15
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 321,
+          columnNumber: 13
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+        lineNumber: 211,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 76,
+      columnNumber: 7
+    }, this),
+    inquiryModalOpen && /* @__PURE__ */ jsxDEV("div", { className: "fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm flex items-center justify-center p-4", children: /* @__PURE__ */ jsxDEV("div", { className: "relative w-full max-w-xl bg-white text-gray-900 rounded-2xl shadow-2xl p-6 sm:p-8 animate-in fade-in zoom-in-95 duration-200", children: [
+      /* @__PURE__ */ jsxDEV(
+        "button",
+        {
+          onClick: () => setInquiryModalOpen(false),
+          className: "absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-700 rounded-full",
+          children: "✕"
+        },
+        void 0,
+        false,
+        {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 343,
+          columnNumber: 13
+        },
+        this
+      ),
+      formSubmitted ? /* @__PURE__ */ jsxDEV("div", { className: "py-8 text-center space-y-3", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full mx-auto flex items-center justify-center", children: /* @__PURE__ */ jsxDEV(ShieldCheck, { className: "w-8 h-8" }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 353,
+          columnNumber: 19
+        }, this) }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 352,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { className: "text-2xl font-bold text-[#0B1F33]", children: "Inquiry Submitted Successfully!" }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 355,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { className: "text-sm text-gray-600 max-w-md mx-auto", children: [
+          "Thank you, ",
+          /* @__PURE__ */ jsxDEV("strong", { children: formData.name }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 359,
+            columnNumber: 30
+          }, this),
+          ". Our Hackathon & Partnerships desk will review your ",
+          inquiryType === "college" ? "college hackathon proposal" : "sponsorship request",
+          " and contact you within 24 hours."
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 358,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "pt-4", children: /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            onClick: () => setInquiryModalOpen(false),
+            className: "px-6 py-2.5 rounded-xl bg-[#0B1F33] text-white text-xs font-bold hover:bg-[#1769AA] transition-colors",
+            children: "Done"
+          },
+          void 0,
+          false,
+          {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 362,
+            columnNumber: 19
+          },
+          this
+        ) }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 361,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+        lineNumber: 351,
+        columnNumber: 11
+      }, this) : /* @__PURE__ */ jsxDEV("form", { onSubmit: handleFormSubmit, className: "space-y-4", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "text-xs font-bold text-[#1769AA] uppercase tracking-wider", children: inquiryType === "college" ? "College Organizer Form" : "Corporate Brand Sponsorship" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 373,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("h3", { className: "text-xl sm:text-2xl font-bold text-[#0B1F33] mt-1", children: inquiryType === "college" ? "Apply for Hackathon Co-Sponsorship & Grants" : "Partner as a Hackathon Corporate Sponsor" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 376,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "text-xs text-gray-500 mt-1", children: "Fill in key details below and our team will get in touch immediately." }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 381,
+            columnNumber: 19
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 372,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-3", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: "Your Name *" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 388,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "text",
+                required: true,
+                placeholder: "e.g. Dr. Ramesh / Sai Kumar",
+                value: formData.name,
+                onChange: (e) => setFormData({ ...formData, name: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 389,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 387,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: "Work / College Email *" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 399,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "email",
+                required: true,
+                placeholder: "name@domain.edu / com",
+                value: formData.email,
+                onChange: (e) => setFormData({ ...formData, email: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 400,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 398,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: "Phone / WhatsApp *" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 410,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "tel",
+                required: true,
+                placeholder: "+91 98765 43210",
+                value: formData.phone,
+                onChange: (e) => setFormData({ ...formData, phone: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 411,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 409,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: [
+              inquiryType === "college" ? "College / University" : "Company / Brand Name",
+              " *"
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 421,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "text",
+                required: true,
+                placeholder: inquiryType === "college" ? "e.g. VIIT / SRM / GITAM" : "e.g. Acme AI Corp",
+                value: formData.organization,
+                onChange: (e) => setFormData({ ...formData, organization: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 424,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 420,
+            columnNumber: 19
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 386,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-3", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: inquiryType === "college" ? "Hackathon Title / Edition" : "Target Sponsorship Tier" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 437,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "input",
+              {
+                type: "text",
+                placeholder: inquiryType === "college" ? "e.g. HackSprint 2026" : "Premier / Track / API",
+                value: formData.hackathonName,
+                onChange: (e) => setFormData({ ...formData, hackathonName: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none"
+              },
+              void 0,
+              false,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 440,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 436,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: inquiryType === "college" ? "Expected Student Participation" : "Target Hiring Volume" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 449,
+              columnNumber: 21
+            }, this),
+            /* @__PURE__ */ jsxDEV(
+              "select",
+              {
+                value: formData.expectedStudents,
+                onChange: (e) => setFormData({ ...formData, expectedStudents: e.target.value }),
+                className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] bg-white",
+                children: [
+                  /* @__PURE__ */ jsxDEV("option", { value: "100-300", children: "100 - 300 Students" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 457,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("option", { value: "300-500", children: "300 - 500 Students" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 458,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("option", { value: "500-1000", children: "500 - 1,000 Students" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 459,
+                    columnNumber: 23
+                  }, this),
+                  /* @__PURE__ */ jsxDEV("option", { value: "1000+", children: "1,000+ Students (State / National Level)" }, void 0, false, {
+                    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                    lineNumber: 460,
+                    columnNumber: 23
+                  }, this)
+                ]
+              },
+              void 0,
+              true,
+              {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 452,
+                columnNumber: 21
+              },
+              this
+            )
+          ] }, void 0, true, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 448,
+            columnNumber: 19
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 435,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { className: "block text-xs font-bold text-gray-700 mb-1", children: "Additional Details / Specific Requirements" }, void 0, false, {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 466,
+            columnNumber: 19
+          }, this),
+          /* @__PURE__ */ jsxDEV(
+            "textarea",
+            {
+              rows: 2,
+              placeholder: "Tentative dates, preferred tracks, jury requirements, or sponsorship package inquiries...",
+              value: formData.notes,
+              onChange: (e) => setFormData({ ...formData, notes: e.target.value }),
+              className: "w-full px-3 py-2 rounded-xl border border-gray-300 text-xs focus:ring-2 focus:ring-[#1769AA] focus:outline-none resize-none"
+            },
+            void 0,
+            false,
+            {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+              lineNumber: 469,
+              columnNumber: 19
+            },
+            this
+          )
+        ] }, void 0, true, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 465,
+          columnNumber: 17
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "pt-2", children: /* @__PURE__ */ jsxDEV(
+          "button",
+          {
+            type: "submit",
+            className: "w-full py-3 rounded-xl bg-gradient-to-r from-[#1769AA] to-[#2BAE66] text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer",
+            children: [
+              /* @__PURE__ */ jsxDEV(Send, { className: "w-4 h-4" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 483,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { children: "Send Hackathon Proposal" }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+                lineNumber: 484,
+                columnNumber: 21
+              }, this)
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+            lineNumber: 479,
+            columnNumber: 19
+          },
+          this
+        ) }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+          lineNumber: 478,
+          columnNumber: 17
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+        lineNumber: 371,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 342,
+      columnNumber: 11
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+      lineNumber: 341,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx",
+    lineNumber: 70,
+    columnNumber: 5
+  }, this);
+};
+_s(HackathonSponsorship, "3cBVKmHsmnted8IlIGYaBR9475g=");
+_c = HackathonSponsorship;
+var _c;
+$RefreshReg$(_c, "HackathonSponsorship");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/HackathonSponsorship.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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YUFUM0k7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVdBO0FBQUEsUUFFQSx1QkFBQyxTQUFJLFdBQVUsUUFDYjtBQUFBLFVBQUM7QUFBQTtBQUFBLFlBQ0MsTUFBSztBQUFBLFlBQ0wsV0FBVTtBQUFBLFlBRVY7QUFBQSxxQ0FBQyxRQUFLLFdBQVUsYUFBaEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxxQkFBeUI7QUFBQSxjQUN6Qix1QkFBQyxVQUFLLHVDQUFOO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQTZCO0FBQUE7QUFBQTtBQUFBLFVBTC9CO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQU1BLEtBUEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVFBO0FBQUEsV0FuSEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQW9IQTtBQUFBLFNBakpKO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FtSkEsS0FwSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQXFKQTtBQUFBLE9BcGFKO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FzYUE7QUFFSjtBQUFFekIsR0F0Y1dGLHNCQUF5RDtBQUFBLEtBQXpEQTtBQUF5RCxJQUFBNEI7QUFBQSxhQUFBQSxJQUFBIiwibmFtZXMiOlsidXNlU3RhdGUiLCJUcm9waHkiLCJSb2NrZXQiLCJDb2RlMiIsIkRvbGxhclNpZ24iLCJDcHUiLCJVc2VycyIsIkJ1aWxkaW5nMiIsIkNoZWNrQ2lyY2xlMiIsIlNwYXJrbGVzIiwiU2VuZCIsIlNoaWVsZENoZWNrIiwiQnJpZWZjYXNlIiwiSGFja2F0aG9uU3BvbnNvcnNoaXAiLCJvblJlcXVlc3RTcG9uc29yc2hpcCIsIl9zIiwiYWN0aXZlVGFiIiwic2V0QWN0aXZlVGFiIiwiaW5xdWlyeU1vZGFsT3BlbiIsInNldElucXVpcnlNb2RhbE9wZW4iLCJpbnF1aXJ5VHlwZSIsInNldElucXVpcnlUeXBlIiwiZm9ybVN1Ym1pdHRlZCIsInNldEZvcm1TdWJtaXR0ZWQiLCJmb3JtRGF0YSIsInNldEZvcm1EYXRhIiwibmFtZSIsImVtYWlsIiwicGhvbmUiLCJvcmdhbml6YXRpb24iLCJoYWNrYXRob25OYW1lIiwiZXhwZWN0ZWRTdHVkZW50cyIsImJ1ZGdldFJhbmdlIiwibm90ZXMiLCJoYW5kbGVPcGVuSW5xdWlyeSIsInR5cGUiLCJoYW5kbGVGb3JtU3VibWl0IiwiZSIsInByZXZlbnREZWZhdWx0IiwidGFyZ2V0IiwidmFsdWUiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJIYWNrYXRob25TcG9uc29yc2hpcC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtcbiAgVHJvcGh5LFxuICBSb2NrZXQsXG4gIENvZGUyLFxuICBEb2xsYXJTaWduLFxuICBDcHUsXG4gIFVzZXJzLFxuICBCdWlsZGluZzIsXG4gIENoZWNrQ2lyY2xlMixcbiAgU3BhcmtsZXMsXG4gIFNlbmQsXG4gIFNoaWVsZENoZWNrLFxuICBCcmllZmNhc2Vcbn0gZnJvbSAnbHVjaWRlLXJlYWN0JztcblxuaW50ZXJmYWNlIEhhY2thdGhvblNwb25zb3JzaGlwUHJvcHMge1xuICBvblJlcXVlc3RTcG9uc29yc2hpcD86ICgpID0+IHZvaWQ7XG59XG5cbmV4cG9ydCBjb25zdCBIYWNrYXRob25TcG9uc29yc2hpcDogUmVhY3QuRkM8SGFja2F0aG9uU3BvbnNvcnNoaXBQcm9wcz4gPSAoe1xuICBvblJlcXVlc3RTcG9uc29yc2hpcFxufSkgPT4ge1xuICBjb25zdCBbYWN0aXZlVGFiLCBzZXRBY3RpdmVUYWJdID0gdXNlU3RhdGU8J2NvbGxlZ2VzJyB8ICdjb3Jwb3JhdGVzJz4oJ2NvbGxlZ2VzJyk7XG4gIGNvbnN0IFtpbnF1aXJ5TW9kYWxPcGVuLCBzZXRJbnF1aXJ5TW9kYWxPcGVuXSA9IHVzZVN0YXRlKGZhbHNlKTtcbiAgY29uc3QgW2lucXVpcnlUeXBlLCBzZXRJbnF1aXJ5VHlwZV0gPSB1c2VTdGF0ZTwnY29sbGVnZScgfCAnc3BvbnNvcic+KCdjb2xsZWdlJyk7XG4gIGNvbnN0IFtmb3JtU3VibWl0dGVkLCBzZXRGb3JtU3VibWl0dGVkXSA9IHVzZVN0YXRlKGZhbHNlKTtcbiAgY29uc3QgW2Zvcm1EYXRhLCBzZXRGb3JtRGF0YV0gPSB1c2VTdGF0ZSh7XG4gICAgbmFtZTogJycsXG4gICAgZW1haWw6ICcnLFxuICAgIHBob25lOiAnJyxcbiAgICBvcmdhbml6YXRpb246ICcnLFxuICAgIGhhY2thdGhvbk5hbWU6ICcnLFxuICAgIGV4cGVjdGVkU3R1ZGVudHM6ICczMDAtNTAwJyxcbiAgICBidWRnZXRSYW5nZTogJ+KCuTUwLDAwMCAtIOKCuTEsMDAsMDAwJyxcbiAgICBub3RlczogJydcbiAgfSk7XG5cbiAgY29uc3QgaGFuZGxlT3BlbklucXVpcnkgPSAodHlwZTogJ2NvbGxlZ2UnIHwgJ3Nwb25zb3InKSA9PiB7XG4gICAgc2V0SW5xdWlyeVR5cGUodHlwZSk7XG4gICAgc2V0Rm9ybVN1Ym1pdHRlZChmYWxzZSk7XG4gICAgc2V0SW5xdWlyeU1vZGFsT3Blbih0cnVlKTtcbiAgfTtcblxuICBjb25zdCBoYW5kbGVGb3JtU3VibWl0ID0gKGU6IFJlYWN0LkZvcm1FdmVudCkgPT4ge1xuICAgIGUucHJldmVudERlZmF1bHQoKTtcbiAgICBzZXRGb3JtU3VibWl0dGVkKHRydWUpO1xuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPHNlY3Rpb24gaWQ9XCJoYWNrYXRob25zXCIgY2xhc3NOYW1lPVwicHktMjAgYmctZ3JhZGllbnQtdG8tYiBmcm9tLVsjMEIxRjMzXSB2aWEtWyMwZDIzM2FdIHRvLVsjMEIxRjMzXSB0ZXh0LXdoaXRlIHJlbGF0aXZlIG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgey8qIERlY29yYXRpdmUgQmFja2dyb3VuZCBFbGVtZW50cyAqL31cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTAgbGVmdC0xLzQgdy05NiBoLTk2IGJnLVsjMTc2OUFBXS8xNSByb3VuZGVkLWZ1bGwgYmx1ci0zeGwgcG9pbnRlci1ldmVudHMtbm9uZVwiPjwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBib3R0b20tMCByaWdodC0xLzQgdy05NiBoLTk2IGJnLVsjMkJBRTY2XS8xMCByb3VuZGVkLWZ1bGwgYmx1ci0zeGwgcG9pbnRlci1ldmVudHMtbm9uZVwiPjwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC0wIGJnLVtyYWRpYWwtZ3JhZGllbnQoIzE3NjlBQV8xcHgsdHJhbnNwYXJlbnRfMXB4KV0gW2JhY2tncm91bmQtc2l6ZToyNHB4XzI0cHhdIG9wYWNpdHktMTAgcG9pbnRlci1ldmVudHMtbm9uZVwiPjwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTd4bCBteC1hdXRvIHB4LTQgc206cHgtNiBsZzpweC04IHJlbGF0aXZlIHotMTBcIj5cbiAgICAgICAgey8qIFNlY3Rpb24gSGVhZGVyICovfVxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIG1heC13LTN4bCBteC1hdXRvIG1iLTE0XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgcHgtMy41IHB5LTEuNSByb3VuZGVkLWZ1bGwgdGV4dC14cyBmb250LXNlbWlib2xkIGJnLVsjMkJBRTY2XS8yMCB0ZXh0LVsjNmVlN2I3XSBib3JkZXIgYm9yZGVyLVsjMkJBRTY2XS80MCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0IG1iLTRcIj5cbiAgICAgICAgICAgIDxUcm9waHkgY2xhc3NOYW1lPVwidy0zLjUgaC0zLjUgdGV4dC1bIzJCQUU2Nl1cIiAvPlxuICAgICAgICAgICAgQ0RHIEhhY2thdGhvbiBFY29zeXN0ZW0gJiBTcG9uc29yc2hpcFxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LTN4bCBzbTp0ZXh0LTR4bCBtZDp0ZXh0LTV4bCBmb250LWJsYWNrIHRleHQtd2hpdGUgdHJhY2tpbmctdGlnaHQgbGVhZGluZy10aWdodFwiPlxuICAgICAgICAgICAgUG93ZXJpbmcgTmV4dC1HZW4gSGFja2F0aG9ucyA8YnIgY2xhc3NOYW1lPVwiaGlkZGVuIHNtOmJsb2NrXCIgLz5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtdHJhbnNwYXJlbnQgYmctY2xpcC10ZXh0IGJnLWdyYWRpZW50LXRvLXIgZnJvbS1bIzYwQTVGQV0gdmlhLVsjMkRENEJGXSB0by1bIzRBREU4MF1cIj5cbiAgICAgICAgICAgICAgV2l0aCBHcmFudHMsIFByb2JsZW0gU3RhdGVtZW50cyAmIFNwb25zb3JzXG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgPC9oMj5cbiAgICAgICAgICA8cCBjbGFzc05hbWU9XCJtdC00IHRleHQtYmFzZSBzbTp0ZXh0LWxnIHRleHQtZ3JheS0zMDAgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICBXZSBicmlkZ2UgY29sbGVnZSBoYWNrYXRob25zIHdpdGggY29ycG9yYXRlIHRlY2ggc3BvbnNvcnMuIFdoZXRoZXIgeW91IGFyZSBhIGNvbGxlZ2UgY2x1YiBzZWVraW5nIGNvLXNwb25zb3JzaGlwIG9yIGEgYnJhbmQgbG9va2luZyB0byByZWNydWl0IHRoZSB0b3AgMSUgYnVpbGRlcnMsIENERyBpcyB5b3VyIGdyb3d0aCBwYXJ0bmVyLlxuICAgICAgICAgIDwvcD5cblxuICAgICAgICAgIHsvKiBEdWFsIFRvZ2dsZSBQaWxsICovfVxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtOCBpbmxpbmUtZmxleCBwLTEuNSByb3VuZGVkLTJ4bCBiZy13aGl0ZS8xMCBiYWNrZHJvcC1ibHVyLW1kIGJvcmRlciBib3JkZXItd2hpdGUvMTAgc2hhZG93LWxnXCI+XG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEFjdGl2ZVRhYignY29sbGVnZXMnKX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtgcHgtNSBweS0yLjUgcm91bmRlZC14bCB0ZXh0LXhzIHNtOnRleHQtc20gZm9udC1ib2xkIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTIwMCBjdXJzb3ItcG9pbnRlciBmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiAke1xuICAgICAgICAgICAgICAgIGFjdGl2ZVRhYiA9PT0gJ2NvbGxlZ2VzJ1xuICAgICAgICAgICAgICAgICAgPyAnYmctZ3JhZGllbnQtdG8tciBmcm9tLVsjMTc2OUFBXSB0by1bIzEzOEE5RV0gdGV4dC13aGl0ZSBzaGFkb3ctbWQnXG4gICAgICAgICAgICAgICAgICA6ICd0ZXh0LWdyYXktMzAwIGhvdmVyOnRleHQtd2hpdGUnXG4gICAgICAgICAgICAgIH1gfVxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICA8Um9ja2V0IGNsYXNzTmFtZT1cInctNCBoLTRcIiAvPlxuICAgICAgICAgICAgICBGb3IgQ29sbGVnZXMgJiBIYWNrYXRob24gT3JnYW5pemVyc1xuICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldEFjdGl2ZVRhYignY29ycG9yYXRlcycpfVxuICAgICAgICAgICAgICBjbGFzc05hbWU9e2BweC01IHB5LTIuNSByb3VuZGVkLXhsIHRleHQteHMgc206dGV4dC1zbSBmb250LWJvbGQgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMjAwIGN1cnNvci1wb2ludGVyIGZsZXggaXRlbXMtY2VudGVyIGdhcC0yICR7XG4gICAgICAgICAgICAgICAgYWN0aXZlVGFiID09PSAnY29ycG9yYXRlcydcbiAgICAgICAgICAgICAgICAgID8gJ2JnLWdyYWRpZW50LXRvLXIgZnJvbS1bIzJCQUU2Nl0gdG8tWyMxMzhBOUVdIHRleHQtd2hpdGUgc2hhZG93LW1kJ1xuICAgICAgICAgICAgICAgICAgOiAndGV4dC1ncmF5LTMwMCBob3Zlcjp0ZXh0LXdoaXRlJ1xuICAgICAgICAgICAgICB9YH1cbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgPEJ1aWxkaW5nMiBjbGFzc05hbWU9XCJ3LTQgaC00XCIgLz5cbiAgICAgICAgICAgICAgRm9yIENvcnBvcmF0ZSBTcG9uc29ycyAmIEhpcmluZyBCcmFuZHNcbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogVGFiIDE6IEZvciBDb2xsZWdlcyAqL31cbiAgICAgICAge2FjdGl2ZVRhYiA9PT0gJ2NvbGxlZ2VzJyAmJiAoXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhbmltYXRlLWluIGZhZGUtaW4gZHVyYXRpb24tMzAwIHNwYWNlLXktMTJcIj5cbiAgICAgICAgICAgIHsvKiA0IENvcmUgUGlsbGFycyBmb3IgQ29sbGVnZXMgKi99XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTEgbWQ6Z3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTQgZ2FwLTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTYgcm91bmRlZC0yeGwgYmctd2hpdGUvNSBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIGhvdmVyOmJvcmRlci1bIzE3NjlBQV0vNjAgaG92ZXI6Ymctd2hpdGUvWzAuMDhdIHRyYW5zaXRpb24tYWxsIGdyb3VwXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEyIGgtMTIgcm91bmRlZC14bCBiZy1bIzE3NjlBQV0vMjAgdGV4dC1bIzYwQTVGQV0gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWItNCBncm91cC1ob3ZlcjpzY2FsZS0xMTAgdHJhbnNpdGlvbi10cmFuc2Zvcm1cIj5cbiAgICAgICAgICAgICAgICAgIDxEb2xsYXJTaWduIGNsYXNzTmFtZT1cInctNiBoLTZcIiAvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWxnIGZvbnQtYm9sZCB0ZXh0LXdoaXRlIG1iLTJcIj5cbiAgICAgICAgICAgICAgICAgIOKCuTI1SyDigJMg4oK5MkwgQ28tU3BvbnNvcnNoaXBcbiAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgc206dGV4dC1zbSB0ZXh0LWdyYXktMzAwIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgRGlyZWN0IGNhc2ggcHJpemUgcG9vbCBzdXBwb3J0IGFuZCBjby1zcG9uc29yc2hpcCBmdW5kcyBmb3IgdmVyaWZpZWQgY29sbGVnZSBoYWNrYXRob25zIGFjcm9zcyBTb3V0aCBJbmRpYS5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC02IHJvdW5kZWQtMnhsIGJnLXdoaXRlLzUgYm9yZGVyIGJvcmRlci13aGl0ZS8xMCBob3Zlcjpib3JkZXItWyMyQkFFNjZdLzYwIGhvdmVyOmJnLXdoaXRlL1swLjA4XSB0cmFuc2l0aW9uLWFsbCBncm91cFwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xMiBoLTEyIHJvdW5kZWQteGwgYmctWyMyQkFFNjZdLzIwIHRleHQtWyM0QURFODBdIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIG1iLTQgZ3JvdXAtaG92ZXI6c2NhbGUtMTEwIHRyYW5zaXRpb24tdHJhbnNmb3JtXCI+XG4gICAgICAgICAgICAgICAgICA8Q29kZTIgY2xhc3NOYW1lPVwidy02IGgtNlwiIC8+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtbGcgZm9udC1ib2xkIHRleHQtd2hpdGUgbWItMlwiPlxuICAgICAgICAgICAgICAgICAgSW5kdXN0cnkgUHJvYmxlbSBTdGF0ZW1lbnRzXG4gICAgICAgICAgICAgICAgPC9oMz5cbiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1ncmF5LTMwMCBsZWFkaW5nLXJlbGF4ZWRcIj5cbiAgICAgICAgICAgICAgICAgIFJlYWwgZW50ZXJwcmlzZSBBSSwgRmludGVjaCwgQWdlbnRpYyBzeXN0ZW1zLCBhbmQgRGF0YSBwaXBlbGluZXMgcHJvYmxlbXMgZGVzaWduZWQgYnkgcHJhY3RpdGlvbmVycyBmcm9tIE1pY3Jvc29mdCwgQW1hem9uLCBhbmQgdW5pY29ybnMuXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNiByb3VuZGVkLTJ4bCBiZy13aGl0ZS81IGJvcmRlciBib3JkZXItd2hpdGUvMTAgaG92ZXI6Ym9yZGVyLVsjRDZBODRGXS82MCBob3ZlcjpiZy13aGl0ZS9bMC4wOF0gdHJhbnNpdGlvbi1hbGwgZ3JvdXBcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTIgaC0xMiByb3VuZGVkLXhsIGJnLVsjRDZBODRGXS8yMCB0ZXh0LVsjRjVDMjZCXSBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi00IGdyb3VwLWhvdmVyOnNjYWxlLTExMCB0cmFuc2l0aW9uLXRyYW5zZm9ybVwiPlxuICAgICAgICAgICAgICAgICAgPENwdSBjbGFzc05hbWU9XCJ3LTYgaC02XCIgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LWJvbGQgdGV4dC13aGl0ZSBtYi0yXCI+XG4gICAgICAgICAgICAgICAgICBDbG91ZCAmIEdlbkFJIEFQSSBHcmFudHNcbiAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgc206dGV4dC1zbSB0ZXh0LWdyYXktMzAwIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgU3BvbnNvcmVkIEFQSSBjcmVkaXRzIChHZW1pbmksIEdyb3EsIFN1cGFiYXNlLCBNb2RhbCkgYW5kIGRldmVsb3BlciBzYW5kYm94ZXMgZm9yIGV2ZXJ5IHBhcnRpY2lwYXRpbmcgc3R1ZGVudCB0ZWFtLlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTYgcm91bmRlZC0yeGwgYmctd2hpdGUvNSBib3JkZXIgYm9yZGVyLXdoaXRlLzEwIGhvdmVyOmJvcmRlci1bIzEzOEE5RV0vNjAgaG92ZXI6Ymctd2hpdGUvWzAuMDhdIHRyYW5zaXRpb24tYWxsIGdyb3VwXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEyIGgtMTIgcm91bmRlZC14bCBiZy1bIzEzOEE5RV0vMjAgdGV4dC1bIzJERDRCRl0gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWItNCBncm91cC1ob3ZlcjpzY2FsZS0xMTAgdHJhbnNpdGlvbi10cmFuc2Zvcm1cIj5cbiAgICAgICAgICAgICAgICAgIDxVc2VycyBjbGFzc05hbWU9XCJ3LTYgaC02XCIgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LWJvbGQgdGV4dC13aGl0ZSBtYi0yXCI+XG4gICAgICAgICAgICAgICAgICBTZW5pb3IgTWVudG9ycyAmIEp1cnlcbiAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgc206dGV4dC1zbSB0ZXh0LWdyYXktMzAwIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgSW5kdXN0cnkgVlBzLCBFbmdpbmVlcmluZyBEaXJlY3RvcnMsIGFuZCBQcmluY2lwYWwgQXJjaGl0ZWN0cyBmbHkgZG93biBvciBqb2luIGxpdmUgdG8gbWVudG9yIGFuZCBqdWRnZSB0aGUgZ3JhbmQgZmluYWxlLlxuICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgey8qIEJhbm5lcjogSG93IENERyBIZWxwcyBDb2xsZWdlIENsdWJzICovfVxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTggcm91bmRlZC0zeGwgYmctZ3JhZGllbnQtdG8tciBmcm9tLVsjMTc2OUFBXS8zMCB2aWEtWyMwQjFGMzNdIHRvLVsjMTM4QTlFXS8yMCBib3JkZXIgYm9yZGVyLVsjMTc2OUFBXS80MCBmbGV4IGZsZXgtY29sIGxnOmZsZXgtcm93IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTYgc2hhZG93LTJ4bFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktMiB0ZXh0LWNlbnRlciBsZzp0ZXh0LWxlZnRcIj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LVsjRjVDMjZCXSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXIgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbGc6anVzdGlmeS1zdGFydCBnYXAtMS41XCI+XG4gICAgICAgICAgICAgICAgICA8U3BhcmtsZXMgY2xhc3NOYW1lPVwidy00IGgtNFwiIC8+XG4gICAgICAgICAgICAgICAgICBDb2xsZWdlIEhhY2thdGhvbiBHcmFudHMgMjAyNi0yN1xuICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC0yeGwgc206dGV4dC0zeGwgZm9udC1leHRyYWJvbGQgdGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgT3JnYW5pemluZyBhIEhhY2thdGhvbiBvbiBZb3VyIENhbXB1cz9cbiAgICAgICAgICAgICAgICA8L2g0PlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1ncmF5LTMwMCBtYXgtdy0yeGwgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICAgICAgICBBcHBseSB3aXRoIHlvdXIgY29sbGVnZSBwcm9wb3NhbC4gV2UgZXZhbHVhdGUgdGhlIHNjYWxlLCBzdHVkZW50IGZvb3RmYWxsLCBhbmQgdHJhY2tzIHRvIHByb3ZpZGUgY28tc3BvbnNvcnNoaXAgZ3JhbnRzIHdpdGhpbiA1IHdvcmtpbmcgZGF5cy5cbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggZmxleC1jb2wgc206ZmxleC1yb3cgZ2FwLTMgc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVPcGVuSW5xdWlyeSgnY29sbGVnZScpfVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicHgtNiBweS0zLjUgcm91bmRlZC14bCBiZy1ncmFkaWVudC10by1yIGZyb20tWyMyQkFFNjZdIHRvLVsjMTM4QTlFXSB0ZXh0LXdoaXRlIGZvbnQtYm9sZCB0ZXh0LXNtIHNoYWRvdy1sZyBob3ZlcjpzaGFkb3ctZW1lcmFsZC01MDAvMzAgaG92ZXI6c2NhbGUtWzEuMDJdIHRyYW5zaXRpb24tYWxsIGN1cnNvci1wb2ludGVyIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0yXCJcbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICA8Um9ja2V0IGNsYXNzTmFtZT1cInctNCBoLTRcIiAvPlxuICAgICAgICAgICAgICAgICAgPHNwYW4+QXBwbHkgZm9yIEhhY2thdGhvbiBDby1TcG9uc29yc2hpcDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICB7b25SZXF1ZXN0U3BvbnNvcnNoaXAgJiYgKFxuICAgICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXtvblJlcXVlc3RTcG9uc29yc2hpcH1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicHgtNSBweS0zLjUgcm91bmRlZC14bCBiZy13aGl0ZS8xMCBob3ZlcjpiZy13aGl0ZS8yMCB0ZXh0LXdoaXRlIGZvbnQtc2VtaWJvbGQgdGV4dC1zbSBib3JkZXIgYm9yZGVyLXdoaXRlLzIwIHRyYW5zaXRpb24tYWxsIGN1cnNvci1wb2ludGVyXCJcbiAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgQ2FtcHVzIFNlc3Npb24gQm9va2luZ1xuICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgKX1cblxuICAgICAgICB7LyogVGFiIDI6IEZvciBDb3Jwb3JhdGUgU3BvbnNvcnMgKi99XG4gICAgICAgIHthY3RpdmVUYWIgPT09ICdjb3Jwb3JhdGVzJyAmJiAoXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhbmltYXRlLWluIGZhZGUtaW4gZHVyYXRpb24tMzAwIHNwYWNlLXktMTJcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMSBtZDpncmlkLWNvbHMtMyBnYXAtNlwiPlxuICAgICAgICAgICAgICB7LyogVGllciAxICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNyByb3VuZGVkLTJ4bCBiZy13aGl0ZS81IGJvcmRlciBib3JkZXItd2hpdGUvMTAgaG92ZXI6Ym9yZGVyLWdyYXktMzAwLzQwIHRyYW5zaXRpb24tYWxsIGZsZXggZmxleC1jb2wganVzdGlmeS1iZXR3ZWVuXCI+XG4gICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyBmb250LWJvbGQgdGV4dC1ncmF5LTQwMCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0IG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgVHJhY2sgU3BvbnNvclxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC0yeGwgZm9udC1ibGFjayB0ZXh0LXdoaXRlXCI+4oK5NTAsMDAwPC9oMz5cbiAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1ncmF5LTMwMCBtdC0yXCI+XG4gICAgICAgICAgICAgICAgICAgIFNwb25zb3IgYSBkZWRpY2F0ZWQgcHJvYmxlbSB0cmFjayAoZS5nLiwgQmVzdCBBSSBBZ2VudCwgQmVzdCBPcGVuIFNvdXJjZSBIYWNrKS5cbiAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtNSBzcGFjZS15LTIuNSB0ZXh0LXhzIHRleHQtZ3JheS0zMDAgYm9yZGVyLXQgYm9yZGVyLXdoaXRlLzEwIHB0LTRcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxDaGVja0NpcmNsZTIgY2xhc3NOYW1lPVwidy00IGgtNCB0ZXh0LVsjMkJBRTY2XSBzaHJpbmstMFwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgPHNwYW4+Q3VzdG9tIHByb2JsZW0gc3RhdGVtZW50ICYgYnJhbmRpbmc8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtWyMyQkFFNjZdIHNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj5BY2Nlc3MgdG8gdG9wIDEwIGZpbmFsaXN0IHJlc3VtZXM8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtWyMyQkFFNjZdIHNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj5Mb2dvIG9uIGFsbCBiYW5uZXJzLCBjZXJ0aWZpY2F0ZXMgJiB3ZWJzaXRlPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxidXR0b25cbiAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZU9wZW5JbnF1aXJ5KCdzcG9uc29yJyl9XG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJtdC02IHctZnVsbCBweS0yLjUgcm91bmRlZC14bCBiZy13aGl0ZS8xMCBob3ZlcjpiZy13aGl0ZS8yMCB0ZXh0LXdoaXRlIHRleHQteHMgZm9udC1ib2xkIHRyYW5zaXRpb24tY29sb3JzIGN1cnNvci1wb2ludGVyXCJcbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICBTcG9uc29yIGEgVHJhY2tcbiAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgey8qIFRpZXIgMiAoSGlnaGxpZ2h0ZWQpICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNyByb3VuZGVkLTJ4bCBiZy1ncmFkaWVudC10by1iIGZyb20tWyMxNzY5QUFdLzQwIHRvLVsjMEIxRjMzXSBib3JkZXItMiBib3JkZXItWyM2MEE1RkFdIHJlbGF0aXZlIGZsZXggZmxleC1jb2wganVzdGlmeS1iZXR3ZWVuIHNoYWRvdy0yeGxcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIC10b3AtMy41IGxlZnQtMS8yIC10cmFuc2xhdGUteC0xLzIgcHgtMyBweS0wLjUgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLXIgZnJvbS1bI0Q2QTg0Rl0gdG8tWyNGNUMyNkJdIHRleHQtWyMwQjFGMzNdIHRleHQtWzExcHhdIGZvbnQtZXh0cmFib2xkIHVwcGVyY2FzZSB0cmFja2luZy13aWRlIHNoYWRvdy1tZFwiPlxuICAgICAgICAgICAgICAgICAgTW9zdCBQb3B1bGFyIEZvciBIaXJpbmdcbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LVsjNjBBNUZBXSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0IG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgUHJlbWllciBDby1TcG9uc29yXG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJsYWNrIHRleHQtd2hpdGVcIj7igrkxLDUwLDAwMDwvaDM+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtZ3JheS0yMDAgbXQtMlwiPlxuICAgICAgICAgICAgICAgICAgICBGdWxsIHJlY3J1aXRtZW50IGFjY2VzcywganVyeSBzZWF0LCBrZXlub3RlIHNsb3QsIGFuZCB0b3AtdGllciBicmFuZCBwbGFjZW1lbnQuXG4gICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTUgc3BhY2UteS0yLjUgdGV4dC14cyB0ZXh0LWdyYXktMjAwIGJvcmRlci10IGJvcmRlci13aGl0ZS8yMCBwdC00XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT1cInctNCBoLTQgdGV4dC1bIzRBREU4MF0gc2hyaW5rLTBcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPkRpcmVjdCBoaXJpbmcgcmlnaHRzIGZvciB0b3AgNTAgZW5naW5lZXJpbmcgcGFydGljaXBhbnRzPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxDaGVja0NpcmNsZTIgY2xhc3NOYW1lPVwidy00IGgtNCB0ZXh0LVsjNEFERTgwXSBzaHJpbmstMFwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgPHNwYW4+S2V5bm90ZSAvIFRlY2ggdGFsayBzbG90IGJlZm9yZSBoYWNrYXRob24ga2lja29mZjwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT1cInctNCBoLTQgdGV4dC1bIzRBREU4MF0gc2hyaW5rLTBcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPlNlYXQgb24gdGhlIEdyYW5kIEZpbmFsZSBldmFsdWF0aW9uIGp1cnkgcGFuZWw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtWyM0QURFODBdIHNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj5PZmZpY2lhbCBicmFuZCBib290aCAvIHJlY3J1aXRtZW50IGxvdW5nZSBhdCB2ZW51ZTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBoYW5kbGVPcGVuSW5xdWlyeSgnc3BvbnNvcicpfVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwibXQtNiB3LWZ1bGwgcHktMyByb3VuZGVkLXhsIGJnLWdyYWRpZW50LXRvLXIgZnJvbS1bIzE3NjlBQV0gdmlhLVsjMTM4QTlFXSB0by1bIzJCQUU2Nl0gaG92ZXI6YnJpZ2h0bmVzcy0xMTAgdGV4dC13aGl0ZSB0ZXh0LXhzIGZvbnQtZXh0cmFib2xkIHNoYWRvdy1sZyB0cmFuc2l0aW9uLWFsbCBjdXJzb3ItcG9pbnRlclwiXG4gICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgQmVjb21lIFByZW1pZXIgQ28tU3BvbnNvclxuICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICB7LyogVGllciAzICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNyByb3VuZGVkLTJ4bCBiZy13aGl0ZS81IGJvcmRlciBib3JkZXItd2hpdGUvMTAgaG92ZXI6Ym9yZGVyLWdyYXktMzAwLzQwIHRyYW5zaXRpb24tYWxsIGZsZXggZmxleC1jb2wganVzdGlmeS1iZXR3ZWVuXCI+XG4gICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC14cyBmb250LWJvbGQgdGV4dC1ncmF5LTQwMCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0IG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgQVBJICYgRGV2ZWxvcGVyIFRvb2wgU3BvbnNvclxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC0yeGwgZm9udC1ibGFjayB0ZXh0LXdoaXRlXCI+SW4tS2luZCAvIENyZWRpdHM8L2gzPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LWdyYXktMzAwIG10LTJcIj5cbiAgICAgICAgICAgICAgICAgICAgUHJvdmlkZSBjbG91ZCBjcmVkaXRzLCBBUEkga2V5cywgb3IgZGV2ZWxvcGVyIHRvb2xpbmcgZm9yIHN0dWRlbnRzIHRvIGJ1aWxkIG9uIHlvdXIgcGxhdGZvcm0uXG4gICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTUgc3BhY2UteS0yLjUgdGV4dC14cyB0ZXh0LWdyYXktMzAwIGJvcmRlci10IGJvcmRlci13aGl0ZS8xMCBwdC00XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8Q2hlY2tDaXJjbGUyIGNsYXNzTmFtZT1cInctNCBoLTQgdGV4dC1bIzJCQUU2Nl0gc2hyaW5rLTBcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPk1hc3MgYWRvcHRpb246IDUwMCsgc3R1ZGVudHMgaW50ZWdyYXRlIHlvdXIgQVBJPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxDaGVja0NpcmNsZTIgY2xhc3NOYW1lPVwidy00IGgtNCB0ZXh0LVsjMkJBRTY2XSBzaHJpbmstMFwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgPHNwYW4+J0Jlc3QgUHJvamVjdCBidWlsdCBvbiBbWW91ciBUb29sXScgYXdhcmQgY2F0ZWdvcnk8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtWyMyQkFFNjZdIHNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj5MaXZlIHByb2R1Y3QgZGVtbyB3b3Jrc2hvcCBiZWZvcmUgaGFja2luZyBiZWdpbnM8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4gaGFuZGxlT3BlbklucXVpcnkoJ3Nwb25zb3InKX1cbiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cIm10LTYgdy1mdWxsIHB5LTIuNSByb3VuZGVkLXhsIGJnLXdoaXRlLzEwIGhvdmVyOmJnLXdoaXRlLzIwIHRleHQtd2hpdGUgdGV4dC14cyBmb250LWJvbGQgdHJhbnNpdGlvbi1jb2xvcnMgY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgIE9mZmVyIERldmVsb3BlciBDcmVkaXRzXG4gICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIHsvKiBDb3Jwb3JhdGUgVmFsdWUgUHJvcCAqL31cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC02IHJvdW5kZWQtMnhsIGJnLVsjMGQyYTQ1XSBib3JkZXIgYm9yZGVyLVsjMTc2OUFBXS80MCBmbGV4IGZsZXgtY29sIG1kOmZsZXgtcm93IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQgdGV4dC14cyB0ZXh0LWdyYXktMzAwXCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgICA8QnJpZWZjYXNlIGNsYXNzTmFtZT1cInctNiBoLTYgdGV4dC1bI0Q2QTg0Rl0gc2hyaW5rLTBcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuPlxuICAgICAgICAgICAgICAgICAgPHN0cm9uZz5XaHkgQnJhbmRzIFNwb25zb3Igd2l0aCBDREc6PC9zdHJvbmc+IFNhdmUgNzAlIGluIGNhbXB1cyByZWNydWl0bWVudCBjb3N0cyBieSBpZGVudGlmeWluZyB2ZXR0ZWQsIGNvZGUtdGVzdGVkIGVuZ2luZWVycyB0aHJvdWdoIGhpZ2gtc3Rha2VzIGhhY2thdGhvbnMgYWNyb3NzIDUwKyB1bml2ZXJzaXRpZXMuXG4gICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IGhhbmRsZU9wZW5JbnF1aXJ5KCdzcG9uc29yJyl9XG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwic2hyaW5rLTAgcHgtNCBweS0yIHJvdW5kZWQtbGcgYmctWyNENkE4NEZdIGhvdmVyOmJnLVsjYjg4YzNhXSB0ZXh0LVsjMEIxRjMzXSBmb250LWJvbGQgdHJhbnNpdGlvbi1jb2xvcnMgY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgRG93bmxvYWQgU3BvbnNvciBEZWNrXG4gICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICl9XG4gICAgICA8L2Rpdj5cblxuICAgICAgey8qIElucXVpcnkgTW9kYWwgKi99XG4gICAgICB7aW5xdWlyeU1vZGFsT3BlbiAmJiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZml4ZWQgaW5zZXQtMCB6LTUwIG92ZXJmbG93LXktYXV0byBiZy1ibGFjay83NSBiYWNrZHJvcC1ibHVyLXNtIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHAtNFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgdy1mdWxsIG1heC13LXhsIGJnLXdoaXRlIHRleHQtZ3JheS05MDAgcm91bmRlZC0yeGwgc2hhZG93LTJ4bCBwLTYgc206cC04IGFuaW1hdGUtaW4gZmFkZS1pbiB6b29tLWluLTk1IGR1cmF0aW9uLTIwMFwiPlxuICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRJbnF1aXJ5TW9kYWxPcGVuKGZhbHNlKX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTQgcmlnaHQtNCBwLTIgdGV4dC1ncmF5LTQwMCBob3Zlcjp0ZXh0LWdyYXktNzAwIHJvdW5kZWQtZnVsbFwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIOKclVxuICAgICAgICAgICAgPC9idXR0b24+XG5cbiAgICAgICAgICAgIHtmb3JtU3VibWl0dGVkID8gKFxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB5LTggdGV4dC1jZW50ZXIgc3BhY2UteS0zXCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTE0IGgtMTQgYmctZW1lcmFsZC0xMDAgdGV4dC1lbWVyYWxkLTYwMCByb3VuZGVkLWZ1bGwgbXgtYXV0byBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgPFNoaWVsZENoZWNrIGNsYXNzTmFtZT1cInctOCBoLThcIiAvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGQgdGV4dC1bIzBCMUYzM11cIj5cbiAgICAgICAgICAgICAgICAgIElucXVpcnkgU3VibWl0dGVkIFN1Y2Nlc3NmdWxseSFcbiAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1ncmF5LTYwMCBtYXgtdy1tZCBteC1hdXRvXCI+XG4gICAgICAgICAgICAgICAgICBUaGFuayB5b3UsIDxzdHJvbmc+e2Zvcm1EYXRhLm5hbWV9PC9zdHJvbmc+LiBPdXIgSGFja2F0aG9uICYgUGFydG5lcnNoaXBzIGRlc2sgd2lsbCByZXZpZXcgeW91ciB7aW5xdWlyeVR5cGUgPT09ICdjb2xsZWdlJyA/ICdjb2xsZWdlIGhhY2thdGhvbiBwcm9wb3NhbCcgOiAnc3BvbnNvcnNoaXAgcmVxdWVzdCd9IGFuZCBjb250YWN0IHlvdSB3aXRoaW4gMjQgaG91cnMuXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtNFwiPlxuICAgICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRJbnF1aXJ5TW9kYWxPcGVuKGZhbHNlKX1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicHgtNiBweS0yLjUgcm91bmRlZC14bCBiZy1bIzBCMUYzM10gdGV4dC13aGl0ZSB0ZXh0LXhzIGZvbnQtYm9sZCBob3ZlcjpiZy1bIzE3NjlBQV0gdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICBEb25lXG4gICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICApIDogKFxuICAgICAgICAgICAgICA8Zm9ybSBvblN1Ym1pdD17aGFuZGxlRm9ybVN1Ym1pdH0gY2xhc3NOYW1lPVwic3BhY2UteS00XCI+XG4gICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQteHMgZm9udC1ib2xkIHRleHQtWyMxNzY5QUFdIHVwcGVyY2FzZSB0cmFja2luZy13aWRlclwiPlxuICAgICAgICAgICAgICAgICAgICB7aW5xdWlyeVR5cGUgPT09ICdjb2xsZWdlJyA/ICdDb2xsZWdlIE9yZ2FuaXplciBGb3JtJyA6ICdDb3Jwb3JhdGUgQnJhbmQgU3BvbnNvcnNoaXAnfVxuICAgICAgICAgICAgICAgICAgPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQteGwgc206dGV4dC0yeGwgZm9udC1ib2xkIHRleHQtWyMwQjFGMzNdIG10LTFcIj5cbiAgICAgICAgICAgICAgICAgICAge2lucXVpcnlUeXBlID09PSAnY29sbGVnZSdcbiAgICAgICAgICAgICAgICAgICAgICA/ICdBcHBseSBmb3IgSGFja2F0aG9uIENvLVNwb25zb3JzaGlwICYgR3JhbnRzJ1xuICAgICAgICAgICAgICAgICAgICAgIDogJ1BhcnRuZXIgYXMgYSBIYWNrYXRob24gQ29ycG9yYXRlIFNwb25zb3InfVxuICAgICAgICAgICAgICAgICAgPC9oMz5cbiAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1ncmF5LTUwMCBtdC0xXCI+XG4gICAgICAgICAgICAgICAgICAgIEZpbGwgaW4ga2V5IGRldGFpbHMgYmVsb3cgYW5kIG91ciB0ZWFtIHdpbGwgZ2V0IGluIHRvdWNoIGltbWVkaWF0ZWx5LlxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0xIHNtOmdyaWQtY29scy0yIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC14cyBmb250LWJvbGQgdGV4dC1ncmF5LTcwMCBtYi0xXCI+WW91ciBOYW1lICo8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXG4gICAgICAgICAgICAgICAgICAgICAgcmVxdWlyZWRcbiAgICAgICAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cImUuZy4gRHIuIFJhbWVzaCAvIFNhaSBLdW1hclwiXG4gICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e2Zvcm1EYXRhLm5hbWV9XG4gICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRGb3JtRGF0YSh7IC4uLmZvcm1EYXRhLCBuYW1lOiBlLnRhcmdldC52YWx1ZSB9KX1cbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgcHgtMyBweS0yIHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTMwMCB0ZXh0LXhzIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLVsjMTc2OUFBXSBmb2N1czpvdXRsaW5lLW5vbmVcIlxuICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiYmxvY2sgdGV4dC14cyBmb250LWJvbGQgdGV4dC1ncmF5LTcwMCBtYi0xXCI+V29yayAvIENvbGxlZ2UgRW1haWwgKjwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJlbWFpbFwiXG4gICAgICAgICAgICAgICAgICAgICAgcmVxdWlyZWRcbiAgICAgICAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIm5hbWVAZG9tYWluLmVkdSAvIGNvbVwiXG4gICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e2Zvcm1EYXRhLmVtYWlsfVxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0Rm9ybURhdGEoeyAuLi5mb3JtRGF0YSwgZW1haWw6IGUudGFyZ2V0LnZhbHVlIH0pfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBweC0zIHB5LTIgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWdyYXktMzAwIHRleHQteHMgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctWyMxNzY5QUFdIGZvY3VzOm91dGxpbmUtbm9uZVwiXG4gICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktNzAwIG1iLTFcIj5QaG9uZSAvIFdoYXRzQXBwICo8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGVsXCJcbiAgICAgICAgICAgICAgICAgICAgICByZXF1aXJlZFxuICAgICAgICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiKzkxIDk4NzY1IDQzMjEwXCJcbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZT17Zm9ybURhdGEucGhvbmV9XG4gICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRGb3JtRGF0YSh7IC4uLmZvcm1EYXRhLCBwaG9uZTogZS50YXJnZXQudmFsdWUgfSl9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIHB4LTMgcHktMiByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItZ3JheS0zMDAgdGV4dC14cyBmb2N1czpyaW5nLTIgZm9jdXM6cmluZy1bIzE3NjlBQV0gZm9jdXM6b3V0bGluZS1ub25lXCJcbiAgICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImJsb2NrIHRleHQteHMgZm9udC1ib2xkIHRleHQtZ3JheS03MDAgbWItMVwiPlxuICAgICAgICAgICAgICAgICAgICAgIHtpbnF1aXJ5VHlwZSA9PT0gJ2NvbGxlZ2UnID8gJ0NvbGxlZ2UgLyBVbml2ZXJzaXR5JyA6ICdDb21wYW55IC8gQnJhbmQgTmFtZSd9ICpcbiAgICAgICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgICAgICAgICAgIHJlcXVpcmVkXG4gICAgICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9e2lucXVpcnlUeXBlID09PSAnY29sbGVnZScgPyAnZS5nLiBWSUlUIC8gU1JNIC8gR0lUQU0nIDogJ2UuZy4gQWNtZSBBSSBDb3JwJ31cbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZT17Zm9ybURhdGEub3JnYW5pemF0aW9ufVxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0Rm9ybURhdGEoeyAuLi5mb3JtRGF0YSwgb3JnYW5pemF0aW9uOiBlLnRhcmdldC52YWx1ZSB9KX1cbiAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgcHgtMyBweS0yIHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTMwMCB0ZXh0LXhzIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLVsjMTc2OUFBXSBmb2N1czpvdXRsaW5lLW5vbmVcIlxuICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ3JpZC1jb2xzLTEgc206Z3JpZC1jb2xzLTIgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktNzAwIG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7aW5xdWlyeVR5cGUgPT09ICdjb2xsZWdlJyA/ICdIYWNrYXRob24gVGl0bGUgLyBFZGl0aW9uJyA6ICdUYXJnZXQgU3BvbnNvcnNoaXAgVGllcid9XG4gICAgICAgICAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj17aW5xdWlyeVR5cGUgPT09ICdjb2xsZWdlJyA/ICdlLmcuIEhhY2tTcHJpbnQgMjAyNicgOiAnUHJlbWllciAvIFRyYWNrIC8gQVBJJ31cbiAgICAgICAgICAgICAgICAgICAgICB2YWx1ZT17Zm9ybURhdGEuaGFja2F0aG9uTmFtZX1cbiAgICAgICAgICAgICAgICAgICAgICBvbkNoYW5nZT17KGUpID0+IHNldEZvcm1EYXRhKHsgLi4uZm9ybURhdGEsIGhhY2thdGhvbk5hbWU6IGUudGFyZ2V0LnZhbHVlIH0pfVxuICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBweC0zIHB5LTIgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLWdyYXktMzAwIHRleHQteHMgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctWyMxNzY5QUFdIGZvY3VzOm91dGxpbmUtbm9uZVwiXG4gICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktNzAwIG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7aW5xdWlyeVR5cGUgPT09ICdjb2xsZWdlJyA/ICdFeHBlY3RlZCBTdHVkZW50IFBhcnRpY2lwYXRpb24nIDogJ1RhcmdldCBIaXJpbmcgVm9sdW1lJ31cbiAgICAgICAgICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICAgICAgICAgICAgPHNlbGVjdFxuICAgICAgICAgICAgICAgICAgICAgIHZhbHVlPXtmb3JtRGF0YS5leHBlY3RlZFN0dWRlbnRzfVxuICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0Rm9ybURhdGEoeyAuLi5mb3JtRGF0YSwgZXhwZWN0ZWRTdHVkZW50czogZS50YXJnZXQudmFsdWUgfSl9XG4gICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIHB4LTMgcHktMiByb3VuZGVkLXhsIGJvcmRlciBib3JkZXItZ3JheS0zMDAgdGV4dC14cyBmb2N1czpyaW5nLTIgZm9jdXM6cmluZy1bIzE3NjlBQV0gYmctd2hpdGVcIlxuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cIjEwMC0zMDBcIj4xMDAgLSAzMDAgU3R1ZGVudHM8L29wdGlvbj5cbiAgICAgICAgICAgICAgICAgICAgICA8b3B0aW9uIHZhbHVlPVwiMzAwLTUwMFwiPjMwMCAtIDUwMCBTdHVkZW50czwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICAgIDxvcHRpb24gdmFsdWU9XCI1MDAtMTAwMFwiPjUwMCAtIDEsMDAwIFN0dWRlbnRzPC9vcHRpb24+XG4gICAgICAgICAgICAgICAgICAgICAgPG9wdGlvbiB2YWx1ZT1cIjEwMDArXCI+MSwwMDArIFN0dWRlbnRzIChTdGF0ZSAvIE5hdGlvbmFsIExldmVsKTwvb3B0aW9uPlxuICAgICAgICAgICAgICAgICAgICA8L3NlbGVjdD5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJibG9jayB0ZXh0LXhzIGZvbnQtYm9sZCB0ZXh0LWdyYXktNzAwIG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgQWRkaXRpb25hbCBEZXRhaWxzIC8gU3BlY2lmaWMgUmVxdWlyZW1lbnRzXG4gICAgICAgICAgICAgICAgICA8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgPHRleHRhcmVhXG4gICAgICAgICAgICAgICAgICAgIHJvd3M9ezJ9XG4gICAgICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiVGVudGF0aXZlIGRhdGVzLCBwcmVmZXJyZWQgdHJhY2tzLCBqdXJ5IHJlcXVpcmVtZW50cywgb3Igc3BvbnNvcnNoaXAgcGFja2FnZSBpbnF1aXJpZXMuLi5cIlxuICAgICAgICAgICAgICAgICAgICB2YWx1ZT17Zm9ybURhdGEubm90ZXN9XG4gICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0Rm9ybURhdGEoeyAuLi5mb3JtRGF0YSwgbm90ZXM6IGUudGFyZ2V0LnZhbHVlIH0pfVxuICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgcHgtMyBweS0yIHJvdW5kZWQteGwgYm9yZGVyIGJvcmRlci1ncmF5LTMwMCB0ZXh0LXhzIGZvY3VzOnJpbmctMiBmb2N1czpyaW5nLVsjMTc2OUFBXSBmb2N1czpvdXRsaW5lLW5vbmUgcmVzaXplLW5vbmVcIlxuICAgICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHQtMlwiPlxuICAgICAgICAgICAgICAgICAgPGJ1dHRvblxuICAgICAgICAgICAgICAgICAgICB0eXBlPVwic3VibWl0XCJcbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIHB5LTMgcm91bmRlZC14bCBiZy1ncmFkaWVudC10by1yIGZyb20tWyMxNzY5QUFdIHRvLVsjMkJBRTY2XSB0ZXh0LXdoaXRlIGZvbnQtYm9sZCB0ZXh0LXhzIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBob3ZlcjpicmlnaHRuZXNzLTEwNSB0cmFuc2l0aW9uLWFsbCBzaGFkb3ctbWQgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTIgY3Vyc29yLXBvaW50ZXJcIlxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICA8U2VuZCBjbGFzc05hbWU9XCJ3LTQgaC00XCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPHNwYW4+U2VuZCBIYWNrYXRob24gUHJvcG9zYWw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9mb3JtPlxuICAgICAgICAgICAgKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICApfVxuICAgIDwvc2VjdGlvbj5cbiAgKTtcbn07XG4iXSwiZmlsZSI6IkM6L1VzZXJzL01vaGl0aHNhaSBNYWxsYS9PbmVEcml2ZS9EZXNrdG9wL2N0cmwrZGF0YStncm93L3NyYy9jb21wb25lbnRzL0hhY2thdGhvblNwb25zb3JzaGlwLnRzeCJ9

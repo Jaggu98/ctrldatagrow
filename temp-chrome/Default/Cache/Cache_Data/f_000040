@@ -1,0 +1,215 @@
+export const EXPERTS_DATA = [
+  {
+    id: "rohit-mishra",
+    name: "Rohit Mishra",
+    role: "Principal AI Scientist",
+    company: "Leading AI Lab / ex-Amazon",
+    category: "ai",
+    categoryLabel: "AI & Data Science",
+    expertise: "Large Language Models & GenAI in Production",
+    topics: ["LLM Orchestration", "RAG Architectures", "AI Agents at Scale"],
+    availability: "Next: Oct 28",
+    format: "Offline & Virtual",
+    image: "/images/expert-rohit.jpg",
+    bio: "14+ years building large-scale ML systems and recommendation engines. Passionate about bringing production ML engineering to campus.",
+    experience: "14+ Years Exp"
+  },
+  {
+    id: "priya-subramanian",
+    name: "Priya Subramanian",
+    role: "VP of Engineering",
+    company: "Fintech Unicorn",
+    category: "leadership",
+    categoryLabel: "Leadership & Eng",
+    expertise: "Distributed Systems & Scaling Teams",
+    topics: ["Microservices at Scale", "High-Throughput Payments", "Engineering Career Ladders"],
+    availability: "Next: Nov 04",
+    format: "Offline / Keynote",
+    image: "/images/expert-priya.jpg",
+    bio: "Leads engineering for 40M+ active users. Mentored 500+ student engineers across top universities.",
+    experience: "16+ Years Exp"
+  },
+  {
+    id: "vikram-anand",
+    name: "Vikram Anand",
+    role: "Staff Systems Architect",
+    company: "Cloud Infrastructure Corp",
+    category: "cloud",
+    categoryLabel: "Cloud & DevOps",
+    expertise: "Kubernetes, Cloud Native & Observability",
+    topics: ["Kubernetes Internals", "Zero-Downtime Deployments", "SRE Practices"],
+    availability: "Next: Nov 10",
+    format: "Workshop / Offline",
+    image: "/images/expert-vikram.jpg",
+    bio: "Author of widely adopted open-source tools. Has delivered 40+ hands-on bootcamps for student developers.",
+    experience: "12+ Years Exp"
+  },
+  {
+    id: "sneha-kapoor",
+    name: "Sneha Kapoor",
+    role: "Head of Product & Data",
+    company: "Global HealthTech",
+    category: "architecture",
+    categoryLabel: "Product & Architecture",
+    expertise: "Data Products & System Design",
+    topics: ["Product Roadmapping for Engineers", "Data Governance", "Designing for Millions"],
+    availability: "Next: Nov 18",
+    format: "Virtual & Offline",
+    image: "/images/expert-sneha.jpg",
+    bio: "Specializes in bridging business goals with technical architecture. Regular speaker at international tech symposiums.",
+    experience: "11+ Years Exp"
+  }
+];
+export const ENGAGEMENTS_DATA = [
+  {
+    id: "guest-lectures",
+    title: "Guest Lectures",
+    subtitle: "Expert Masterclasses",
+    description: "Specialized 90-120 minute sessions bringing current industry blueprints, technology transitions, and architectural trade-offs to the lecture hall.",
+    duration: "90 - 120 mins",
+    audience: "Entire Batch / Department",
+    image: "/images/engagement-lecture.jpg",
+    highlights: ["Live case studies from production", "Deep Q&A session with students", "Interactive presentation & resources"]
+  },
+  {
+    id: "workshops",
+    title: "Hands-on Workshops",
+    subtitle: "Deep-Dive Labs",
+    description: "Immersive half-day or full-day coding bootcamps where students write code, build production pipelines, and deploy live applications.",
+    duration: "4 - 8 hours",
+    audience: "Lab batches (40-80 students)",
+    image: "/images/engagement-workshop.jpg",
+    highlights: ["Hands-on coding exercises", "Toolchains: Docker, K8s, PyTorch", "Certificate of workshop completion"]
+  },
+  {
+    id: "industry-talks",
+    title: "Industry Talks",
+    subtitle: "Symposium Keynotes",
+    description: "Inspirational keynotes for college tech fests, national conferences, and departmental symposiums on the future of tech, AI, and industry disruption.",
+    duration: "45 - 60 mins",
+    audience: "Auditorium (200 - 1,000+)",
+    image: "/images/engagement-talks.jpg",
+    highlights: ["Visionary tech trends", "Executive leadership perspective", "Q&A on industry shifts"]
+  },
+  {
+    id: "mentorship",
+    title: "Career & Mentorship",
+    subtitle: "Placement Readiness",
+    description: "Targeted resume reviews, technical mock interviews, and career roadmap strategy sessions to prepare pre-final and final-year students for dream roles.",
+    duration: "Half-Day / Cohort",
+    audience: "Pre-final & Final year",
+    image: "/images/engagement-mentorship.jpg",
+    highlights: ["1-on-1 portfolio feedback", "System design interview tips", "High-growth career navigation"]
+  }
+];
+export const TESTIMONIALS_DATA = [
+  {
+    id: "nit-sharma",
+    author: "Dr. K. R. Sharma",
+    role: "Dean of Academic Affairs",
+    institution: "National Institute of Technology",
+    avatar: "/images/expert-rohit.jpg",
+    quote: "The guest lecture on system architecture truly enlightened our final-year CS & AI students. The coordination from Ctrl + Data + Grow was seamless and professional, bringing a level of practical depth our students rarely encounter in standard textbooks.",
+    sessionType: "Advanced Cloud Architectures Guest Lecture",
+    studentsAttended: 320
+  },
+  {
+    id: "vit-verma",
+    author: "Prof. S. Verma",
+    role: "Head of Placement & Training",
+    institution: "Vellore Institute of Technology",
+    avatar: "/images/expert-vikram.jpg",
+    quote: "Having senior engineering leaders from top product companies interact directly with our students elevated their confidence tremendously. Our placement numbers in top-tier tech roles saw an immediate qualitative improvement.",
+    sessionType: "Hands-on Microservices & Placement Mentorship",
+    studentsAttended: 480
+  },
+  {
+    id: "bits-rao",
+    author: "Dr. Ananya Rao",
+    role: "Faculty Coordinator, IEEE Chapter",
+    institution: "BITS Pilani",
+    avatar: "/images/expert-priya.jpg",
+    quote: "Ctrl + Data + Grow bridged the exact gap we were struggling with: matching the university syllabus with modern industry frameworks. Their responsiveness and speaker quality are truly best-in-class.",
+    sessionType: "Generative AI & LLM Systems Weekend Workshop",
+    studentsAttended: 240
+  }
+];
+export const ARTICLES_DATA = [
+  {
+    id: "article-1",
+    category: "CAMPUS EVENTS",
+    title: "How to conduct a successful hackathon in your college",
+    excerpt: "Step-by-step guide for student coordinators and faculty on problem-statement design, industry sponsorship, and judge panels.",
+    readTime: "5 min read",
+    date: "Oct 2026",
+    image: "/images/article-hackathon.jpg"
+  },
+  {
+    id: "article-2",
+    category: "STUDENT SUCCESS",
+    title: "Benefits of industry guest lectures for engineering students",
+    excerpt: "Why direct exposure to real-world codebases and senior practitioner insights accelerates student career trajectory by 2x.",
+    readTime: "4 min read",
+    date: "Sep 2026",
+    image: "/images/article-lecture.jpg"
+  },
+  {
+    id: "article-3",
+    category: "FUTURE TECH",
+    title: "Top technology skills & workshops to explore in 2026",
+    excerpt: "A comprehensive review of what top tech companies seek today: agentic AI, distributed systems, platform engineering, and modern data stacks.",
+    readTime: "6 min read",
+    date: "Aug 2026",
+    image: "/images/article-tech.jpg"
+  }
+];
+export const FAQ_DATA = [
+  {
+    id: "faq-1",
+    question: "How can colleges invite an expert through Ctrl + Data + Grow?",
+    answer: "Simply share your requirements using our session planning tool or contact form. Specify your desired domain, preferred dates, and student batch. Our team matches you with vetted industry experts and handles all alignment, logistics, and presentation prep."
+  },
+  {
+    id: "faq-2",
+    question: "How are the industry experts verified?",
+    answer: "All speakers on Ctrl + Data + Grow are seasoned practitioners with verified track records at leading technology firms, unicorns, or research labs. Each expert undergoes pedigree verification and pedagogical screening to guarantee engaging, high-impact sessions."
+  },
+  {
+    id: "faq-3",
+    question: "What types of events and programs can we host?",
+    answer: "We support 90-minute guest lectures, half-day or multi-day hands-on workshops, tech symposium keynotes, faculty development programs (FDP), hackathon mentorship, and campus placement masterclasses."
+  },
+  {
+    id: "faq-4",
+    question: "Do you offer both online and offline sessions?",
+    answer: "Yes! We coordinate both on-campus in-person lectures across major university hubs in India, as well as interactive live virtual webinars with screen sharing, coding labs, and live Q&A."
+  },
+  {
+    id: "faq-5",
+    question: "How does the pricing and booking process work?",
+    answer: "We offer flexible institutional packages based on event type, session length, and whether it is virtual or on-campus. We work within university departmental budgets and provide transparent institutional invoices."
+  },
+  {
+    id: "faq-6",
+    question: "How can an industry leader become a speaker?",
+    answer: 'Experienced professionals can apply to join our curated roster of speakers by clicking "Partner with us" or selecting "Join as Expert". Our academic council reviews profiles and aligns them with upcoming campus requirements.'
+  }
+];
+export const INSTITUTIONS = [
+  { name: "SRM University", tag: "SRM" },
+  { name: "GITAM University", tag: "GITAM" },
+  { name: "VIIT College", tag: "VIIT" },
+  { name: "VIT Vellore", tag: "VIT" },
+  { name: "IIT Delhi", tag: "IITD" },
+  { name: "IIT Bombay", tag: "IITB" },
+  { name: "BITS Pilani", tag: "BITS" },
+  { name: "NIT Trichy", tag: "NITT" },
+  { name: "IIIT Hyderabad", tag: "IIITH" },
+  { name: "Manipal Academy", tag: "MAHE" },
+  { name: "RV College of Engg", tag: "RVCE" },
+  { name: "PSG Tech Coimbatore", tag: "PSG" },
+  { name: "Thapar University", tag: "TIET" },
+  { name: "COEP Tech University", tag: "COEP" }
+];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vY2tEYXRhLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBpbnRlcmZhY2UgRXhwZXJ0IHtcbiAgaWQ6IHN0cmluZztcbiAgbmFtZTogc3RyaW5nO1xuICByb2xlOiBzdHJpbmc7XG4gIGNvbXBhbnk6IHN0cmluZztcbiAgY2F0ZWdvcnk6ICdhaScgfCAnY2xvdWQnIHwgJ2FyY2hpdGVjdHVyZScgfCAnbGVhZGVyc2hpcCc7XG4gIGNhdGVnb3J5TGFiZWw6IHN0cmluZztcbiAgZXhwZXJ0aXNlOiBzdHJpbmc7XG4gIHRvcGljczogc3RyaW5nW107XG4gIGF2YWlsYWJpbGl0eTogc3RyaW5nO1xuICBmb3JtYXQ6IHN0cmluZztcbiAgaW1hZ2U6IHN0cmluZztcbiAgYmlvOiBzdHJpbmc7XG4gIGV4cGVyaWVuY2U6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBFbmdhZ2VtZW50IHtcbiAgaWQ6IHN0cmluZztcbiAgdGl0bGU6IHN0cmluZztcbiAgc3VidGl0bGU6IHN0cmluZztcbiAgZGVzY3JpcHRpb246IHN0cmluZztcbiAgZHVyYXRpb246IHN0cmluZztcbiAgYXVkaWVuY2U6IHN0cmluZztcbiAgaW1hZ2U6IHN0cmluZztcbiAgaGlnaGxpZ2h0czogc3RyaW5nW107XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgVGVzdGltb25pYWwge1xuICBpZDogc3RyaW5nO1xuICBhdXRob3I6IHN0cmluZztcbiAgcm9sZTogc3RyaW5nO1xuICBpbnN0aXR1dGlvbjogc3RyaW5nO1xuICBhdmF0YXI6IHN0cmluZztcbiAgcXVvdGU6IHN0cmluZztcbiAgc2Vzc2lvblR5cGU6IHN0cmluZztcbiAgc3R1ZGVudHNBdHRlbmRlZDogbnVtYmVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEFydGljbGUge1xuICBpZDogc3RyaW5nO1xuICBjYXRlZ29yeTogc3RyaW5nO1xuICB0aXRsZTogc3RyaW5nO1xuICBleGNlcnB0OiBzdHJpbmc7XG4gIHJlYWRUaW1lOiBzdHJpbmc7XG4gIGRhdGU6IHN0cmluZztcbiAgaW1hZ2U6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBGYXFJdGVtIHtcbiAgaWQ6IHN0cmluZztcbiAgcXVlc3Rpb246IHN0cmluZztcbiAgYW5zd2VyOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBjb25zdCBFWFBFUlRTX0RBVEE6IEV4cGVydFtdID0gW1xuICB7XG4gICAgaWQ6ICdyb2hpdC1taXNocmEnLFxuICAgIG5hbWU6ICdSb2hpdCBNaXNocmEnLFxuICAgIHJvbGU6ICdQcmluY2lwYWwgQUkgU2NpZW50aXN0JyxcbiAgICBjb21wYW55OiAnTGVhZGluZyBBSSBMYWIgLyBleC1BbWF6b24nLFxuICAgIGNhdGVnb3J5OiAnYWknLFxuICAgIGNhdGVnb3J5TGFiZWw6ICdBSSAmIERhdGEgU2NpZW5jZScsXG4gICAgZXhwZXJ0aXNlOiAnTGFyZ2UgTGFuZ3VhZ2UgTW9kZWxzICYgR2VuQUkgaW4gUHJvZHVjdGlvbicsXG4gICAgdG9waWNzOiBbJ0xMTSBPcmNoZXN0cmF0aW9uJywgJ1JBRyBBcmNoaXRlY3R1cmVzJywgJ0FJIEFnZW50cyBhdCBTY2FsZSddLFxuICAgIGF2YWlsYWJpbGl0eTogJ05leHQ6IE9jdCAyOCcsXG4gICAgZm9ybWF0OiAnT2ZmbGluZSAmIFZpcnR1YWwnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9leHBlcnQtcm9oaXQuanBnJyxcbiAgICBiaW86ICcxNCsgeWVhcnMgYnVpbGRpbmcgbGFyZ2Utc2NhbGUgTUwgc3lzdGVtcyBhbmQgcmVjb21tZW5kYXRpb24gZW5naW5lcy4gUGFzc2lvbmF0ZSBhYm91dCBicmluZ2luZyBwcm9kdWN0aW9uIE1MIGVuZ2luZWVyaW5nIHRvIGNhbXB1cy4nLFxuICAgIGV4cGVyaWVuY2U6ICcxNCsgWWVhcnMgRXhwJ1xuICB9LFxuICB7XG4gICAgaWQ6ICdwcml5YS1zdWJyYW1hbmlhbicsXG4gICAgbmFtZTogJ1ByaXlhIFN1YnJhbWFuaWFuJyxcbiAgICByb2xlOiAnVlAgb2YgRW5naW5lZXJpbmcnLFxuICAgIGNvbXBhbnk6ICdGaW50ZWNoIFVuaWNvcm4nLFxuICAgIGNhdGVnb3J5OiAnbGVhZGVyc2hpcCcsXG4gICAgY2F0ZWdvcnlMYWJlbDogJ0xlYWRlcnNoaXAgJiBFbmcnLFxuICAgIGV4cGVydGlzZTogJ0Rpc3RyaWJ1dGVkIFN5c3RlbXMgJiBTY2FsaW5nIFRlYW1zJyxcbiAgICB0b3BpY3M6IFsnTWljcm9zZXJ2aWNlcyBhdCBTY2FsZScsICdIaWdoLVRocm91Z2hwdXQgUGF5bWVudHMnLCAnRW5naW5lZXJpbmcgQ2FyZWVyIExhZGRlcnMnXSxcbiAgICBhdmFpbGFiaWxpdHk6ICdOZXh0OiBOb3YgMDQnLFxuICAgIGZvcm1hdDogJ09mZmxpbmUgLyBLZXlub3RlJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZXhwZXJ0LXByaXlhLmpwZycsXG4gICAgYmlvOiAnTGVhZHMgZW5naW5lZXJpbmcgZm9yIDQwTSsgYWN0aXZlIHVzZXJzLiBNZW50b3JlZCA1MDArIHN0dWRlbnQgZW5naW5lZXJzIGFjcm9zcyB0b3AgdW5pdmVyc2l0aWVzLicsXG4gICAgZXhwZXJpZW5jZTogJzE2KyBZZWFycyBFeHAnXG4gIH0sXG4gIHtcbiAgICBpZDogJ3Zpa3JhbS1hbmFuZCcsXG4gICAgbmFtZTogJ1Zpa3JhbSBBbmFuZCcsXG4gICAgcm9sZTogJ1N0YWZmIFN5c3RlbXMgQXJjaGl0ZWN0JyxcbiAgICBjb21wYW55OiAnQ2xvdWQgSW5mcmFzdHJ1Y3R1cmUgQ29ycCcsXG4gICAgY2F0ZWdvcnk6ICdjbG91ZCcsXG4gICAgY2F0ZWdvcnlMYWJlbDogJ0Nsb3VkICYgRGV2T3BzJyxcbiAgICBleHBlcnRpc2U6ICdLdWJlcm5ldGVzLCBDbG91ZCBOYXRpdmUgJiBPYnNlcnZhYmlsaXR5JyxcbiAgICB0b3BpY3M6IFsnS3ViZXJuZXRlcyBJbnRlcm5hbHMnLCAnWmVyby1Eb3dudGltZSBEZXBsb3ltZW50cycsICdTUkUgUHJhY3RpY2VzJ10sXG4gICAgYXZhaWxhYmlsaXR5OiAnTmV4dDogTm92IDEwJyxcbiAgICBmb3JtYXQ6ICdXb3Jrc2hvcCAvIE9mZmxpbmUnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9leHBlcnQtdmlrcmFtLmpwZycsXG4gICAgYmlvOiAnQXV0aG9yIG9mIHdpZGVseSBhZG9wdGVkIG9wZW4tc291cmNlIHRvb2xzLiBIYXMgZGVsaXZlcmVkIDQwKyBoYW5kcy1vbiBib290Y2FtcHMgZm9yIHN0dWRlbnQgZGV2ZWxvcGVycy4nLFxuICAgIGV4cGVyaWVuY2U6ICcxMisgWWVhcnMgRXhwJ1xuICB9LFxuICB7XG4gICAgaWQ6ICdzbmVoYS1rYXBvb3InLFxuICAgIG5hbWU6ICdTbmVoYSBLYXBvb3InLFxuICAgIHJvbGU6ICdIZWFkIG9mIFByb2R1Y3QgJiBEYXRhJyxcbiAgICBjb21wYW55OiAnR2xvYmFsIEhlYWx0aFRlY2gnLFxuICAgIGNhdGVnb3J5OiAnYXJjaGl0ZWN0dXJlJyxcbiAgICBjYXRlZ29yeUxhYmVsOiAnUHJvZHVjdCAmIEFyY2hpdGVjdHVyZScsXG4gICAgZXhwZXJ0aXNlOiAnRGF0YSBQcm9kdWN0cyAmIFN5c3RlbSBEZXNpZ24nLFxuICAgIHRvcGljczogWydQcm9kdWN0IFJvYWRtYXBwaW5nIGZvciBFbmdpbmVlcnMnLCAnRGF0YSBHb3Zlcm5hbmNlJywgJ0Rlc2lnbmluZyBmb3IgTWlsbGlvbnMnXSxcbiAgICBhdmFpbGFiaWxpdHk6ICdOZXh0OiBOb3YgMTgnLFxuICAgIGZvcm1hdDogJ1ZpcnR1YWwgJiBPZmZsaW5lJyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZXhwZXJ0LXNuZWhhLmpwZycsXG4gICAgYmlvOiAnU3BlY2lhbGl6ZXMgaW4gYnJpZGdpbmcgYnVzaW5lc3MgZ29hbHMgd2l0aCB0ZWNobmljYWwgYXJjaGl0ZWN0dXJlLiBSZWd1bGFyIHNwZWFrZXIgYXQgaW50ZXJuYXRpb25hbCB0ZWNoIHN5bXBvc2l1bXMuJyxcbiAgICBleHBlcmllbmNlOiAnMTErIFllYXJzIEV4cCdcbiAgfVxuXTtcblxuZXhwb3J0IGNvbnN0IEVOR0FHRU1FTlRTX0RBVEE6IEVuZ2FnZW1lbnRbXSA9IFtcbiAge1xuICAgIGlkOiAnZ3Vlc3QtbGVjdHVyZXMnLFxuICAgIHRpdGxlOiAnR3Vlc3QgTGVjdHVyZXMnLFxuICAgIHN1YnRpdGxlOiAnRXhwZXJ0IE1hc3RlcmNsYXNzZXMnLFxuICAgIGRlc2NyaXB0aW9uOiAnU3BlY2lhbGl6ZWQgOTAtMTIwIG1pbnV0ZSBzZXNzaW9ucyBicmluZ2luZyBjdXJyZW50IGluZHVzdHJ5IGJsdWVwcmludHMsIHRlY2hub2xvZ3kgdHJhbnNpdGlvbnMsIGFuZCBhcmNoaXRlY3R1cmFsIHRyYWRlLW9mZnMgdG8gdGhlIGxlY3R1cmUgaGFsbC4nLFxuICAgIGR1cmF0aW9uOiAnOTAgLSAxMjAgbWlucycsXG4gICAgYXVkaWVuY2U6ICdFbnRpcmUgQmF0Y2ggLyBEZXBhcnRtZW50JyxcbiAgICBpbWFnZTogJy9pbWFnZXMvZW5nYWdlbWVudC1sZWN0dXJlLmpwZycsXG4gICAgaGlnaGxpZ2h0czogWydMaXZlIGNhc2Ugc3R1ZGllcyBmcm9tIHByb2R1Y3Rpb24nLCAnRGVlcCBRJkEgc2Vzc2lvbiB3aXRoIHN0dWRlbnRzJywgJ0ludGVyYWN0aXZlIHByZXNlbnRhdGlvbiAmIHJlc291cmNlcyddXG4gIH0sXG4gIHtcbiAgICBpZDogJ3dvcmtzaG9wcycsXG4gICAgdGl0bGU6ICdIYW5kcy1vbiBXb3Jrc2hvcHMnLFxuICAgIHN1YnRpdGxlOiAnRGVlcC1EaXZlIExhYnMnLFxuICAgIGRlc2NyaXB0aW9uOiAnSW1tZXJzaXZlIGhhbGYtZGF5IG9yIGZ1bGwtZGF5IGNvZGluZyBib290Y2FtcHMgd2hlcmUgc3R1ZGVudHMgd3JpdGUgY29kZSwgYnVpbGQgcHJvZHVjdGlvbiBwaXBlbGluZXMsIGFuZCBkZXBsb3kgbGl2ZSBhcHBsaWNhdGlvbnMuJyxcbiAgICBkdXJhdGlvbjogJzQgLSA4IGhvdXJzJyxcbiAgICBhdWRpZW5jZTogJ0xhYiBiYXRjaGVzICg0MC04MCBzdHVkZW50cyknLFxuICAgIGltYWdlOiAnL2ltYWdlcy9lbmdhZ2VtZW50LXdvcmtzaG9wLmpwZycsXG4gICAgaGlnaGxpZ2h0czogWydIYW5kcy1vbiBjb2RpbmcgZXhlcmNpc2VzJywgJ1Rvb2xjaGFpbnM6IERvY2tlciwgSzhzLCBQeVRvcmNoJywgJ0NlcnRpZmljYXRlIG9mIHdvcmtzaG9wIGNvbXBsZXRpb24nXVxuICB9LFxuICB7XG4gICAgaWQ6ICdpbmR1c3RyeS10YWxrcycsXG4gICAgdGl0bGU6ICdJbmR1c3RyeSBUYWxrcycsXG4gICAgc3VidGl0bGU6ICdTeW1wb3NpdW0gS2V5bm90ZXMnLFxuICAgIGRlc2NyaXB0aW9uOiAnSW5zcGlyYXRpb25hbCBrZXlub3RlcyBmb3IgY29sbGVnZSB0ZWNoIGZlc3RzLCBuYXRpb25hbCBjb25mZXJlbmNlcywgYW5kIGRlcGFydG1lbnRhbCBzeW1wb3NpdW1zIG9uIHRoZSBmdXR1cmUgb2YgdGVjaCwgQUksIGFuZCBpbmR1c3RyeSBkaXNydXB0aW9uLicsXG4gICAgZHVyYXRpb246ICc0NSAtIDYwIG1pbnMnLFxuICAgIGF1ZGllbmNlOiAnQXVkaXRvcml1bSAoMjAwIC0gMSwwMDArKScsXG4gICAgaW1hZ2U6ICcvaW1hZ2VzL2VuZ2FnZW1lbnQtdGFsa3MuanBnJyxcbiAgICBoaWdobGlnaHRzOiBbJ1Zpc2lvbmFyeSB0ZWNoIHRyZW5kcycsICdFeGVjdXRpdmUgbGVhZGVyc2hpcCBwZXJzcGVjdGl2ZScsICdRJkEgb24gaW5kdXN0cnkgc2hpZnRzJ11cbiAgfSxcbiAge1xuICAgIGlkOiAnbWVudG9yc2hpcCcsXG4gICAgdGl0bGU6ICdDYXJlZXIgJiBNZW50b3JzaGlwJyxcbiAgICBzdWJ0aXRsZTogJ1BsYWNlbWVudCBSZWFkaW5lc3MnLFxuICAgIGRlc2NyaXB0aW9uOiAnVGFyZ2V0ZWQgcmVzdW1lIHJldmlld3MsIHRlY2huaWNhbCBtb2NrIGludGVydmlld3MsIGFuZCBjYXJlZXIgcm9hZG1hcCBzdHJhdGVneSBzZXNzaW9ucyB0byBwcmVwYXJlIHByZS1maW5hbCBhbmQgZmluYWwteWVhciBzdHVkZW50cyBmb3IgZHJlYW0gcm9sZXMuJyxcbiAgICBkdXJhdGlvbjogJ0hhbGYtRGF5IC8gQ29ob3J0JyxcbiAgICBhdWRpZW5jZTogJ1ByZS1maW5hbCAmIEZpbmFsIHllYXInLFxuICAgIGltYWdlOiAnL2ltYWdlcy9lbmdhZ2VtZW50LW1lbnRvcnNoaXAuanBnJyxcbiAgICBoaWdobGlnaHRzOiBbJzEtb24tMSBwb3J0Zm9saW8gZmVlZGJhY2snLCAnU3lzdGVtIGRlc2lnbiBpbnRlcnZpZXcgdGlwcycsICdIaWdoLWdyb3d0aCBjYXJlZXIgbmF2aWdhdGlvbiddXG4gIH1cbl07XG5cbmV4cG9ydCBjb25zdCBURVNUSU1PTklBTFNfREFUQTogVGVzdGltb25pYWxbXSA9IFtcbiAge1xuICAgIGlkOiAnbml0LXNoYXJtYScsXG4gICAgYXV0aG9yOiAnRHIuIEsuIFIuIFNoYXJtYScsXG4gICAgcm9sZTogJ0RlYW4gb2YgQWNhZGVtaWMgQWZmYWlycycsXG4gICAgaW5zdGl0dXRpb246ICdOYXRpb25hbCBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neScsXG4gICAgYXZhdGFyOiAnL2ltYWdlcy9leHBlcnQtcm9oaXQuanBnJyxcbiAgICBxdW90ZTogJ1RoZSBndWVzdCBsZWN0dXJlIG9uIHN5c3RlbSBhcmNoaXRlY3R1cmUgdHJ1bHkgZW5saWdodGVuZWQgb3VyIGZpbmFsLXllYXIgQ1MgJiBBSSBzdHVkZW50cy4gVGhlIGNvb3JkaW5hdGlvbiBmcm9tIEN0cmwgKyBEYXRhICsgR3JvdyB3YXMgc2VhbWxlc3MgYW5kIHByb2Zlc3Npb25hbCwgYnJpbmdpbmcgYSBsZXZlbCBvZiBwcmFjdGljYWwgZGVwdGggb3VyIHN0dWRlbnRzIHJhcmVseSBlbmNvdW50ZXIgaW4gc3RhbmRhcmQgdGV4dGJvb2tzLicsXG4gICAgc2Vzc2lvblR5cGU6ICdBZHZhbmNlZCBDbG91ZCBBcmNoaXRlY3R1cmVzIEd1ZXN0IExlY3R1cmUnLFxuICAgIHN0dWRlbnRzQXR0ZW5kZWQ6IDMyMFxuICB9LFxuICB7XG4gICAgaWQ6ICd2aXQtdmVybWEnLFxuICAgIGF1dGhvcjogJ1Byb2YuIFMuIFZlcm1hJyxcbiAgICByb2xlOiAnSGVhZCBvZiBQbGFjZW1lbnQgJiBUcmFpbmluZycsXG4gICAgaW5zdGl0dXRpb246ICdWZWxsb3JlIEluc3RpdHV0ZSBvZiBUZWNobm9sb2d5JyxcbiAgICBhdmF0YXI6ICcvaW1hZ2VzL2V4cGVydC12aWtyYW0uanBnJyxcbiAgICBxdW90ZTogJ0hhdmluZyBzZW5pb3IgZW5naW5lZXJpbmcgbGVhZGVycyBmcm9tIHRvcCBwcm9kdWN0IGNvbXBhbmllcyBpbnRlcmFjdCBkaXJlY3RseSB3aXRoIG91ciBzdHVkZW50cyBlbGV2YXRlZCB0aGVpciBjb25maWRlbmNlIHRyZW1lbmRvdXNseS4gT3VyIHBsYWNlbWVudCBudW1iZXJzIGluIHRvcC10aWVyIHRlY2ggcm9sZXMgc2F3IGFuIGltbWVkaWF0ZSBxdWFsaXRhdGl2ZSBpbXByb3ZlbWVudC4nLFxuICAgIHNlc3Npb25UeXBlOiAnSGFuZHMtb24gTWljcm9zZXJ2aWNlcyAmIFBsYWNlbWVudCBNZW50b3JzaGlwJyxcbiAgICBzdHVkZW50c0F0dGVuZGVkOiA0ODBcbiAgfSxcbiAge1xuICAgIGlkOiAnYml0cy1yYW8nLFxuICAgIGF1dGhvcjogJ0RyLiBBbmFueWEgUmFvJyxcbiAgICByb2xlOiAnRmFjdWx0eSBDb29yZGluYXRvciwgSUVFRSBDaGFwdGVyJyxcbiAgICBpbnN0aXR1dGlvbjogJ0JJVFMgUGlsYW5pJyxcbiAgICBhdmF0YXI6ICcvaW1hZ2VzL2V4cGVydC1wcml5YS5qcGcnLFxuICAgIHF1b3RlOiAnQ3RybCArIERhdGEgKyBHcm93IGJyaWRnZWQgdGhlIGV4YWN0IGdhcCB3ZSB3ZXJlIHN0cnVnZ2xpbmcgd2l0aDogbWF0Y2hpbmcgdGhlIHVuaXZlcnNpdHkgc3lsbGFidXMgd2l0aCBtb2Rlcm4gaW5kdXN0cnkgZnJhbWV3b3Jrcy4gVGhlaXIgcmVzcG9uc2l2ZW5lc3MgYW5kIHNwZWFrZXIgcXVhbGl0eSBhcmUgdHJ1bHkgYmVzdC1pbi1jbGFzcy4nLFxuICAgIHNlc3Npb25UeXBlOiAnR2VuZXJhdGl2ZSBBSSAmIExMTSBTeXN0ZW1zIFdlZWtlbmQgV29ya3Nob3AnLFxuICAgIHN0dWRlbnRzQXR0ZW5kZWQ6IDI0MFxuICB9XG5dO1xuXG5leHBvcnQgY29uc3QgQVJUSUNMRVNfREFUQTogQXJ0aWNsZVtdID0gW1xuICB7XG4gICAgaWQ6ICdhcnRpY2xlLTEnLFxuICAgIGNhdGVnb3J5OiAnQ0FNUFVTIEVWRU5UUycsXG4gICAgdGl0bGU6ICdIb3cgdG8gY29uZHVjdCBhIHN1Y2Nlc3NmdWwgaGFja2F0aG9uIGluIHlvdXIgY29sbGVnZScsXG4gICAgZXhjZXJwdDogJ1N0ZXAtYnktc3RlcCBndWlkZSBmb3Igc3R1ZGVudCBjb29yZGluYXRvcnMgYW5kIGZhY3VsdHkgb24gcHJvYmxlbS1zdGF0ZW1lbnQgZGVzaWduLCBpbmR1c3RyeSBzcG9uc29yc2hpcCwgYW5kIGp1ZGdlIHBhbmVscy4nLFxuICAgIHJlYWRUaW1lOiAnNSBtaW4gcmVhZCcsXG4gICAgZGF0ZTogJ09jdCAyMDI2JyxcbiAgICBpbWFnZTogJy9pbWFnZXMvYXJ0aWNsZS1oYWNrYXRob24uanBnJ1xuICB9LFxuICB7XG4gICAgaWQ6ICdhcnRpY2xlLTInLFxuICAgIGNhdGVnb3J5OiAnU1RVREVOVCBTVUNDRVNTJyxcbiAgICB0aXRsZTogJ0JlbmVmaXRzIG9mIGluZHVzdHJ5IGd1ZXN0IGxlY3R1cmVzIGZvciBlbmdpbmVlcmluZyBzdHVkZW50cycsXG4gICAgZXhjZXJwdDogJ1doeSBkaXJlY3QgZXhwb3N1cmUgdG8gcmVhbC13b3JsZCBjb2RlYmFzZXMgYW5kIHNlbmlvciBwcmFjdGl0aW9uZXIgaW5zaWdodHMgYWNjZWxlcmF0ZXMgc3R1ZGVudCBjYXJlZXIgdHJhamVjdG9yeSBieSAyeC4nLFxuICAgIHJlYWRUaW1lOiAnNCBtaW4gcmVhZCcsXG4gICAgZGF0ZTogJ1NlcCAyMDI2JyxcbiAgICBpbWFnZTogJy9pbWFnZXMvYXJ0aWNsZS1sZWN0dXJlLmpwZydcbiAgfSxcbiAge1xuICAgIGlkOiAnYXJ0aWNsZS0zJyxcbiAgICBjYXRlZ29yeTogJ0ZVVFVSRSBURUNIJyxcbiAgICB0aXRsZTogJ1RvcCB0ZWNobm9sb2d5IHNraWxscyAmIHdvcmtzaG9wcyB0byBleHBsb3JlIGluIDIwMjYnLFxuICAgIGV4Y2VycHQ6ICdBIGNvbXByZWhlbnNpdmUgcmV2aWV3IG9mIHdoYXQgdG9wIHRlY2ggY29tcGFuaWVzIHNlZWsgdG9kYXk6IGFnZW50aWMgQUksIGRpc3RyaWJ1dGVkIHN5c3RlbXMsIHBsYXRmb3JtIGVuZ2luZWVyaW5nLCBhbmQgbW9kZXJuIGRhdGEgc3RhY2tzLicsXG4gICAgcmVhZFRpbWU6ICc2IG1pbiByZWFkJyxcbiAgICBkYXRlOiAnQXVnIDIwMjYnLFxuICAgIGltYWdlOiAnL2ltYWdlcy9hcnRpY2xlLXRlY2guanBnJ1xuICB9XG5dO1xuXG5leHBvcnQgY29uc3QgRkFRX0RBVEE6IEZhcUl0ZW1bXSA9IFtcbiAge1xuICAgIGlkOiAnZmFxLTEnLFxuICAgIHF1ZXN0aW9uOiAnSG93IGNhbiBjb2xsZWdlcyBpbnZpdGUgYW4gZXhwZXJ0IHRocm91Z2ggQ3RybCArIERhdGEgKyBHcm93PycsXG4gICAgYW5zd2VyOiAnU2ltcGx5IHNoYXJlIHlvdXIgcmVxdWlyZW1lbnRzIHVzaW5nIG91ciBzZXNzaW9uIHBsYW5uaW5nIHRvb2wgb3IgY29udGFjdCBmb3JtLiBTcGVjaWZ5IHlvdXIgZGVzaXJlZCBkb21haW4sIHByZWZlcnJlZCBkYXRlcywgYW5kIHN0dWRlbnQgYmF0Y2guIE91ciB0ZWFtIG1hdGNoZXMgeW91IHdpdGggdmV0dGVkIGluZHVzdHJ5IGV4cGVydHMgYW5kIGhhbmRsZXMgYWxsIGFsaWdubWVudCwgbG9naXN0aWNzLCBhbmQgcHJlc2VudGF0aW9uIHByZXAuJ1xuICB9LFxuICB7XG4gICAgaWQ6ICdmYXEtMicsXG4gICAgcXVlc3Rpb246ICdIb3cgYXJlIHRoZSBpbmR1c3RyeSBleHBlcnRzIHZlcmlmaWVkPycsXG4gICAgYW5zd2VyOiAnQWxsIHNwZWFrZXJzIG9uIEN0cmwgKyBEYXRhICsgR3JvdyBhcmUgc2Vhc29uZWQgcHJhY3RpdGlvbmVycyB3aXRoIHZlcmlmaWVkIHRyYWNrIHJlY29yZHMgYXQgbGVhZGluZyB0ZWNobm9sb2d5IGZpcm1zLCB1bmljb3Jucywgb3IgcmVzZWFyY2ggbGFicy4gRWFjaCBleHBlcnQgdW5kZXJnb2VzIHBlZGlncmVlIHZlcmlmaWNhdGlvbiBhbmQgcGVkYWdvZ2ljYWwgc2NyZWVuaW5nIHRvIGd1YXJhbnRlZSBlbmdhZ2luZywgaGlnaC1pbXBhY3Qgc2Vzc2lvbnMuJ1xuICB9LFxuICB7XG4gICAgaWQ6ICdmYXEtMycsXG4gICAgcXVlc3Rpb246ICdXaGF0IHR5cGVzIG9mIGV2ZW50cyBhbmQgcHJvZ3JhbXMgY2FuIHdlIGhvc3Q/JyxcbiAgICBhbnN3ZXI6ICdXZSBzdXBwb3J0IDkwLW1pbnV0ZSBndWVzdCBsZWN0dXJlcywgaGFsZi1kYXkgb3IgbXVsdGktZGF5IGhhbmRzLW9uIHdvcmtzaG9wcywgdGVjaCBzeW1wb3NpdW0ga2V5bm90ZXMsIGZhY3VsdHkgZGV2ZWxvcG1lbnQgcHJvZ3JhbXMgKEZEUCksIGhhY2thdGhvbiBtZW50b3JzaGlwLCBhbmQgY2FtcHVzIHBsYWNlbWVudCBtYXN0ZXJjbGFzc2VzLidcbiAgfSxcbiAge1xuICAgIGlkOiAnZmFxLTQnLFxuICAgIHF1ZXN0aW9uOiAnRG8geW91IG9mZmVyIGJvdGggb25saW5lIGFuZCBvZmZsaW5lIHNlc3Npb25zPycsXG4gICAgYW5zd2VyOiAnWWVzISBXZSBjb29yZGluYXRlIGJvdGggb24tY2FtcHVzIGluLXBlcnNvbiBsZWN0dXJlcyBhY3Jvc3MgbWFqb3IgdW5pdmVyc2l0eSBodWJzIGluIEluZGlhLCBhcyB3ZWxsIGFzIGludGVyYWN0aXZlIGxpdmUgdmlydHVhbCB3ZWJpbmFycyB3aXRoIHNjcmVlbiBzaGFyaW5nLCBjb2RpbmcgbGFicywgYW5kIGxpdmUgUSZBLidcbiAgfSxcbiAge1xuICAgIGlkOiAnZmFxLTUnLFxuICAgIHF1ZXN0aW9uOiAnSG93IGRvZXMgdGhlIHByaWNpbmcgYW5kIGJvb2tpbmcgcHJvY2VzcyB3b3JrPycsXG4gICAgYW5zd2VyOiAnV2Ugb2ZmZXIgZmxleGlibGUgaW5zdGl0dXRpb25hbCBwYWNrYWdlcyBiYXNlZCBvbiBldmVudCB0eXBlLCBzZXNzaW9uIGxlbmd0aCwgYW5kIHdoZXRoZXIgaXQgaXMgdmlydHVhbCBvciBvbi1jYW1wdXMuIFdlIHdvcmsgd2l0aGluIHVuaXZlcnNpdHkgZGVwYXJ0bWVudGFsIGJ1ZGdldHMgYW5kIHByb3ZpZGUgdHJhbnNwYXJlbnQgaW5zdGl0dXRpb25hbCBpbnZvaWNlcy4nXG4gIH0sXG4gIHtcbiAgICBpZDogJ2ZhcS02JyxcbiAgICBxdWVzdGlvbjogJ0hvdyBjYW4gYW4gaW5kdXN0cnkgbGVhZGVyIGJlY29tZSBhIHNwZWFrZXI/JyxcbiAgICBhbnN3ZXI6ICdFeHBlcmllbmNlZCBwcm9mZXNzaW9uYWxzIGNhbiBhcHBseSB0byBqb2luIG91ciBjdXJhdGVkIHJvc3RlciBvZiBzcGVha2VycyBieSBjbGlja2luZyBcIlBhcnRuZXIgd2l0aCB1c1wiIG9yIHNlbGVjdGluZyBcIkpvaW4gYXMgRXhwZXJ0XCIuIE91ciBhY2FkZW1pYyBjb3VuY2lsIHJldmlld3MgcHJvZmlsZXMgYW5kIGFsaWducyB0aGVtIHdpdGggdXBjb21pbmcgY2FtcHVzIHJlcXVpcmVtZW50cy4nXG4gIH1cbl07XG5cbmV4cG9ydCBjb25zdCBJTlNUSVRVVElPTlMgPSBbXG4gIHsgbmFtZTogJ1NSTSBVbml2ZXJzaXR5JywgdGFnOiAnU1JNJyB9LFxuICB7IG5hbWU6ICdHSVRBTSBVbml2ZXJzaXR5JywgdGFnOiAnR0lUQU0nIH0sXG4gIHsgbmFtZTogJ1ZJSVQgQ29sbGVnZScsIHRhZzogJ1ZJSVQnIH0sXG4gIHsgbmFtZTogJ1ZJVCBWZWxsb3JlJywgdGFnOiAnVklUJyB9LFxuICB7IG5hbWU6ICdJSVQgRGVsaGknLCB0YWc6ICdJSVREJyB9LFxuICB7IG5hbWU6ICdJSVQgQm9tYmF5JywgdGFnOiAnSUlUQicgfSxcbiAgeyBuYW1lOiAnQklUUyBQaWxhbmknLCB0YWc6ICdCSVRTJyB9LFxuICB7IG5hbWU6ICdOSVQgVHJpY2h5JywgdGFnOiAnTklUVCcgfSxcbiAgeyBuYW1lOiAnSUlJVCBIeWRlcmFiYWQnLCB0YWc6ICdJSUlUSCcgfSxcbiAgeyBuYW1lOiAnTWFuaXBhbCBBY2FkZW15JywgdGFnOiAnTUFIRScgfSxcbiAgeyBuYW1lOiAnUlYgQ29sbGVnZSBvZiBFbmdnJywgdGFnOiAnUlZDRScgfSxcbiAgeyBuYW1lOiAnUFNHIFRlY2ggQ29pbWJhdG9yZScsIHRhZzogJ1BTRycgfSxcbiAgeyBuYW1lOiAnVGhhcGFyIFVuaXZlcnNpdHknLCB0YWc6ICdUSUVUJyB9LFxuICB7IG5hbWU6ICdDT0VQIFRlY2ggVW5pdmVyc2l0eScsIHRhZzogJ0NPRVAnIH0sXG5dO1xuIl0sIm1hcHBpbmdzIjoiQUFzRE8sYUFBTSxlQUF5QjtBQUFBLEVBQ3BDO0FBQUEsSUFDRSxJQUFJO0FBQUEsSUFDSixNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixTQUFTO0FBQUEsSUFDVCxVQUFVO0FBQUEsSUFDVixlQUFlO0FBQUEsSUFDZixXQUFXO0FBQUEsSUFDWCxRQUFRLENBQUMscUJBQXFCLHFCQUFxQixvQkFBb0I7QUFBQSxJQUN2RSxjQUFjO0FBQUEsSUFDZCxRQUFRO0FBQUEsSUFDUixPQUFPO0FBQUEsSUFDUCxLQUFLO0FBQUEsSUFDTCxZQUFZO0FBQUEsRUFDZDtBQUFBLEVBQ0E7QUFBQSxJQUNFLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLE1BQU07QUFBQSxJQUNOLFNBQVM7QUFBQSxJQUNULFVBQVU7QUFBQSxJQUNWLGVBQWU7QUFBQSxJQUNmLFdBQVc7QUFBQSxJQUNYLFFBQVEsQ0FBQywwQkFBMEIsNEJBQTRCLDRCQUE0QjtBQUFBLElBQzNGLGNBQWM7QUFBQSxJQUNkLFFBQVE7QUFBQSxJQUNSLE9BQU87QUFBQSxJQUNQLEtBQUs7QUFBQSxJQUNMLFlBQVk7QUFB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

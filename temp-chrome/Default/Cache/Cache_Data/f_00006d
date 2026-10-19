@@ -1,0 +1,171 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/BridgingGap.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=b2f98eab"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+import { ArrowUpRight, Cpu, Compass, Code2 } from "/node_modules/.vite/deps/lucide-react.js?v=b2f98eab";
+export const BridgingGap = () => {
+  const benefits = [
+    {
+      tag: "PRACTICAL",
+      title: "Real-world case studies & production architectures",
+      description: "Moving beyond hypothetical textbook examples to real systems handling millions of queries, real outages, and architectural trade-offs.",
+      icon: Cpu
+    },
+    {
+      tag: "CAREER",
+      title: "Direct hiring insights & engineering career roadmaps",
+      description: "Candid guidance on what technical interviewers evaluate, resume critiques, and modern engineering expectations.",
+      icon: Compass
+    },
+    {
+      tag: "INDUSTRY",
+      title: "Modern frameworks, toolchains & best practices",
+      description: "Exposing students to Docker, Kubernetes, CI/CD, LLM fine-tuning, and cloud-native paradigms before they graduate.",
+      icon: Code2
+    }
+  ];
+  return /* @__PURE__ */ jsxDEV("section", { id: "about", className: "bg-[#EAF4F8] pt-24 pb-16 md:pt-32 md:pb-20 border-b border-[#D7EDF4]", children: /* @__PURE__ */ jsxDEV("div", { className: "max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxDEV("div", { className: "grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-5", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "text-xs font-bold tracking-widest text-[#1286A0] uppercase block mb-2", children: "Why Ctrl + Data + Grow" }, void 0, false, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+        lineNumber: 52,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { className: "text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#103957] tracking-tight leading-tight mb-4", children: "Bridging the gap between classrooms and the real world" }, void 0, false, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+        lineNumber: 55,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "text-sm sm:text-base text-[#244866] leading-relaxed mb-6", children: "Traditional university curricula often lag behind rapid industry transitions. We bring senior practitioners who operate at global scale straight into college auditoriums to empower students with job-ready perspectives and high-value technical clarity." }, void 0, false, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+        lineNumber: 58,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "p-4 rounded-xl bg-white/70 border border-[#C5E2EC] text-xs text-[#153F60]", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "font-semibold text-[#1286A0]", children: "Mission:" }, void 0, false, {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+          lineNumber: 62,
+          columnNumber: 15
+        }, this),
+        " Empowering over 100,000 engineering and business graduates with direct access to mentorship from active tech innovators."
+      ] }, void 0, true, {
+        fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+        lineNumber: 61,
+        columnNumber: 13
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+      lineNumber: 51,
+      columnNumber: 11
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "lg:col-span-7 space-y-4", children: benefits.map((item, idx) => {
+      const Icon = item.icon;
+      return /* @__PURE__ */ jsxDEV(
+        "div",
+        {
+          className: "bg-white rounded-xl p-5 sm:p-6 shadow-sm border border-[#C5E2EC] hover:border-[#1286A0] hover:shadow-md transition-all duration-200 flex items-start gap-4",
+          children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "w-10 h-10 rounded-lg bg-[#EAF4F8] text-[#1286A0] flex-shrink-0 flex items-center justify-center font-bold", children: /* @__PURE__ */ jsxDEV(Icon, { className: "w-5 h-5" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+              lineNumber: 76,
+              columnNumber: 21
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+              lineNumber: 75,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "flex-1", children: [
+              /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2 mb-1", children: /* @__PURE__ */ jsxDEV("span", { className: "text-[10px] font-extrabold tracking-wider text-[#1286A0] bg-[#EAF4F8] px-2 py-0.5 rounded border border-[#C5E2EC]", children: item.tag }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+                lineNumber: 81,
+                columnNumber: 23
+              }, this) }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+                lineNumber: 80,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { className: "text-base font-bold text-[#103957] leading-snug", children: item.title }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+                lineNumber: 85,
+                columnNumber: 21
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { className: "text-xs sm:text-sm text-[#244866] mt-1 leading-relaxed", children: item.description }, void 0, false, {
+                fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+                lineNumber: 88,
+                columnNumber: 21
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+              lineNumber: 79,
+              columnNumber: 19
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "text-slate-300 group-hover:text-[#1286A0] hidden sm:block", children: /* @__PURE__ */ jsxDEV(ArrowUpRight, { className: "w-5 h-5" }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+              lineNumber: 94,
+              columnNumber: 21
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+              lineNumber: 93,
+              columnNumber: 19
+            }, this)
+          ]
+        },
+        idx,
+        true,
+        {
+          fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+          lineNumber: 71,
+          columnNumber: 17
+        },
+        this
+      );
+    }) }, void 0, false, {
+      fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+      lineNumber: 67,
+      columnNumber: 11
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+    lineNumber: 48,
+    columnNumber: 9
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+    lineNumber: 47,
+    columnNumber: 7
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx",
+    lineNumber: 46,
+    columnNumber: 5
+  }, this);
+};
+_c = BridgingGap;
+var _c;
+$RefreshReg$(_c, "BridgingGap");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/Mohithsai Malla/OneDrive/Desktop/ctrl+data+grow/src/components/BridgingGap.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBVTtBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJBcnJvd1VwUmlnaHQiLCJDcHUiLCJDb21wYXNzIiwiQ29kZTIiLCJCcmlkZ2luZ0dhcCIsImJlbmVmaXRzIiwidGFnIiwidGl0bGUiLCJkZXNjcmlwdGlvbiIsImljb24iLCJtYXAiLCJpdGVtIiwiaWR4IiwiSWNvbiIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkJyaWRnaW5nR2FwLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQXJyb3dVcFJpZ2h0LCBDcHUsIENvbXBhc3MsIENvZGUyIH0gZnJvbSAnbHVjaWRlLXJlYWN0JztcblxuZXhwb3J0IGNvbnN0IEJyaWRnaW5nR2FwOiBSZWFjdC5GQyA9ICgpID0+IHtcbiAgY29uc3QgYmVuZWZpdHMgPSBbXG4gICAge1xuICAgICAgdGFnOiAnUFJBQ1RJQ0FMJyxcbiAgICAgIHRpdGxlOiAnUmVhbC13b3JsZCBjYXNlIHN0dWRpZXMgJiBwcm9kdWN0aW9uIGFyY2hpdGVjdHVyZXMnLFxuICAgICAgZGVzY3JpcHRpb246ICdNb3ZpbmcgYmV5b25kIGh5cG90aGV0aWNhbCB0ZXh0Ym9vayBleGFtcGxlcyB0byByZWFsIHN5c3RlbXMgaGFuZGxpbmcgbWlsbGlvbnMgb2YgcXVlcmllcywgcmVhbCBvdXRhZ2VzLCBhbmQgYXJjaGl0ZWN0dXJhbCB0cmFkZS1vZmZzLicsXG4gICAgICBpY29uOiBDcHUsXG4gICAgfSxcbiAgICB7XG4gICAgICB0YWc6ICdDQVJFRVInLFxuICAgICAgdGl0bGU6ICdEaXJlY3QgaGlyaW5nIGluc2lnaHRzICYgZW5naW5lZXJpbmcgY2FyZWVyIHJvYWRtYXBzJyxcbiAgICAgIGRlc2NyaXB0aW9uOiAnQ2FuZGlkIGd1aWRhbmNlIG9uIHdoYXQgdGVjaG5pY2FsIGludGVydmlld2VycyBldmFsdWF0ZSwgcmVzdW1lIGNyaXRpcXVlcywgYW5kIG1vZGVybiBlbmdpbmVlcmluZyBleHBlY3RhdGlvbnMuJyxcbiAgICAgIGljb246IENvbXBhc3MsXG4gICAgfSxcbiAgICB7XG4gICAgICB0YWc6ICdJTkRVU1RSWScsXG4gICAgICB0aXRsZTogJ01vZGVybiBmcmFtZXdvcmtzLCB0b29sY2hhaW5zICYgYmVzdCBwcmFjdGljZXMnLFxuICAgICAgZGVzY3JpcHRpb246ICdFeHBvc2luZyBzdHVkZW50cyB0byBEb2NrZXIsIEt1YmVybmV0ZXMsIENJL0NELCBMTE0gZmluZS10dW5pbmcsIGFuZCBjbG91ZC1uYXRpdmUgcGFyYWRpZ21zIGJlZm9yZSB0aGV5IGdyYWR1YXRlLicsXG4gICAgICBpY29uOiBDb2RlMixcbiAgICB9LFxuICBdO1xuXG4gIHJldHVybiAoXG4gICAgPHNlY3Rpb24gaWQ9XCJhYm91dFwiIGNsYXNzTmFtZT1cImJnLVsjRUFGNEY4XSBwdC0yNCBwYi0xNiBtZDpwdC0zMiBtZDpwYi0yMCBib3JkZXItYiBib3JkZXItWyNEN0VERjRdXCI+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LVsxMjQwcHhdIG14LWF1dG8gcHgtNCBzbTpweC02IGxnOnB4LThcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0xIGxnOmdyaWQtY29scy0xMiBnYXAtMTAgbGc6Z2FwLTE0IGl0ZW1zLWNlbnRlclwiPlxuICAgICAgICAgIFxuICAgICAgICAgIHsvKiBMZWZ0IENvbHVtbiAqL31cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxnOmNvbC1zcGFuLTVcIj5cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQteHMgZm9udC1ib2xkIHRyYWNraW5nLXdpZGVzdCB0ZXh0LVsjMTI4NkEwXSB1cHBlcmNhc2UgYmxvY2sgbWItMlwiPlxuICAgICAgICAgICAgICBXaHkgQ3RybCArIERhdGEgKyBHcm93XG4gICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC0yeGwgc206dGV4dC0zeGwgbWQ6dGV4dC00eGwgZm9udC1leHRyYWJvbGQgdGV4dC1bIzEwMzk1N10gdHJhY2tpbmctdGlnaHQgbGVhZGluZy10aWdodCBtYi00XCI+XG4gICAgICAgICAgICAgIEJyaWRnaW5nIHRoZSBnYXAgYmV0d2VlbiBjbGFzc3Jvb21zIGFuZCB0aGUgcmVhbCB3b3JsZFxuICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gc206dGV4dC1iYXNlIHRleHQtWyMyNDQ4NjZdIGxlYWRpbmctcmVsYXhlZCBtYi02XCI+XG4gICAgICAgICAgICAgIFRyYWRpdGlvbmFsIHVuaXZlcnNpdHkgY3VycmljdWxhIG9mdGVuIGxhZyBiZWhpbmQgcmFwaWQgaW5kdXN0cnkgdHJhbnNpdGlvbnMuIFdlIGJyaW5nIHNlbmlvciBwcmFjdGl0aW9uZXJzIHdobyBvcGVyYXRlIGF0IGdsb2JhbCBzY2FsZSBzdHJhaWdodCBpbnRvIGNvbGxlZ2UgYXVkaXRvcml1bXMgdG8gZW1wb3dlciBzdHVkZW50cyB3aXRoIGpvYi1yZWFkeSBwZXJzcGVjdGl2ZXMgYW5kIGhpZ2gtdmFsdWUgdGVjaG5pY2FsIGNsYXJpdHkuXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtNCByb3VuZGVkLXhsIGJnLXdoaXRlLzcwIGJvcmRlciBib3JkZXItWyNDNUUyRUNdIHRleHQteHMgdGV4dC1bIzE1M0Y2MF1cIj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiZm9udC1zZW1pYm9sZCB0ZXh0LVsjMTI4NkEwXVwiPk1pc3Npb246PC9zcGFuPiBFbXBvd2VyaW5nIG92ZXIgMTAwLDAwMCBlbmdpbmVlcmluZyBhbmQgYnVzaW5lc3MgZ3JhZHVhdGVzIHdpdGggZGlyZWN0IGFjY2VzcyB0byBtZW50b3JzaGlwIGZyb20gYWN0aXZlIHRlY2ggaW5ub3ZhdG9ycy5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgey8qIFJpZ2h0IENvbHVtbjogMyBCZW5lZml0IFJvd3MgKi99XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsZzpjb2wtc3Bhbi03IHNwYWNlLXktNFwiPlxuICAgICAgICAgICAge2JlbmVmaXRzLm1hcCgoaXRlbSwgaWR4KSA9PiB7XG4gICAgICAgICAgICAgIGNvbnN0IEljb24gPSBpdGVtLmljb247XG4gICAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgPGRpdlxuICAgICAgICAgICAgICAgICAga2V5PXtpZHh9XG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJiZy13aGl0ZSByb3VuZGVkLXhsIHAtNSBzbTpwLTYgc2hhZG93LXNtIGJvcmRlciBib3JkZXItWyNDNUUyRUNdIGhvdmVyOmJvcmRlci1bIzEyODZBMF0gaG92ZXI6c2hhZG93LW1kIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTIwMCBmbGV4IGl0ZW1zLXN0YXJ0IGdhcC00XCJcbiAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTAgaC0xMCByb3VuZGVkLWxnIGJnLVsjRUFGNEY4XSB0ZXh0LVsjMTI4NkEwXSBmbGV4LXNocmluay0wIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGZvbnQtYm9sZFwiPlxuICAgICAgICAgICAgICAgICAgICA8SWNvbiBjbGFzc05hbWU9XCJ3LTUgaC01XCIgLz5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtMVwiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LVsxMHB4XSBmb250LWV4dHJhYm9sZCB0cmFja2luZy13aWRlciB0ZXh0LVsjMTI4NkEwXSBiZy1bI0VBRjRGOF0gcHgtMiBweS0wLjUgcm91bmRlZCBib3JkZXIgYm9yZGVyLVsjQzVFMkVDXVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0udGFnfVxuICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LWJhc2UgZm9udC1ib2xkIHRleHQtWyMxMDM5NTddIGxlYWRpbmctc251Z1wiPlxuICAgICAgICAgICAgICAgICAgICAgIHtpdGVtLnRpdGxlfVxuICAgICAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHNtOnRleHQtc20gdGV4dC1bIzI0NDg2Nl0gbXQtMSBsZWFkaW5nLXJlbGF4ZWRcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5kZXNjcmlwdGlvbn1cbiAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS0zMDAgZ3JvdXAtaG92ZXI6dGV4dC1bIzEyODZBMF0gaGlkZGVuIHNtOmJsb2NrXCI+XG4gICAgICAgICAgICAgICAgICAgIDxBcnJvd1VwUmlnaHQgY2xhc3NOYW1lPVwidy01IGgtNVwiIC8+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgKTtcbiAgICAgICAgICAgIH0pfVxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuICApO1xufTtcbiJdLCJmaWxlIjoiQzovVXNlcnMvTW9oaXRoc2FpIE1hbGxhL09uZURyaXZlL0Rlc2t0b3AvY3RybCtkYXRhK2dyb3cvc3JjL2NvbXBvbmVudHMvQnJpZGdpbmdHYXAudHN4In0=
