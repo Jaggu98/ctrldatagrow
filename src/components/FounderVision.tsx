@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quote, Linkedin, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Quote, Linkedin } from 'lucide-react';
 
 interface FounderVisionProps {
   onOpenPartnerModal?: () => void;
