@@ -14,16 +14,16 @@ export const BeyondClassroom: React.FC<BeyondClassroomProps> = ({
   const [selectedDomain, setSelectedDomain] = useState<string | null>(null);
 
   const domains = [
-    { name: 'Technology & Engineering', color: '#1769AA', sub: 'Cloud, Systems & Architecture' },
-    { name: 'Data Analytics & AI', color: '#138A9E', sub: 'LLMs, Vector DBs & MLOps' },
-    { name: 'Business & Management', color: '#2BAE66', sub: 'Agile Strategy & Product Scale' },
-    { name: 'Finance & Economics', color: '#0B1F33', sub: 'FinTech, Algorithmic Systems' },
-    { name: 'Marketing & Consumer Insights', color: '#1769AA', sub: 'Growth Funnels & User Analytics' },
-    { name: 'Retail & E-commerce', color: '#138A9E', sub: 'Supply Chain, Platforms & UX' },
-    { name: 'HR & Leadership', color: '#2BAE66', sub: 'Org Culture & Talent Pipelines' },
-    { name: 'Entrepreneurship & Innovation', color: '#0B1F33', sub: '0-to-1 Venture Building' },
-    { name: 'Career Development', color: '#1769AA', sub: 'Placement Mastery & Engineering Roadmaps' },
-    { name: 'Emerging Technologies', color: '#138A9E', sub: 'Web3, Robotics, Quantum & Edge' },
+    { name: 'Data & Business Analytics', color: '#138A9E', sub: 'Data-driven Decision Making' },
+    { name: 'SQL & MySQL Databases', color: '#1769AA', sub: 'Queries, Modeling & Indexing' },
+    { name: 'Python & Azure Databricks', color: '#0B1F33', sub: 'Python Programming & Pipelines' },
+    { name: 'Power BI & Tableau', color: '#138A9E', sub: 'Business Intelligence & Dashboards' },
+    { name: 'Microsoft Excel Analytics', color: '#2BAE66', sub: 'Advanced Modeling & Metrics' },
+    { name: 'Career Growth in Data', color: '#1769AA', sub: 'Placement Mastery & Interview Prep' },
+    { name: 'Business Intelligence (BI)', color: '#138A9E', sub: 'KPI Architecture & Reporting' },
+    { name: 'Data-driven Decision Making', color: '#0B1F33', sub: 'Executive Frameworks & Case Studies' },
+    { name: 'Cloud Data Pipelines', color: '#2BAE66', sub: 'Databricks, Warehousing & ETL' },
+    { name: 'Industry Mentorship', color: '#1769AA', sub: '1-on-1 Guidance & Live Portfolio' },
   ];
 
   const handleDomainClick = (domainName: string) => {

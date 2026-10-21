@@ -17,7 +17,7 @@ import {
 interface ResourceItem {
   id: string;
   title: string;
-  category: 'ai' | 'programming' | 'cloud' | 'career' | 'tools' | 'templates';
+  category: 'analytics' | 'sql' | 'bi' | 'python' | 'career';
   badge: string;
   badgeType: 'official' | 'doc' | 'free' | 'premium';
   description: string;
@@ -38,116 +38,114 @@ export const StudentResources: React.FC<StudentResourcesProps> = ({ onOpenAmbass
   const [unlockedItems, setUnlockedItems] = useState<string[]>([]);
   const [showCheckout, setShowCheckout] = useState(false);
 
-  const quickTags = ['AI', 'Python', 'Resume', 'Hackathon', 'Git', 'Cloud', 'DSA', 'Figma', 'Internship'];
-
   const resources: ResourceItem[] = [
     {
-      id: 'google-ai-studio',
-      title: 'Google AI Studio',
-      category: 'ai',
-      badge: 'OFFICIAL',
-      badgeType: 'official',
-      description: 'Build and test Gemini-powered AI apps directly in your browser — zero server setup required.',
-      price: 0,
-      linkText: 'Open Studio',
-      tag: 'AI',
-      contentPreview: 'Access Gemini 1.5 Pro & Flash models with developer API keys, rapid prototyping prompts, and instant Python/Node SDK code export.'
-    },
-    {
-      id: 'gemini-api-docs',
-      title: 'Gemini API Master Docs',
-      category: 'ai',
-      badge: 'DOCUMENTATION',
-      badgeType: 'doc',
-      description: 'Production integration blueprints for embedding Gemini into Python, Next.js, and Android apps.',
-      price: 0,
-      linkText: 'Read Docs',
-      tag: 'AI',
-      contentPreview: 'Structured output schemas, function calling, multimodal vision embeddings, and rate-limit handling patterns for campus projects.'
-    },
-    {
-      id: 'prompt-engineering-guide',
-      title: 'Prompt Engineering Guide',
-      category: 'ai',
+      id: 'sql-mysql-handbook',
+      title: 'SQL & MySQL Master Handbook',
+      category: 'sql',
       badge: 'FREE GUIDE',
       badgeType: 'free',
-      description: 'Learn how to craft effective system prompts, few-shot conditioning, and chain-of-thought logic.',
+      description: 'Core joins, window functions, indexing, and query optimization patterns for technical rounds.',
       price: 0,
-      linkText: 'Learn Prompting',
-      tag: 'AI',
-      contentPreview: 'From naive questions to enterprise metaprompts. Includes 50+ tested prompt templates for code generation and resume tailoring.'
+      linkText: 'Read Handbook',
+      tag: 'SQL & MySQL',
+      contentPreview: 'Covers CTEs, recursive queries, indexing strategies, GROUP BY aggregations, and MySQL schema design best practices.'
     },
     {
-      id: 'ai-project-ideas',
-      title: '100+ Production AI Project Ideas',
-      category: 'ai',
-      badge: 'PREMIUM • ₹19',
-      badgeType: 'premium',
-      description: 'Curated blueprint list of resume-worthy AI projects — full architecture diagrams, API stacks & rubrics.',
-      price: 19,
-      linkText: 'Unlock Blueprint',
-      tag: 'AI',
-      contentPreview: 'Includes complete architecture flowcharts, GitHub boilerplates, and interview talking points for RAG chatbots, multi-agent research tools, and medical image classifiers.'
-    },
-    {
-      id: 'dsa-sheet-crack',
-      title: 'Top 75 FAANG DSA Patterns Sheet',
-      category: 'programming',
-      badge: 'PREMIUM • ₹19',
-      badgeType: 'premium',
-      description: 'The exact two-pointer, sliding window, and graph BFS/DFS templates asked in Tier-1 technical rounds.',
-      price: 19,
-      linkText: 'Unlock Sheet',
-      tag: 'DSA',
-      contentPreview: '75 high-frequency problems grouped by algorithmic pattern with Python, C++, and Java solutions + time/space complexity proof cheat-sheets.'
-    },
-    {
-      id: 'vertex-ai-basics',
-      title: 'Vertex AI Cloud Fundamentals',
-      category: 'cloud',
+      id: 'business-analytics-starter',
+      title: 'Business Analytics Toolkit',
+      category: 'analytics',
       badge: 'FREE GUIDE',
       badgeType: 'free',
-      description: 'Deploy, monitor, and scale custom ML pipelines with enterprise tools and automated endpoints.',
+      description: 'Foundations of business metrics, KPIs, cohort analyses, and diagnostic data frameworks.',
       price: 0,
-      linkText: 'Explore Cloud',
-      tag: 'Cloud',
-      contentPreview: 'Model garden overview, vector search endpoints, batch inference, and cost optimization techniques for student projects.'
+      linkText: 'Explore Toolkit',
+      tag: 'Business Analytics',
+      contentPreview: 'Learn churn rates, CAC/LTV funnels, unit economics, and data-driven storytelling techniques for college presentations.'
     },
     {
-      id: 'ai-engineer-roadmap',
-      title: '6-Month AI Engineer Career Roadmap',
+      id: 'python-data-analytics',
+      title: 'Python for Data Analytics Kit',
+      category: 'python',
+      badge: 'FREE GUIDE',
+      badgeType: 'free',
+      description: 'Pandas, NumPy, and data wrangling blueprints with Jupyter starter notebooks.',
+      price: 0,
+      linkText: 'Open Python Kit',
+      tag: 'Python',
+      contentPreview: 'Clean real-world messy datasets, automate exploratory data analysis, and build automated visualization pipelines in Python.'
+    },
+    {
+      id: 'powerbi-tableau-blueprints',
+      title: 'Power BI & Tableau Blueprint Pack',
+      category: 'bi',
+      badge: 'PREMIUM',
+      badgeType: 'premium',
+      description: 'Complete interactive dashboard templates, DAX formulas, and visual storytelling kits.',
+      price: 19,
+      linkText: 'Unlock Blueprints',
+      tag: 'Power BI & Tableau',
+      contentPreview: '10 production-grade dashboard templates in Power BI and Tableau with DAX calculated measures, data models, and executive palettes.'
+    },
+    {
+      id: 'excel-analytics-mastery',
+      title: 'Microsoft Excel for Analytics',
+      category: 'analytics',
+      badge: 'PREMIUM',
+      badgeType: 'premium',
+      description: 'XLOOKUP, Power Query, pivot modeling, and automated executive metric sheets.',
+      price: 19,
+      linkText: 'Unlock Excel Pack',
+      tag: 'Microsoft Excel',
+      contentPreview: 'Advanced workbook models with dynamic array formulas, nested XLOOKUPs, scenario managers, and one-click Power Query transformations.'
+    },
+    {
+      id: 'azure-databricks-guide',
+      title: 'Azure Databricks & PySpark Guide',
+      category: 'python',
+      badge: 'FREE GUIDE',
+      badgeType: 'free',
+      description: 'Big data ingestion, lakehouse architectures, and cloud data transformations.',
+      price: 0,
+      linkText: 'Read Guide',
+      tag: 'Azure Databricks',
+      contentPreview: 'Learn Apache Spark on Azure Databricks, Delta Lake foundations, and connecting scalable pipelines to analytical warehouses.'
+    },
+    {
+      id: 'data-career-roadmap',
+      title: 'Data & Analytics Career Roadmap',
       category: 'career',
-      badge: 'PREMIUM • ₹19',
+      badge: 'PREMIUM',
       badgeType: 'premium',
-      description: 'Ctrl + Data + Grow exclusive structured curriculum to transition from student coder to AI engineer.',
+      description: 'Structured 6-month curriculum to crack Business Analyst, BI, and Data roles.',
       price: 19,
       linkText: 'Unlock Roadmap',
-      tag: 'Career',
-      contentPreview: 'Month-by-month skill breakdown: Month 1-2 Deep Python & Linear Algebra, Month 3 PyTorch, Month 4 Transformers & Attention, Month 5 RAG & MLOps, Month 6 Portfolio Polish.'
+      tag: 'Career Growth',
+      contentPreview: 'Month-by-month skill roadmap: Month 1-2 Advanced SQL & Excel, Month 3-4 Power BI & Tableau, Month 5 Python Analytics, Month 6 Placement Interview Mock Prep.'
     },
     {
-      id: 'ats-resume-templates',
-      title: 'ATS-Proof Tech Resume Templates',
-      category: 'templates',
-      badge: 'PREMIUM • ₹19',
-      badgeType: 'premium',
-      description: 'LaTeX and Word formats verified by senior recruiters from Amazon, Google, and Microsoft.',
-      price: 19,
-      linkText: 'Download Pack',
-      tag: 'Resume',
-      contentPreview: '3 clean single-column templates engineered to score 95+ on Taleo and Greenhouse ATS parsers. Includes action verb index.'
-    },
-    {
-      id: 'git-hackathon-handbook',
-      title: 'Hackathon Winning Playbook',
-      category: 'career',
+      id: 'data-driven-decision-making',
+      title: 'Data-driven Decision Making Playbook',
+      category: 'analytics',
       badge: 'FREE GUIDE',
       badgeType: 'free',
-      description: 'Pitch deck structures, demo video scripts, and fast prototyping kits to win college hackathons.',
+      description: 'Executive decision frameworks, root cause analysis, and A/B test methodologies.',
       price: 0,
       linkText: 'Read Playbook',
-      tag: 'Hackathon',
-      contentPreview: 'How to pick winning problem statements, building functional MVPs in 24 hours, and delivering the 3-minute jury presentation.'
+      tag: 'Decision Making',
+      contentPreview: 'Case studies on how top firms leverage telemetry, statistical confidence, and hypothesis validation to drive multi-million dollar growth.'
+    },
+    {
+      id: 'ats-data-resume-pack',
+      title: 'ATS Data Analyst Resume Templates',
+      category: 'career',
+      badge: 'PREMIUM',
+      badgeType: 'premium',
+      description: 'Templates specifically tailored for Data Analysts, BI Engineers, and Analytics Consultants.',
+      price: 19,
+      linkText: 'Download Pack',
+      tag: 'Career Growth',
+      contentPreview: '3 clean single-column templates verified for ATS screening in top consulting and analytics firms, with project bullet formula sheets.'
     },
   ];
 
@@ -173,118 +171,97 @@ export const StudentResources: React.FC<StudentResourcesProps> = ({ onOpenAmbass
   };
 
   return (
-    <section id="resources" className="py-20 md:py-28 bg-[#F4F9FC] border-b border-[#D7EAF3] relative overflow-hidden">
-      {/* Background glow */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-b from-[#138A9E]/10 via-[#1769AA]/5 to-transparent blur-3xl" />
-
+    <section id="resources" className="py-16 md:py-24 bg-[#F4F9FC] border-b border-[#D7EAF3] relative">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Heading matching Image 1 */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#138A9E]/15 border border-[#138A9E]/30 text-[#138A9E] text-xs font-bold tracking-widest uppercase mb-4">
-            <span>Free Student Knowledge Hub &amp; Micro-Guides</span>
+        {/* Section Heading */}
+        <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#138A9E]/10 border border-[#138A9E]/20 text-[#138A9E] text-xs font-bold tracking-widest uppercase mb-3">
+            <span>Student Knowledge Hub</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B1F33] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B1F33] tracking-tight">
             Resources for Every <span className="text-[#138A9E]">Student</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#4A6D88] mt-3 font-normal leading-relaxed">
-            AI, Programming, Cloud, Career, Opportunities, Tools, Templates &amp; Ctrl + Data + Grow-exclusive content — all in one place. Built for students, priced at ₹0 or a micro ₹19 student pass.
+          <p className="text-sm text-[#4A6D88] mt-2 font-normal leading-relaxed">
+            Curated roadmaps, interview guides, and starter repositories to accelerate your tech career.
           </p>
         </div>
 
-        {/* Search Bar matching Image 1 */}
-        <div className="max-w-2xl mx-auto mb-6">
-          <div className="relative">
-            <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+        {/* Controls: Category Tabs & Search Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+          {/* Category Tabs */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2">
+            {[
+              { id: 'all', label: 'All', icon: Layers },
+              { id: 'analytics', label: 'Business Analytics', icon: Zap },
+              { id: 'sql', label: 'SQL & MySQL', icon: Code },
+              { id: 'bi', label: 'Power BI & Tableau', icon: FileText },
+              { id: 'python', label: 'Python & Databricks', icon: Cloud },
+              { id: 'career', label: 'Career Growth', icon: Briefcase },
+            ].map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-xl transition-all border ${
+                    isActive
+                      ? 'bg-[#0B1F33] text-white border-[#0B1F33] shadow-sm'
+                      : 'bg-white text-[#244866] border-[#D7EAF3] hover:border-[#138A9E] hover:text-[#138A9E]'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Search Input */}
+          <div className="relative w-full md:w-64 shrink-0">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search resources — AI, Python, Resume, Hackathon, DSA..."
-              className="w-full bg-white border border-[#D7EAF3] hover:border-[#138A9E]/40 focus:border-[#138A9E] rounded-2xl pl-12 pr-4 py-3.5 text-xs sm:text-sm text-[#0B1F33] font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-[#138A9E]/20 transition-all"
+              placeholder="Search resources..."
+              className="w-full bg-white border border-[#D7EAF3] hover:border-[#138A9E]/40 focus:border-[#138A9E] rounded-xl pl-10 pr-8 py-2 text-xs text-[#0B1F33] font-medium shadow-sm focus:outline-none focus:ring-1 focus:ring-[#138A9E] transition-all"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs font-semibold"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs font-semibold"
               >
-                Clear
+                ✕
               </button>
             )}
           </div>
-
-          {/* Quick Tag Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-3.5">
-            {quickTags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => setSearchQuery(tag)}
-                className={`text-[11px] font-semibold px-3 py-1 rounded-full transition-all border ${
-                  searchQuery.toLowerCase() === tag.toLowerCase()
-                    ? 'bg-[#138A9E] text-white border-[#138A9E]'
-                    : 'bg-white text-slate-600 border-[#D7EAF3] hover:border-[#138A9E] hover:text-[#138A9E]'
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Filter Tabs matching Image 1 */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 pb-2">
-          {[
-            { id: 'all', label: 'All', icon: Layers },
-            { id: 'ai', label: 'AI & GenAI', icon: Zap },
-            { id: 'programming', label: 'Programming', icon: Code },
-            { id: 'cloud', label: 'Cloud', icon: Cloud },
-            { id: 'career', label: 'Career', icon: Briefcase },
-            { id: 'templates', label: 'Templates', icon: FileText },
-          ].map((tab) => {
-            const Icon = tab.icon;
-            const isActive = activeTab === tab.id;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all border ${
-                  isActive
-                    ? 'bg-[#0B1F33] text-white border-[#0B1F33] shadow-md'
-                    : 'bg-white text-[#244866] border-[#D7EAF3] hover:border-[#138A9E] hover:text-[#138A9E]'
-                }`}
-              >
-                <Icon className="w-3.5 h-3.5" />
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Resource Cards Grid matching Image 1 */}
+        {/* Resource Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredResources.map((res) => {
             const isUnlocked = res.price === 0 || unlockedItems.includes(res.id);
             return (
               <div
                 key={res.id}
-                className="bg-white rounded-2xl p-5 border border-[#D7EAF3] hover:border-[#138A9E] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-2xl p-5 border border-[#D7EAF3] hover:border-[#138A9E] hover:shadow-lg transition-all duration-200 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Top Badge & Bookmark Row */}
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-[11px] font-bold text-[#138A9E]">
+                      {res.tag}
+                    </span>
                     <span
-                      className={`text-[10px] font-extrabold tracking-wider px-2.5 py-1 rounded-md uppercase ${
+                      className={`text-[10px] font-bold tracking-wider px-2 py-0.5 rounded uppercase ${
                         res.price > 0
-                          ? 'bg-[#D6A84F]/15 text-[#9E731F] border border-[#D6A84F]/30'
-                          : 'bg-[#138A9E]/10 text-[#138A9E] border border-[#138A9E]/20'
+                          ? 'bg-amber-50 text-amber-800 border border-amber-200'
+                          : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                       }`}
                     >
-                      {res.badge}
-                    </span>
-
-                    <span className="text-[11px] font-semibold text-slate-400 group-hover:text-[#138A9E] transition-colors">
-                      {res.tag}
+                      {res.price === 0 ? 'FREE' : 'PREMIUM'}
                     </span>
                   </div>
 
@@ -297,29 +274,28 @@ export const StudentResources: React.FC<StudentResourcesProps> = ({ onOpenAmbass
                   </p>
                 </div>
 
-                {/* Card Action Footer */}
                 <div className="mt-5 pt-3.5 border-t border-[#EAF4F8] flex items-center justify-between">
                   <div className="text-xs">
                     {res.price === 0 ? (
-                      <span className="text-[#2BAE66] font-extrabold">FREE</span>
+                      <span className="text-emerald-700 font-bold">Free Access</span>
                     ) : isUnlocked ? (
-                      <span className="text-[#2BAE66] font-bold flex items-center gap-1">
+                      <span className="text-emerald-700 font-bold flex items-center gap-1">
                         <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>Unlocked</span>
                       </span>
                     ) : (
                       <span className="text-[#0B1F33] font-bold">
-                        ₹19 <span className="text-slate-400 font-normal text-[11px]">one-time</span>
+                        ₹19 <span className="text-slate-400 font-normal text-[11px]">pass</span>
                       </span>
                     )}
                   </div>
 
                   <button
                     onClick={() => handleOpenResource(res)}
-                    className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-1.5 rounded-lg transition-all ${
+                    className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all ${
                       res.price === 0 || isUnlocked
                         ? 'bg-[#EAF6FA] text-[#138A9E] hover:bg-[#138A9E] hover:text-white'
-                        : 'bg-[#D6A84F]/15 text-[#9E731F] hover:bg-[#D6A84F] hover:text-white'
+                        : 'bg-amber-100/70 text-amber-900 hover:bg-[#D6A84F] hover:text-white'
                     }`}
                   >
                     <span>{res.price === 0 || isUnlocked ? res.linkText : 'Unlock ₹19'}</span>
@@ -337,23 +313,23 @@ export const StudentResources: React.FC<StudentResourcesProps> = ({ onOpenAmbass
 
         {/* Campus Ambassador Promotion Banner */}
         {onOpenAmbassadorModal && (
-          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#1769AA]/15 via-[#138A9E]/15 to-[#2BAE66]/15 border-2 border-[#138A9E]/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-            <div className="space-y-1.5 text-center md:text-left">
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#138A9E]/20 text-[#0c5966] uppercase tracking-wider">
-                Student Leadership Privilege
+          <div className="mt-12 p-6 sm:p-7 rounded-2xl bg-white border border-[#D7EAF3] flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div className="space-y-1 text-center md:text-left">
+              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#138A9E]/10 text-[#138A9E] uppercase tracking-wider">
+                Leadership Opportunity
               </div>
-              <h4 className="text-xl sm:text-2xl font-black text-[#0B1F33]">
-                Want 100% Free VIP Access to All Premium Resources?
+              <h4 className="text-lg sm:text-xl font-bold text-[#0B1F33]">
+                Become a Ctrl + Data + Grow Campus Ambassador
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 max-w-xl">
-                Become the official <strong>Ctrl + Data + Grow Campus Ambassador</strong> for your college. Represent CDG, organize tech bootcamps, connect your college clubs with industry speakers, and earn cash rewards + certificate of leadership.
+                Organize tech bootcamps at your campus, connect student clubs with industry speakers, and gain free access to all resources.
               </p>
             </div>
             <button
               onClick={onOpenAmbassadorModal}
-              className="shrink-0 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#138A9E] to-[#2BAE66] hover:brightness-105 text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2"
+              className="shrink-0 px-5 py-3 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer flex items-center gap-2"
             >
-              <span>Apply as Campus Ambassador</span>
+              <span>Apply as Ambassador</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

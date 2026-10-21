@@ -26,14 +26,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks = [
     { label: 'Home', href: '#hero' },
-    { label: 'Courses', href: '#courses' },
-    { label: 'Founder', href: '#founder' },
-    //{ label: '12 Formats', href: '#programs' },
-    //{ label: 'Disciplines', href: '#domains' },
-    { label: 'Student Resources', href: '#resources' },
     { label: 'Gallery', href: '#gallery' },
-    //{ label: 'Hackathons', href: '#hackathons' },
-    //{ label: 'Testimonials', href: '#testimonials' },
+    { label: 'Team', href: '#team' },
+    { label: 'Student Resources', href: '#resources' },
+    { label: 'Courses', href: '#courses' },
   ];
 
   return (

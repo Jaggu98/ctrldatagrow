@@ -17,10 +17,10 @@ interface PlanCardProps {
 }
 
 export const PlanCard: React.FC<PlanCardProps> = ({ onSelectExpert }) => {
-  const [sessionType, setSessionType] = useState('Guest Lecture (90–120 min)');
-  const [domain, setDomain] = useState('AI, LLMs & Generative Tech');
+  const [sessionType, setSessionType] = useState('Career & Mentorship Session');
+  const [domain, setDomain] = useState('analytics');
   const [date, setDate] = useState('15-11-2026');
-  const [collegeDept, setCollegeDept] = useState('B.Tech (CS, IT & AI)');
+  const [collegeDept, setCollegeDept] = useState('Aerospace & Aeronautical Engineering');
 
   const handleBookSession = (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,16 +120,16 @@ export const PlanCard: React.FC<PlanCardProps> = ({ onSelectExpert }) => {
                     onChange={(e) => setSessionType(e.target.value)}
                     className="w-full bg-[#F4F9FC] border border-[#D7EAF3] hover:border-[#1286A0]/40 rounded-xl px-3.5 py-2.5 text-xs sm:text-[13px] text-[#103957] font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-[#1286A0]/20 focus:border-[#1286A0] transition-all cursor-pointer pr-8"
                   >
+                    <option value="Career & Mentorship Session">Career &amp; Mentorship Session</option>
                     <option value="Guest Lecture (90–120 min)">Guest Lecture (90–120 min)</option>
                     <option value="Hands-on Workshop (Full Day)">Hands-on Workshop (Full Day)</option>
                     <option value="Industry Keynote / Symposium">Industry Keynote / Symposium</option>
-                    <option value="Career & Mentorship Session">Career & Mentorship Session</option>
                   </select>
                   <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>
               </div>
 
-              {/* Field 2: Subject / Domain */}
+              {/* Field 2: Subject / Domain in Alphabetical Order */}
               <div className="lg:col-span-3 flex flex-col">
                 <label className="text-[12px] font-bold text-[#103957] mb-1.5 flex items-center gap-1.5">
                   <BookOpen className="w-3.5 h-3.5 text-[#1286A0]" />
@@ -141,10 +141,11 @@ export const PlanCard: React.FC<PlanCardProps> = ({ onSelectExpert }) => {
                     onChange={(e) => setDomain(e.target.value)}
                     className="w-full bg-[#F4F9FC] border border-[#D7EAF3] hover:border-[#1286A0]/40 rounded-xl px-3.5 py-2.5 text-xs sm:text-[13px] text-[#103957] font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-[#1286A0]/20 focus:border-[#1286A0] transition-all cursor-pointer pr-8"
                   >
-                    <option value="AI, LLMs & Generative Tech">AI, LLMs & Generative Tech</option>
-                    <option value="Cloud Architecture & DevOps">Cloud Architecture & DevOps</option>
-                    <option value="Distributed Systems Design">Distributed Systems Design</option>
-                    <option value="Engineering Leadership">Engineering Leadership</option>
+                    <option value="analytics">Business Analytics &amp; Data-driven Decision Making</option>
+                    <option value="career">Microsoft Excel &amp; Career Growth in Data</option>
+                    <option value="bi">Power BI &amp; Tableau (Business Intelligence)</option>
+                    <option value="python">Python &amp; Azure Databricks</option>
+                    <option value="sql">SQL &amp; MySQL Database Systems</option>
                   </select>
                   <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>
@@ -180,10 +181,23 @@ export const PlanCard: React.FC<PlanCardProps> = ({ onSelectExpert }) => {
                     onChange={(e) => setCollegeDept(e.target.value)}
                     className="w-full bg-[#F4F9FC] border border-[#D7EAF3] hover:border-[#1286A0]/40 rounded-xl px-3.5 py-2.5 text-xs sm:text-[13px] text-[#103957] font-medium appearance-none focus:outline-none focus:ring-2 focus:ring-[#1286A0]/20 focus:border-[#1286A0] transition-all cursor-pointer pr-8"
                   >
-                    <option value="B.Tech (CS, IT & AI)">B.Tech (CS, IT & AI)</option>
-                    <option value="ECE & Electrical Engg">ECE & Electrical Engg</option>
-                    <option value="Mechanical & Civil Engg">Mechanical & Civil Engg</option>
-                    <option value="All Departments / College-wide">All Departments / College-wide</option>
+                    <option value="Aerospace & Aeronautical Engineering">Aerospace &amp; Aeronautical Engineering</option>
+                    <option value="All Engineering Departments (College-wide)">All Engineering Departments (College-wide)</option>
+                    <option value="Artificial Intelligence & Machine Learning (AI & ML)">Artificial Intelligence &amp; Machine Learning (AI &amp; ML)</option>
+                    <option value="Automobile Engineering">Automobile Engineering</option>
+                    <option value="Biotechnology & Biomedical Engineering">Biotechnology &amp; Biomedical Engineering</option>
+                    <option value="Chemical Engineering">Chemical Engineering</option>
+                    <option value="Civil Engineering (CE)">Civil Engineering (CE)</option>
+                    <option value="Computer Science & Engineering (CSE)">Computer Science &amp; Engineering (CSE)</option>
+                    <option value="Data Science & Engineering">Data Science &amp; Engineering</option>
+                    <option value="Electrical & Electronics Engineering (EEE)">Electrical &amp; Electronics Engineering (EEE)</option>
+                    <option value="Electronics & Communication Engineering (ECE)">Electronics &amp; Communication Engineering (ECE)</option>
+                    <option value="Information Technology (IT)">Information Technology (IT)</option>
+                    <option value="Mechanical Engineering (ME)">Mechanical Engineering (ME)</option>
+                    <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                    <option value="Metallurgical & Materials Engineering">Metallurgical &amp; Materials Engineering</option>
+                    <option value="Robotics & Automation">Robotics &amp; Automation</option>
+                    <option value="Other">Other Engineering / Specialization</option>
                   </select>
                   <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>

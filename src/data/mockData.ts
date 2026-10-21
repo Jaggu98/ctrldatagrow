@@ -3,7 +3,7 @@ export interface Expert {
   name: string;
   role: string;
   company: string;
-  category: 'ai' | 'cloud' | 'architecture' | 'leadership';
+  category: 'analytics' | 'sql' | 'python' | 'bi' | 'career';
   categoryLabel: string;
   expertise: string;
   topics: string[];
@@ -56,62 +56,77 @@ export const EXPERTS_DATA: Expert[] = [
   {
     id: 'rohit-mishra',
     name: 'Rohit Mishra',
-    role: 'Principal AI Scientist',
-    company: 'Leading AI Lab / ex-Amazon',
-    category: 'ai',
-    categoryLabel: 'AI & Data Science',
-    expertise: 'Large Language Models & GenAI in Production',
-    topics: ['LLM Orchestration', 'RAG Architectures', 'AI Agents at Scale'],
+    role: 'Lead Business Analytics Consultant',
+    company: 'Global Analytics Practice / ex-Mu Sigma',
+    category: 'analytics',
+    categoryLabel: 'Data & Business Analytics',
+    expertise: 'Business Analytics & Data-driven Decision Making',
+    topics: ['Business Analytics', 'Data Analytics', 'Data-driven Decision Making'],
     availability: 'Next: Oct 28',
     format: 'Offline & Virtual',
     image: '/images/expert-rohit.jpg',
-    bio: '14+ years building large-scale ML systems and recommendation engines. Passionate about bringing production ML engineering to campus.',
+    bio: '14+ years designing metric frameworks and executive analytics. Mentored 40+ college departments on data-driven decision making.',
     experience: '14+ Years Exp'
   },
   {
     id: 'priya-subramanian',
     name: 'Priya Subramanian',
-    role: 'VP of Engineering',
-    company: 'Fintech Unicorn',
-    category: 'leadership',
-    categoryLabel: 'Leadership & Eng',
-    expertise: 'Distributed Systems & Scaling Teams',
-    topics: ['Microservices at Scale', 'High-Throughput Payments', 'Engineering Career Ladders'],
+    role: 'Principal Database Architect',
+    company: 'Enterprise Data Systems',
+    category: 'sql',
+    categoryLabel: 'SQL & MySQL',
+    expertise: 'SQL, MySQL & Relational Data Modeling',
+    topics: ['Advanced SQL', 'MySQL Performance', 'Relational Schema Design'],
     availability: 'Next: Nov 04',
-    format: 'Offline / Keynote',
+    format: 'Workshop & Offline',
     image: '/images/expert-priya.jpg',
-    bio: 'Leads engineering for 40M+ active users. Mentored 500+ student engineers across top universities.',
+    bio: '16+ years architecting relational datastores and high-throughput query pipelines for millions of records.',
     experience: '16+ Years Exp'
   },
   {
     id: 'vikram-anand',
     name: 'Vikram Anand',
-    role: 'Staff Systems Architect',
-    company: 'Cloud Infrastructure Corp',
-    category: 'cloud',
-    categoryLabel: 'Cloud & DevOps',
-    expertise: 'Kubernetes, Cloud Native & Observability',
-    topics: ['Kubernetes Internals', 'Zero-Downtime Deployments', 'SRE Practices'],
+    role: 'Staff Data Engineer',
+    company: 'Cloud Analytics Solutions',
+    category: 'python',
+    categoryLabel: 'Python & Azure Databricks',
+    expertise: 'Python (Programming Language) & Azure Databricks',
+    topics: ['Python for Analytics', 'Azure Databricks', 'Scalable Data Pipelines'],
     availability: 'Next: Nov 10',
     format: 'Workshop / Offline',
     image: '/images/expert-vikram.jpg',
-    bio: 'Author of widely adopted open-source tools. Has delivered 40+ hands-on bootcamps for student developers.',
+    bio: 'Delivered 35+ hands-on code-along bootcamps teaching Python programming, Spark clusters, and Azure Databricks pipelines.',
     experience: '12+ Years Exp'
   },
   {
     id: 'sneha-kapoor',
     name: 'Sneha Kapoor',
-    role: 'Head of Product & Data',
-    company: 'Global HealthTech',
-    category: 'architecture',
-    categoryLabel: 'Product & Architecture',
-    expertise: 'Data Products & System Design',
-    topics: ['Product Roadmapping for Engineers', 'Data Governance', 'Designing for Millions'],
+    role: 'Head of Business Intelligence',
+    company: 'Multinational BI Consultancy',
+    category: 'bi',
+    categoryLabel: 'Power BI & Tableau',
+    expertise: 'Power BI, Tableau & Business Intelligence',
+    topics: ['Power BI Dashboards', 'Tableau Visualizations', 'Business Intelligence (BI)'],
     availability: 'Next: Nov 18',
     format: 'Virtual & Offline',
     image: '/images/expert-sneha.jpg',
-    bio: 'Specializes in bridging business goals with technical architecture. Regular speaker at international tech symposiums.',
+    bio: 'Specializes in translating raw data into boardroom-ready visual narratives using Power BI and Tableau.',
     experience: '11+ Years Exp'
+  },
+  {
+    id: 'ananya-deshmukh',
+    name: 'Ananya Deshmukh',
+    role: 'Analytics Director & Career Mentor',
+    company: 'Strategy & Analytics Advisory',
+    category: 'career',
+    categoryLabel: 'Excel & Career Growth',
+    expertise: 'Microsoft Excel, Analytics & Career Growth',
+    topics: ['Microsoft Excel Advanced', 'Career Growth Strategies', 'Campus Placement Mastery'],
+    availability: 'Next: Nov 25',
+    format: 'Keynote & Masterclass',
+    image: '/images/expert-priya.jpg',
+    bio: 'Helping students master advanced Microsoft Excel modeling while navigating campus-to-corporate career transitions in data.',
+    experience: '10+ Years Exp'
   }
 ];
 
@@ -134,7 +149,7 @@ export const ENGAGEMENTS_DATA: Engagement[] = [
     duration: '4 - 8 hours',
     audience: 'Lab batches (40-80 students)',
     image: '/images/engagement-workshop.jpg',
-    highlights: ['Hands-on coding exercises', 'Toolchains: Docker, K8s, PyTorch', 'Certificate of workshop completion']
+    highlights: ['Hands-on coding exercises', 'Toolchains: SQL, Python, Power BI, Excel, Tableau, Azure Databricks', 'Certificate of workshop completion']
   },
   {
     id: 'industry-talks',
@@ -165,8 +180,8 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     role: 'Dean of Academic Affairs',
     institution: 'National Institute of Technology',
     avatar: '/images/expert-rohit.jpg',
-    quote: 'The guest lecture on system architecture truly enlightened our final-year CS & AI students. The coordination from Ctrl + Data + Grow was seamless and professional, bringing a level of practical depth our students rarely encounter in standard textbooks.',
-    sessionType: 'Advanced Cloud Architectures Guest Lecture',
+    quote: 'The guest lecture on Business Analytics & Power BI truly enlightened our students. The coordination from Ctrl + Data + Grow was seamless and professional, bringing a level of practical depth our students rarely encounter in standard textbooks.',
+    sessionType: 'Business Analytics & Power BI Masterclass',
     studentsAttended: 320
   },
   {
@@ -175,8 +190,8 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     role: 'Head of Placement & Training',
     institution: 'Vellore Institute of Technology',
     avatar: '/images/expert-vikram.jpg',
-    quote: 'Having senior engineering leaders from top product companies interact directly with our students elevated their confidence tremendously. Our placement numbers in top-tier tech roles saw an immediate qualitative improvement.',
-    sessionType: 'Hands-on Microservices & Placement Mentorship',
+    quote: 'Having senior analytics and data engineering leaders interact directly with our students elevated their confidence tremendously. Our placement numbers in SQL, Python, and BI roles saw an immediate qualitative improvement.',
+    sessionType: 'Hands-on SQL, Databricks & Placement Mentorship',
     studentsAttended: 480
   },
   {
@@ -185,8 +200,8 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     role: 'Faculty Coordinator, IEEE Chapter',
     institution: 'BITS Pilani',
     avatar: '/images/expert-priya.jpg',
-    quote: 'Ctrl + Data + Grow bridged the exact gap we were struggling with: matching the university syllabus with modern industry frameworks. Their responsiveness and speaker quality are truly best-in-class.',
-    sessionType: 'Generative AI & LLM Systems Weekend Workshop',
+    quote: 'Ctrl + Data + Grow bridged the exact gap we were struggling with: matching the university syllabus with modern industry frameworks in SQL, Python, and Tableau. Their responsiveness and speaker quality are truly best-in-class.',
+    sessionType: 'Data-driven Decision Making & Tableau Weekend Workshop',
     studentsAttended: 240
   }
 ];

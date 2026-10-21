@@ -41,7 +41,7 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: '40–80 Students',
       format: 'Hands-on Coding Lab',
       duration: 'Full Day (6 hrs)',
-      description: 'Intensive code-along labs covering Docker, Kubernetes, Next.js, and Cloud Infrastructure.'
+      description: 'Intensive code-along labs covering SQL, MySQL, Python (Programming Language), and Azure Databricks.'
     },
     {
       id: 'corporate-masterclasses',
@@ -52,7 +52,7 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: 'Final Year & Postgrad',
       format: 'Executive Masterclass',
       duration: 'Half Day (4 hrs)',
-      description: 'Exclusive deep-dives into modern corporate methodologies, enterprise Agile, and system scalability.'
+      description: 'Exclusive deep-dives into modern corporate methodologies, enterprise analytics, and data-driven decision making.'
     },
     {
       id: 'business-analytics-workshops',
@@ -63,18 +63,18 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: 'Management & B.Tech',
       format: 'Case Study Lab',
       duration: '3–4 Hours',
-      description: 'Practical data-driven decision making, SQL at scale, PowerBI, and predictive metric modeling.'
+      description: 'Practical data-driven decision making, SQL at scale, Power BI, Tableau, and Microsoft Excel modeling.'
     },
     {
       id: 'data-science-ai-sessions',
-      name: 'Data Science & AI Sessions',
+      name: 'Data Science & BI Sessions',
       icon: Cpu,
       color: '#138A9E',
       meta: 'Audience · format · duration',
       audience: 'CS, IT & AI Departments',
       format: 'Architecture Deep-Dive',
       duration: '2–3 Hours',
-      description: 'Production LLMs, retrieval augmented generation (RAG), vector databases, and MLOps pipelines.'
+      description: 'Data Analytics, Business Intelligence (BI), Azure Databricks workflows, and automated reporting pipelines.'
     },
     {
       id: 'industry-case-studies',
@@ -85,7 +85,7 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: 'Engineering & MBA',
       format: 'Real Incident Analysis',
       duration: '2 Hours',
-      description: 'Walkthroughs of actual production outages, traffic surges, and multi-region architectural trade-offs.'
+      description: 'Walkthroughs of actual corporate data dilemmas, metric funnels, and data-driven decision making trade-offs.'
     },
     {
       id: 'career-guidance-sessions',
@@ -96,7 +96,7 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: '2nd & 3rd Year Students',
       format: 'Strategic Roadmap',
       duration: '90 min',
-      description: 'Unfiltered clarity on hiring expectations, portfolio building, and choosing the right engineering track.'
+      description: 'Career growth roadmaps, portfolio building, and choosing the right track in Data Analytics, BI, and Engineering.'
     },
     {
       id: 'resume-interview-workshops',
@@ -107,7 +107,7 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
       audience: 'Placement Batch',
       format: 'Live Critiques & Mocks',
       duration: 'Half Day (4 hrs)',
-      description: 'ATS resume formatting, behavioral rounds, system design interviews, and live mock evaluations.'
+      description: 'ATS resume formatting, SQL & Python live coding rounds, analytics case studies, and mock evaluations.'
     },
     {
       id: 'industry-mentorship',
@@ -156,7 +156,8 @@ export const TwelveWays: React.FC<TwelveWaysProps> = ({ onSelectFormat }) => {
   ];
 
   return (
-    <section id="programs" className="py-20 md:py-28 bg-white border-b border-[#D7EAF3]">
+    <section id="courses" className="py-20 md:py-28 bg-white border-b border-[#D7EAF3] relative">
+      <div id="programs" className="absolute -top-24 pointer-events-none" />
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

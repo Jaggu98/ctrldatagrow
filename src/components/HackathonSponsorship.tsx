@@ -62,8 +62,8 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
             Powering Next-Gen Hackathons <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#60A5FA] via-[#2DD4BF] to-[#4ADE80]">
-              With Grants, Problem Statements & Sponsors
+            <span className="text-[#138A9E]">
+              With Grants, Problem Statements &amp; Sponsors
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-300 leading-relaxed">
@@ -76,18 +76,18 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
               onClick={() => setActiveTab('colleges')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer flex items-center gap-2 ${
                 activeTab === 'colleges'
-                  ? 'bg-gradient-to-r from-[#1769AA] to-[#138A9E] text-white shadow-md'
+                  ? 'bg-[#1769AA] text-white shadow-md'
                   : 'text-gray-300 hover:text-white'
               }`}
             >
               <Rocket className="w-4 h-4" />
-              For Colleges & Hackathon Organizers
+              For Colleges &amp; Hackathon Organizers
             </button>
             <button
               onClick={() => setActiveTab('corporates')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer flex items-center gap-2 ${
                 activeTab === 'corporates'
-                  ? 'bg-gradient-to-r from-[#2BAE66] to-[#138A9E] text-white shadow-md'
+                  ? 'bg-[#138A9E] text-white shadow-md'
                   : 'text-gray-300 hover:text-white'
               }`}
             >
@@ -167,7 +167,7 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <button
                   onClick={() => handleOpenInquiry('college')}
-                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#2BAE66] to-[#138A9E] text-white font-bold text-sm shadow-lg hover:shadow-emerald-500/30 hover:scale-[1.02] transition-all cursor-pointer flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-[#138A9E] hover:bg-[#0E6D82] text-white font-bold text-sm shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Rocket className="w-4 h-4" />
                   <span>Apply for Hackathon Co-Sponsorship</span>
@@ -223,8 +223,8 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
               </div>
 
               {/* Tier 2 (Highlighted) */}
-              <div className="p-7 rounded-2xl bg-gradient-to-b from-[#1769AA]/40 to-[#0B1F33] border-2 border-[#60A5FA] relative flex flex-col justify-between shadow-2xl">
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-[#D6A84F] to-[#F5C26B] text-[#0B1F33] text-[11px] font-extrabold uppercase tracking-wide shadow-md">
+              <div className="p-7 rounded-2xl bg-[#0B1F33] border-2 border-[#1769AA] relative flex flex-col justify-between shadow-2xl">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#D6A84F] text-[#0B1F33] text-[11px] font-extrabold uppercase tracking-wide shadow-md">
                   Most Popular For Hiring
                 </div>
                 <div>
@@ -256,7 +256,7 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
                 </div>
                 <button
                   onClick={() => handleOpenInquiry('sponsor')}
-                  className="mt-6 w-full py-3 rounded-xl bg-gradient-to-r from-[#1769AA] via-[#138A9E] to-[#2BAE66] hover:brightness-110 text-white text-xs font-extrabold shadow-lg transition-all cursor-pointer"
+                  className="mt-6 w-full py-3 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white text-xs font-extrabold shadow-md transition-all cursor-pointer"
                 >
                   Become Premier Co-Sponsor
                 </button>
@@ -457,7 +457,7 @@ export const HackathonSponsorship: React.FC<HackathonSponsorshipProps> = ({
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-[#1769AA] to-[#2BAE66] text-white font-bold text-xs uppercase tracking-wider hover:brightness-105 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Hackathon Proposal</span>

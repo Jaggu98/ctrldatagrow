@@ -75,13 +75,13 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
             {/* Header matching Image 3 */}
             <div className="mb-4">
               <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#1769AA]/15 border border-[#1769AA]/30 text-[#1769AA] text-[10px] font-bold tracking-widest uppercase mb-1.5">
-                <span>Speaker Application • Vetted Network</span>
+                <span>Speaker Application • Verified Network</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#0B1F33] tracking-tight">
-                Apply to Become a <span className="text-[#138A9E]">Ctrl + Data + Grow Expert</span>
+                Apply to Become a <span className="text-[#138A9E]">Resource Person</span> for CDG
               </h3>
               <p className="text-xs text-[#4A6D88] mt-1 font-normal">
-                Tell us about your background, weekend college availability, and session topics. All profiles undergo human LinkedIn verification before listing.
+                Tell us about your background, session availability and session topics. All profiles undergo human LinkedIn verification before listing.
               </p>
             </div>
 
@@ -188,9 +188,9 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
                     className="w-full bg-[#F4F9FC] border border-[#D7EAF3] rounded-xl px-3.5 py-2.5 text-xs text-[#0B1F33] font-medium focus:outline-none focus:ring-2 focus:ring-[#138A9E]/20 focus:border-[#138A9E]"
                   >
                     <option value="Both Online & Offline (Weekends)">Both Online &amp; Offline (Weekends)</option>
-                    <option value="Online Virtual Workshops (Saturdays/Sundays)">Online Virtual Workshops (Weekends)</option>
-                    <option value="On-Campus Offline Guest Keynotes Only">On-Campus Offline Guest Keynotes</option>
                     <option value="Hackathon Jury & Mentorship Only">Hackathon Jury &amp; Mentorship</option>
+                    <option value="On-Campus Offline Guest Keynotes Only">On-Campus Offline Guest Keynotes</option>
+                    <option value="Online Virtual Workshops (Saturdays/Sundays)">Online Virtual Workshops (Weekends)</option>
                   </select>
                 </div>
               </div>
@@ -229,18 +229,24 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
 
               {/* Row 5: Topics / Domains of Expertise */}
               <div>
-                <label className="text-[11px] font-bold text-[#0B1F33] mb-1 flex items-center gap-1">
-                  <Award className="w-3 h-3 text-[#138A9E]" />
-                  <span>Topics / Domains of Expertise *</span>
+                <label className="text-[11px] font-bold text-[#0B1F33] mb-1 flex items-center justify-between">
+                  <span className="flex items-center gap-1">
+                    <Award className="w-3 h-3 text-[#138A9E]" />
+                    <span>Topics / Domains of Expertise *</span>
+                  </span>
+                  <span className="text-[10px] text-[#138A9E] font-medium">SQL • Analytics • Python • Power BI</span>
                 </label>
                 <textarea
                   required
                   rows={2}
-                  placeholder="e.g. Generative AI with Google Gemini, Full-Stack Distributed Systems, Cloud Architecture, Interview Optimization..."
+                  placeholder="e.g. SQL & MySQL, Business Analytics, Python, Microsoft Excel, Azure Databricks, Power BI, Tableau, Business Intelligence, Data-driven Decision Making, Career Growth..."
                   value={formData.topics}
                   onChange={(e) => setFormData({ ...formData, topics: e.target.value })}
                   className="w-full bg-[#F4F9FC] border border-[#D7EAF3] rounded-xl px-3.5 py-2 text-xs text-[#0B1F33] font-medium focus:outline-none focus:ring-2 focus:ring-[#138A9E]/20 focus:border-[#138A9E]"
                 />
+                <p className="text-[10px] text-slate-500 mt-1">
+                  Popular topics: SQL, MySQL, Business Analytics, Python (Programming Language), Microsoft Excel, Azure Databricks, Power BI, Tableau, Business Intelligence, Data-driven Decision Making, Career Growth.
+                </p>
               </div>
 
               {/* Row 6: Past Speaking & Training Experience */}

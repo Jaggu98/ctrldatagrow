@@ -8,7 +8,6 @@ import { TwelveWays } from './components/TwelveWays';
 import { ProcessSteps } from './components/ProcessSteps';
 import { StudentResources } from './components/StudentResources';
 import { HackathonSponsorship } from './components/HackathonSponsorship';
-import { DualTestimonials } from './components/DualTestimonials';
 import { TrustSafety } from './components/TrustSafety';
 import { Gallery } from './components/Gallery';
 import { Insights } from './components/Insights';
@@ -120,9 +119,6 @@ export function App() {
 
         {/* 13. Creating Meaningful Campus Experiences */}
         {/* <ValueFeatures /> */}
-
-        {/* 14. Dual Testimonials: College Management & Placed Students / Campus Ambassadors */}
-        <DualTestimonials />
 
         {/* 15. Brand Slide 4: Institutional Trust & Safety Standards */}
         <TrustSafety />

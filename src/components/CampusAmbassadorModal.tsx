@@ -55,7 +55,7 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 animate-in fade-in duration-200">
       <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-gray-100 max-h-[92vh] flex flex-col overflow-hidden">
         {/* Compact Header */}
-        <div className="bg-gradient-to-r from-[#0B1F33] via-[#0d2a45] to-[#1769AA] text-white px-5 py-4 shrink-0 relative">
+        <div className="bg-[#0B1F33] border-b border-[#1769AA]/30 text-white px-5 py-4 shrink-0 relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white cursor-pointer"
@@ -328,7 +328,7 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
               type="submit"
               form="ambassador-form"
               disabled={isSubmitting}
-              className="w-full sm:w-auto py-2.5 px-6 rounded-xl bg-gradient-to-r from-[#1769AA] via-[#138A9E] to-[#2BAE66] hover:brightness-105 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-70"
+              className="w-full sm:w-auto py-2.5 px-6 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-70"
             >
               {isSubmitting ? (
                 <span>Submitting...</span>

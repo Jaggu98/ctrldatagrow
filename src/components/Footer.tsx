@@ -63,13 +63,12 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs text-sky-200/80">
               <li><a href="#hero" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#founder" className="hover:text-white transition-colors">Founder Vision</a></li>
-              <li><a href="#programs" className="hover:text-white transition-colors">12 Engagement Formats</a></li>
-              <li><a href="#domains" className="hover:text-white transition-colors">10 Tech Disciplines</a></li>
-              <li><a href="#resources" className="hover:text-white transition-colors">Student Knowledge Hub</a></li>
+              <li><a href="#gallery" className="hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#team" className="hover:text-white transition-colors">Team &amp; Leadership</a></li>
+              <li><a href="#resources" className="hover:text-white transition-colors">Student Resources</a></li>
+              <li><a href="#courses" className="hover:text-white transition-colors">Courses &amp; Formats</a></li>
               <li><a href="#hackathons" className="hover:text-white transition-colors">Hackathon Co-Sponsorship</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Dual Testimonials</a></li>
-              <li><a href="#trust-safety" className="hover:text-white transition-colors">Trust & Safety Charter</a></li>
+              <li><a href="#trust-safety" className="hover:text-white transition-colors">Trust &amp; Safety Charter</a></li>
             </ul>
             {onOpenPartnerModal && (
               <div className="pt-2">
@@ -139,7 +138,7 @@ export const Footer: React.FC<FooterProps> = ({
               {onOpenSpeakerModal && (
                 <button
                   onClick={onOpenSpeakerModal}
-                  className="w-full text-xs font-bold py-2.5 px-3 rounded-lg bg-gradient-to-r from-[#1769AA] to-[#138A9E] hover:brightness-110 text-white transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
+                  className="w-full text-xs font-bold py-2.5 px-3 rounded-lg bg-[#1286A0] hover:bg-[#0E6D82] text-white transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
                 >
                   <UserCheck className="w-4 h-4" />
                   <span>Apply as Speaker (Weekend Sessions)</span>

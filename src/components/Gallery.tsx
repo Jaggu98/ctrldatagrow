@@ -100,7 +100,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenPartnerModal }) => {
               </div>
 
               {/* Bottom Right: Teal Pattern Card */}
-              <div className="rounded-2xl bg-gradient-to-br from-[#1286A0] to-[#0E6D82] text-white p-6 shadow-md flex flex-col justify-between relative overflow-hidden h-[200px] sm:h-full">
+              <div className="rounded-2xl bg-[#1286A0] text-white p-6 shadow-md flex flex-col justify-between relative overflow-hidden h-[200px] sm:h-full">
                 {/* Subtle ripple background decoration */}
                 <div className="absolute -right-6 -bottom-6 w-32 h-32 rounded-full border-4 border-white/10 pointer-events-none"></div>
 

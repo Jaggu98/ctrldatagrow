@@ -7,7 +7,8 @@ interface FounderVisionProps {
 
 export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal }) => {
   return (
-    <section id="founder" className="relative py-20 md:py-28 bg-[#0B1F33] text-white overflow-hidden border-y border-[#1769AA]/20">
+    <section id="team" className="relative py-20 md:py-28 bg-[#0B1F33] text-white overflow-hidden border-y border-[#1769AA]/20">
+      <div id="founder" className="absolute -top-24 pointer-events-none" />
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#138A9E]/10 rounded-full blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-10 w-80 h-80 bg-[#D6A84F]/5 rounded-full blur-3xl" />

@@ -14,11 +14,12 @@ export const ExpertDirectory: React.FC<ExpertDirectoryProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: 'All Experts' },
-    { id: 'ai', label: 'AI & Data' },
-    { id: 'cloud', label: 'Cloud & DevOps' },
-    { id: 'architecture', label: 'System Design' },
-    { id: 'leadership', label: 'Leadership' },
+    { id: 'all', label: 'All Resource Persons' },
+    { id: 'analytics', label: 'Data & Business Analytics' },
+    { id: 'sql', label: 'SQL & MySQL' },
+    { id: 'python', label: 'Python & Azure Databricks' },
+    { id: 'bi', label: 'Power BI & Tableau' },
+    { id: 'career', label: 'Excel & Career Growth' },
   ];
 
   const filteredExperts = EXPERTS_DATA.filter((expert) => {
@@ -33,13 +34,13 @@ export const ExpertDirectory: React.FC<ExpertDirectoryProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
           <div>
             <span className="text-xs font-bold tracking-widest text-[#1286A0] uppercase">
-              Expert Directory
+              Resource Persons &amp; Speakers
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#103957] tracking-tight mt-1">
-              Learn from industry leaders
+              Learn from verified industry leaders
             </h2>
             <p className="text-sm sm:text-base text-[#244866] mt-2 max-w-xl">
-              Vetted architects, engineering directors, and AI researchers eager to mentor the next generation of engineers.
+              Vetted practitioners and analytics leaders eager to mentor students in SQL, MySQL, Python, Excel, Azure Databricks, Power BI, Tableau, and Data-driven Decision Making.
             </p>
           </div>
 
@@ -69,9 +70,9 @@ export const ExpertDirectory: React.FC<ExpertDirectoryProps> = ({
           
           {/* Table Header (Desktop) */}
           <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3.5 bg-[#F3F9FC] border-b border-[#C5E2EC] text-[11.5px] font-bold text-[#153F60] uppercase tracking-wider">
-            <div className="col-span-4">Expert & Designation</div>
-            <div className="col-span-4">Subject Expertise</div>
-            <div className="col-span-2">Availability & Mode</div>
+            <div className="col-span-4">Resource Person &amp; Designation</div>
+            <div className="col-span-4">Subject Expertise &amp; Topics</div>
+            <div className="col-span-2">Availability &amp; Mode</div>
             <div className="col-span-2 text-right">Action</div>
           </div>
 
@@ -169,23 +170,23 @@ export const ExpertDirectory: React.FC<ExpertDirectoryProps> = ({
           </button>
         </div>
 
-        {/* Join as Weekend Resource Person Callout */}
+        {/* Join as Resource Person Callout */}
         {onOpenSpeakerModal && (
-          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-[#0B1F33] via-[#103957] to-[#1769AA] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+          <div className="mt-8 p-6 rounded-2xl bg-[#0B1F33] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg border border-[#1769AA]/30">
             <div className="space-y-1 text-center sm:text-left">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#D6A84F]/20 text-[#F5C26B] border border-[#D6A84F]/40 uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#138A9E]/20 text-[#38BDF8] border border-[#138A9E]/40 uppercase tracking-wider">
                 For Industry Professionals
               </div>
               <h4 className="text-base sm:text-lg font-bold">
-                Passionate About Mentoring Next-Gen Engineers?
+                Passionate About Mentoring in Data, Analytics &amp; Career Growth?
               </h4>
               <p className="text-xs text-sky-100/80 max-w-xl">
-                Register as a CDG Weekend Resource Person. Share your technical domain expertise with enthusiastic student communities across 50+ colleges. Profiles listed after LinkedIn verification.
+                Register as a CDG Resource Person. Share your expertise in SQL, Business Analytics, Python, Power BI, Tableau, Azure Databricks, and Decision Making with student communities across 50+ colleges.
               </p>
             </div>
             <button
               onClick={onOpenSpeakerModal}
-              className="shrink-0 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D6A84F] to-[#F5C26B] hover:brightness-105 text-[#0B1F33] font-bold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer flex items-center gap-2"
+              className="shrink-0 px-5 py-2.5 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer flex items-center gap-2"
             >
               <span>Enroll as Resource Person</span>
               <ArrowRight className="w-4 h-4" />
