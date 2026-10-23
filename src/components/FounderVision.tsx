@@ -1,13 +1,102 @@
-import React from 'react';
-import { Quote, Linkedin } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Quote, Linkedin, Award, Briefcase, Eye } from 'lucide-react';
 
 interface FounderVisionProps {
   onOpenPartnerModal?: () => void;
 }
 
-export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal }) => {
+interface RollingCounterProps {
+  end: number;
+  decimals?: number;
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+  startTrigger: boolean;
+}
+
+const RollingCounter: React.FC<RollingCounterProps> = ({
+  end,
+  decimals = 0,
+  duration = 1800,
+  prefix = '',
+  suffix = '',
+  startTrigger,
+}) => {
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!startTrigger) return;
+
+    let startTime: number | null = null;
+    let animationFrameId: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Ease-out cubic: starts fast and smoothly decelerates into place
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = easeOut * end;
+
+      setVal(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animate);
+      } else {
+        setVal(end);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [end, duration, startTrigger]);
+
+  const displayVal =
+    decimals > 0
+      ? val.toFixed(decimals)
+      : Math.floor(val).toLocaleString();
+
   return (
-    <section id="team" className="relative py-20 md:py-28 bg-[#0B1F33] text-white overflow-hidden border-y border-[#1769AA]/20">
+    <span>
+      {prefix}
+      {displayVal}
+      {suffix}
+    </span>
+  );
+};
+
+export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      id="team"
+      ref={sectionRef}
+      className="relative py-20 md:py-28 bg-[#0B1F33] text-white overflow-hidden border-y border-[#1769AA]/20"
+    >
       <div id="founder" className="absolute -top-24 pointer-events-none" />
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#138A9E]/10 rounded-full blur-3xl" />
@@ -83,28 +172,112 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
               </div>
             </div>
 
-            {/* Institutional Trust & Verification Pillars */}
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A] border border-[#1769AA]/20">
-                <div className="flex items-center gap-2 mb-1.5 text-xs font-bold tracking-wider uppercase text-[#138A9E]">
-                  <ShieldCheck className="w-4 h-4 text-[#2BAE66]" />
-                  <span>Verified Credentials Only</span>
+            {/* CEO Track Record & Impact Counters */}
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-1">
+              {/* LinkedIn Followers */}
+              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-slate-300">
+                    LinkedIn
+                  </span>
+                  <div className="w-7 h-7 rounded-lg bg-[#0077B5]/20 flex items-center justify-center text-[#38bdf8]">
+                    <Linkedin className="w-4 h-4" />
+                  </div>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Strict policy against unverified claims. Every speaker profile, case study, and syllabus mapping is authenticated before stepping on campus.
-                </p>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight tabular-nums">
+                    <RollingCounter
+                      end={20}
+                      suffix="k+"
+                      startTrigger={isVisible}
+                    />
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium mt-0.5 block">
+                    Followers
+                  </span>
+                </div>
               </div>
 
-              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A] border border-[#1769AA]/20">
-                <div className="flex items-center gap-2 mb-1.5 text-xs font-bold tracking-wider uppercase text-[#D6A84F]">
-                  <CheckCircle2 className="w-4 h-4 text-[#D6A84F]" />
-                  <span>Academic Alignment</span>
+              {/* Quora Views */}
+              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-slate-300">
+                    Quora
+                  </span>
+                  <div className="w-7 h-7 rounded-lg bg-[#B92B27]/20 flex items-center justify-center text-[#f87171]">
+                    <Eye className="w-4 h-4" />
+                  </div>
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Engineered specifically to complement university board-of-studies syllabi with actionable production architecture and placement clarity.
-                </p>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight tabular-nums">
+                    <RollingCounter
+                      end={4.6}
+                      decimals={1}
+                      suffix=" Million"
+                      startTrigger={isVisible}
+                    />
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium mt-0.5 block">
+                    Content Views
+                  </span>
+                </div>
               </div>
-            </div> */}
+
+              {/* Topmate */}
+              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#D6A84F]/50 transition-all flex flex-col justify-between shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#D6A84F]">
+                    Topmate
+                  </span>
+                  <div className="w-7 h-7 rounded-lg bg-[#D6A84F]/20 flex items-center justify-center text-[#D6A84F]">
+                    <Award className="w-4 h-4" />
+                  </div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight tabular-nums">
+                    <RollingCounter
+                      end={0.1}
+                      decimals={1}
+                      prefix="Top "
+                      suffix="%"
+                      startTrigger={isVisible}
+                    />
+                    <span className="text-sm font-semibold text-slate-300 ml-1.5">
+                      Mentor
+                    </span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#D6A84F]/15 text-[#E6BC65] border border-[#D6A84F]/30">
+                      ★ Top Speaker 2024
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* IT Industry Experience */}
+              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-[#138A9E]">
+                    Experience
+                  </span>
+                  <div className="w-7 h-7 rounded-lg bg-[#138A9E]/20 flex items-center justify-center text-[#138A9E]">
+                    <Briefcase className="w-4 h-4" />
+                  </div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight tabular-nums">
+                    <RollingCounter
+                      end={6}
+                      suffix=" yrs+"
+                      startTrigger={isVisible}
+                    />
+                  </div>
+                  <span className="text-xs text-slate-300 font-medium mt-0.5 block">
+                    Years of IT Experience
+                  </span>
+                </div>
+              </div>
+            </div>
 
             {onOpenPartnerModal && (
               <div className="pt-2">
