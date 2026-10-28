@@ -1,17 +1,19 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Mail, MapPin, Linkedin, ArrowUp, ExternalLink, Award, UserCheck, Calendar } from 'lucide-react';
+import { Mail, MapPin, Linkedin, ArrowUp, ExternalLink, Award, UserCheck, Calendar, ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   onOpenPartnerModal?: () => void;
   onOpenSpeakerModal?: () => void;
   onOpenAmbassadorModal?: () => void;
+  onOpenAdmin?: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   onOpenPartnerModal,
   onOpenSpeakerModal,
-  onOpenAmbassadorModal
+  onOpenAmbassadorModal,
+  onOpenAdmin
 }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -172,6 +174,16 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex items-center gap-6">
             <a href="#trust-safety" className="hover:text-white transition-colors">Trust & Safety Charter</a>
             <a href="#privacy" className="hover:text-white transition-colors">Academic Privacy</a>
+            {onOpenAdmin && (
+              <button
+                onClick={onOpenAdmin}
+                className="hover:text-[#138A9E] text-slate-400 text-xs transition-colors inline-flex items-center gap-1 cursor-pointer"
+                title="Open Supabase Admin Portal"
+              >
+                <ShieldCheck className="w-3.5 h-3.5 text-[#138A9E]" />
+                <span>Admin Desk</span>
+              </button>
+            )}
             <button
               onClick={scrollToTop}
               className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-colors cursor-pointer"

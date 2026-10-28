@@ -10,50 +10,70 @@ import {
   User,
   Mail,
   Phone,
-  Briefcase
+  Briefcase,
+  AlertCircle,
+  Loader2
 } from 'lucide-react';
+import { submitSpeakerApplication } from '../services/speakerService';
 
 interface SpeakerApplicationModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const initialFormState = {
+  fullName: '',
+  email: '',
+  phone: '',
+  designation: '',
+  company: '',
+  preferredMode: 'Both Online & Offline (Weekends)',
+  linkedinUrl: '',
+  portfolioUrl: '',
+  topics: '',
+  speakingExperience: '',
+  feeRange: '₹5,000 - ₹15,000 per 90-min session',
+  agreeVerify: true,
+};
+
 export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = ({
   isOpen,
   onClose,
 }) => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    designation: '',
-    company: '',
-    preferredMode: 'Both Online & Offline (Weekends)',
-    linkedinUrl: '',
-    portfolioUrl: '',
-    topics: '',
-    speakingExperience: '',
-    feeRange: '₹5,000 - ₹15,000 per 90-min session',
-    agreeVerify: true,
-  });
-
+  const [formData, setFormData] = useState(initialFormState);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [registrationId, setRegistrationId] = useState<string>('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage(null);
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      const result = await submitSpeakerApplication(formData);
+
+      if (result.success) {
+        setRegistrationId(result.referenceId || '');
+        setSubmitted(true);
+      } else {
+        setErrorMessage(result.error || 'Failed to submit application. Please verify your details.');
+      }
+    } catch (err: any) {
+      setErrorMessage(err?.message || 'An unexpected error occurred. Please try again.');
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    }
   };
 
   const handleReset = () => {
+    setFormData(initialFormState);
     setSubmitted(false);
+    setErrorMessage(null);
+    setRegistrationId('');
     onClose();
   };
 
@@ -278,14 +298,32 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
                 />
               </div>
 
+              {/* Error Alert Banner */}
+              {errorMessage && (
+                <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start gap-2.5">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0 text-red-500 mt-0.5" />
+                  <div className="space-y-0.5">
+                    <p className="font-semibold text-red-800">Submission Error</p>
+                    <p className="text-[11px] text-red-600 leading-relaxed">{errorMessage}</p>
+                  </div>
+                </div>
+              )}
+
               {/* Submit CTA matching Image 3 */}
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#0B1F33] hover:bg-[#1769AA] text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer"
+                  className="w-full bg-[#0B1F33] hover:bg-[#1769AA] disabled:bg-[#0B1F33]/70 text-white font-bold text-xs sm:text-sm py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer"
                 >
-                  <span>{loading ? 'Submitting Application...' : 'Submit Expert Application'}</span>
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-[#8ED0EA]" />
+                      <span>Submitting Application to Supabase...</span>
+                    </>
+                  ) : (
+                    <span>Submit Expert Application</span>
+                  )}
                 </button>
               </div>
 
@@ -301,12 +339,16 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
               Application Received for Review
             </h4>
             <p className="text-sm text-[#4A6D88] mt-2 max-w-md mx-auto">
-              Thank you, <span className="font-semibold text-[#0B1F33]">{formData.fullName}</span>. Your resource person application has been submitted to the Ctrl + Data + Grow speaker accreditation desk.
+              Thank you, <span className="font-semibold text-[#0B1F33]">{formData.fullName}</span>. Your resource person application has been persistently saved in our accreditation desk.
             </p>
             <div className="mt-5 p-4 rounded-xl bg-[#F4F9FC] border border-[#D7EAF3] max-w-sm mx-auto text-xs text-left space-y-1.5 text-slate-600">
+              {registrationId && (
+                <p>Registration ID: <strong className="text-[#138A9E] font-mono tracking-wide">{registrationId}</strong></p>
+              )}
               <p>Role: <strong className="text-[#0B1F33]">{formData.designation} at {formData.company}</strong></p>
               <p>LinkedIn: <strong className="text-[#0077B5] truncate block">{formData.linkedinUrl}</strong></p>
               <p>Review Timeline: <strong className="text-[#2BAE66]">2–3 business days</strong></p>
+              <p>Status: <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-100 text-amber-800 uppercase tracking-wider">Pending Review</span></p>
             </div>
             <p className="text-xs text-slate-400 mt-4 max-w-xs mx-auto">
               Upon profile authentication, your public expert card will be displayed in the live catalog for college invitations.

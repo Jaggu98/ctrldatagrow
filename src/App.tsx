@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PlanCard } from './components/PlanCard';
@@ -17,14 +17,32 @@ import { Footer } from './components/Footer';
 import { PartnerModal } from './components/PartnerModal';
 import { SpeakerApplicationModal } from './components/SpeakerApplicationModal';
 import { CampusAmbassadorModal } from './components/CampusAmbassadorModal';
+import { AdminDashboard } from './components/admin/AdminDashboard';
 import { Expert } from './data/mockData';
 
 export function App() {
   const [isPartnerModalOpen, setIsPartnerModalOpen] = useState(false);
   const [isSpeakerModalOpen, setIsSpeakerModalOpen] = useState(false);
   const [isAmbassadorModalOpen, setIsAmbassadorModalOpen] = useState(false);
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   const [selectedExpert, setSelectedExpert] = useState<Expert | null>(null);
   const [selectedFormat, setSelectedFormat] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    // Check if URL contains #admin
+    if (window.location.hash === '#admin') {
+      setIsAdminModalOpen(true);
+    }
+
+    const handleHashChange = () => {
+      if (window.location.hash === '#admin') {
+        setIsAdminModalOpen(true);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleOpenPartnerModal = (expert?: Expert | null, format?: string) => {
     setSelectedExpert(expert || null);
@@ -38,6 +56,10 @@ export function App() {
 
   const handleOpenAmbassadorModal = () => {
     setIsAmbassadorModalOpen(true);
+  };
+
+  const handleOpenAdminModal = () => {
+    setIsAdminModalOpen(true);
   };
 
   const handleSelectFormat = (formatName: string) => {
@@ -147,6 +169,7 @@ export function App() {
         onOpenPartnerModal={() => handleOpenPartnerModal()}
         onOpenSpeakerModal={handleOpenSpeakerModal}
         onOpenAmbassadorModal={handleOpenAmbassadorModal}
+        onOpenAdmin={handleOpenAdminModal}
       />
 
       {/* Global Interactive Partner Modal (Brand Slide 12: Campus Booking Form · 15 Fields) */}
@@ -167,6 +190,12 @@ export function App() {
       <CampusAmbassadorModal
         isOpen={isAmbassadorModalOpen}
         onClose={() => setIsAmbassadorModalOpen(false)}
+      />
+
+      {/* Authorized Admin Portal */}
+      <AdminDashboard
+        isOpen={isAdminModalOpen}
+        onClose={() => setIsAdminModalOpen(false)}
       />
     </div>
   );

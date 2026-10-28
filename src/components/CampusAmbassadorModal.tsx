@@ -10,44 +10,65 @@ import {
   Linkedin,
   Gift,
   Zap,
-  ArrowRight
+  ArrowRight,
+  AlertCircle,
+  Loader2
 } from 'lucide-react';
+import { submitCampusAmbassador } from '../services/ambassadorService';
 
 interface CampusAmbassadorModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    collegeName: '',
-    cityState: '',
-    branch: '',
-    yearOfStudy: '3rd Year',
-    linkedinUrl: '',
-    clubInvolvement: '',
-    outreachPlan: '',
-  });
+const initialAmbassadorState = {
+  fullName: '',
+  email: '',
+  phone: '',
+  collegeName: '',
+  cityState: '',
+  branch: '',
+  yearOfStudy: '3rd Year',
+  linkedinUrl: '',
+  clubInvolvement: '',
+  outreachPlan: '',
+};
 
+export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ isOpen, onClose }) => {
+  const [formData, setFormData] = useState(initialAmbassadorState);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [applicationId, setApplicationId] = useState<string>('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage(null);
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      const result = await submitCampusAmbassador(formData);
+
+      if (result.success) {
+        setApplicationId(result.referenceId || '');
+        setSubmitted(true);
+      } else {
+        setErrorMessage(result.error || 'Failed to submit application. Please check your inputs.');
+      }
+    } catch (err: any) {
+      setErrorMessage(err?.message || 'An unexpected error occurred. Please try again.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 800);
+    }
   };
 
   const handleReset = () => {
+    setFormData(initialAmbassadorState);
     setSubmitted(false);
+    setErrorMessage(null);
+    setApplicationId('');
     onClose();
   };
 
@@ -117,10 +138,14 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
                 Thank you for applying to represent Ctrl + Data + Grow at <strong className="text-[#0B1F33]">{formData.collegeName || 'your college'}</strong>.
               </p>
               <div className="bg-gray-50 border border-gray-200 rounded-xl p-3.5 max-w-md mx-auto text-left text-xs space-y-1.5 text-gray-700">
-                <div className="font-semibold text-gray-900 border-b pb-1 text-[11px]">Next Steps:</div>
+                <div className="font-semibold text-gray-900 border-b pb-1 text-[11px] flex items-center justify-between">
+                  <span>Application Reference:</span>
+                  {applicationId && <strong className="text-[#1769AA] font-mono">{applicationId}</strong>}
+                </div>
                 <div>1. Our Community Lead reviews your application within <strong>48 hours</strong>.</div>
                 <div>2. We will WhatsApp you at <strong>{formData.phone || 'your phone number'}</strong> for a short 10-minute briefing.</div>
                 <div>3. You receive your official CDG Ambassador badge & full VIP resource vault access.</div>
+                <div className="pt-1 text-[11px] text-gray-500">Status: <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800 uppercase tracking-wider">Pending Review</span></div>
               </div>
               <div className="pt-3 flex justify-center gap-2.5">
                 <a
@@ -143,6 +168,17 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
             </div>
           ) : (
             <form id="ambassador-form" onSubmit={handleSubmit} className="space-y-3">
+              {/* Error Alert Banner */}
+              {errorMessage && (
+                <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start gap-2.5">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0 text-red-500 mt-0.5" />
+                  <div className="space-y-0.5">
+                    <p className="font-semibold text-red-800">Application Submission Error</p>
+                    <p className="text-[11px] text-red-600 leading-relaxed">{errorMessage}</p>
+                  </div>
+                </div>
+              )}
+
               {/* Row 1: Full Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
@@ -331,7 +367,10 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
               className="w-full sm:w-auto py-2.5 px-6 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-70"
             >
               {isSubmitting ? (
-                <span>Submitting...</span>
+                <>
+                  <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                  <span>Submitting to Supabase...</span>
+                </>
               ) : (
                 <>
                   <span>Submit Ambassador Application</span>
