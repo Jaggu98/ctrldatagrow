@@ -86,29 +86,9 @@ export const submitCampusAmbassador = async (
 
   // 2. Check Supabase config
   if (!isSupabaseConfigured()) {
-    console.warn('Supabase not configured. Simulating fallback persistence in development.');
-    const simRef = generateAmbassadorReferenceId();
     return {
-      success: true,
-      referenceId: simRef,
-      data: {
-        id: crypto.randomUUID ? crypto.randomUUID() : 'simulated-id',
-        application_id: simRef,
-        full_name: input.fullName.trim(),
-        email: input.email.trim(),
-        phone: input.phone.trim(),
-        college_name: input.collegeName.trim(),
-        city_state: input.cityState.trim(),
-        branch: input.branch.trim(),
-        year_of_study: input.yearOfStudy,
-        linkedin_url: input.linkedinUrl.trim(),
-        club_involvement: input.clubInvolvement?.trim() || null,
-        outreach_plan: input.outreachPlan.trim(),
-        resume_url: input.resumeUrl || null,
-        status: 'pending',
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
-      },
+      success: false,
+      error: 'Supabase is not configured. Please add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to your environment variables (e.g. in Vercel Project Settings).',
     };
   }
 
