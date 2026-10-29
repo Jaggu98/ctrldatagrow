@@ -73,4 +73,5 @@ coverage/
 # Automation screenshot outputs & crops
 public/*.png
 !public/logo-full.png
+!public/favicon.png
 public/crops/
