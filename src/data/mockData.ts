@@ -176,7 +176,7 @@ export const ENGAGEMENTS_DATA: Engagement[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 'nit-sharma',
-    author: 'Dr. K. R. Sharma',
+    author: 'Dr. K. S. Sharma',
     role: 'Dean of Academic Affairs',
     institution: 'National Institute of Technology',
     avatar: '/images/expert-rohit.jpg',
