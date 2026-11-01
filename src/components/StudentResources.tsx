@@ -390,7 +390,7 @@ export const StudentResources: React.FC<StudentResourcesProps> = ({ onOpenAmbass
                     Close
                   </button>
                   <a
-                    href="https://www.linkedin.com/company/ctrl-data-grow/"
+                    href="https://www.linkedin.com/company/ctrl-data-grow/home/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#138A9E] hover:bg-[#0E6D82] text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-all"

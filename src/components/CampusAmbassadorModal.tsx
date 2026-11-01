@@ -149,7 +149,7 @@ export const CampusAmbassadorModal: React.FC<CampusAmbassadorModalProps> = ({ is
               </div>
               <div className="pt-3 flex justify-center gap-2.5">
                 <a
-                  href="https://www.linkedin.com/company/ctrl-data-grow/"
+                  href="https://www.linkedin.com/company/ctrl-data-grow/home/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0077b5] text-white text-xs font-semibold hover:bg-[#006396] transition-colors"

@@ -111,7 +111,7 @@ export const TrustSafety: React.FC = () => {
           </div>
 
           <a
-            href="https://www.linkedin.com/company/ctrl-data-grow/"
+            href="https://www.linkedin.com/company/ctrl-data-grow/home/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0077b5] hover:bg-[#006396] text-white text-xs font-bold transition-colors shrink-0 shadow-sm"

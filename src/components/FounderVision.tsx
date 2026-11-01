@@ -160,27 +160,43 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
                   </span>
                 </div>
 
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#1769AA]/20 hover:bg-[#1769AA]/40 border border-[#1769AA]/40 text-xs font-semibold text-[#8ED0EA] transition-colors"
-                >
-                  <Linkedin className="w-3.5 h-3.5" />
-                  <span>Connect on LinkedIn</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-2.5">
+                  <a
+                    href="https://www.linkedin.com/in/pondara-jagadeesh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0077B5]/20 hover:bg-[#0077B5]/40 border border-[#0077B5]/50 text-xs font-semibold text-[#8ED0EA] transition-colors"
+                  >
+                    <Linkedin className="w-3.5 h-3.5 text-[#38bdf8]" />
+                    <span>Connect on LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://topmate.io/pondara_jagadeesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#D6A84F]/20 hover:bg-[#D6A84F]/40 border border-[#D6A84F]/50 text-xs font-semibold text-[#F2D082] transition-colors"
+                  >
+                    <Award className="w-3.5 h-3.5 text-[#D6A84F]" />
+                    <span>Book on Topmate</span>
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* CEO Track Record & Impact Counters */}
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-1">
               {/* LinkedIn Followers */}
-              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
+              <a
+                href="https://www.linkedin.com/in/pondara-jagadeesh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#0077B5] hover:bg-[#102d4a] transition-all flex flex-col justify-between shadow-lg group cursor-pointer"
+              >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[11px] font-bold tracking-wider uppercase text-slate-300">
                     LinkedIn
                   </span>
-                  <div className="w-7 h-7 rounded-lg bg-[#0077B5]/20 flex items-center justify-center text-[#38bdf8]">
+                  <div className="w-7 h-7 rounded-lg bg-[#0077B5]/20 flex items-center justify-center text-[#38bdf8] group-hover:scale-110 transition-transform">
                     <Linkedin className="w-4 h-4" />
                   </div>
                 </div>
@@ -192,11 +208,12 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
                       startTrigger={isVisible}
                     />
                   </div>
-                  <span className="text-xs text-slate-300 font-medium mt-0.5 block">
-                    Followers
+                  <span className="text-xs text-slate-300 group-hover:text-sky-300 font-medium mt-0.5 flex items-center justify-between">
+                    <span>Followers</span>
+                    <span className="text-[10px] text-sky-400 opacity-0 group-hover:opacity-100 transition-opacity">View Profile →</span>
                   </span>
                 </div>
-              </div>
+              </a>
 
               {/* Quora Views */}
               <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
@@ -224,12 +241,17 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
               </div>
 
               {/* Topmate */}
-              <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#D6A84F]/50 transition-all flex flex-col justify-between shadow-lg">
+              <a
+                href="https://topmate.io/pondara_jagadeesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#D6A84F] hover:bg-[#102d4a] transition-all flex flex-col justify-between shadow-lg group cursor-pointer"
+              >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[11px] font-bold tracking-wider uppercase text-[#D6A84F]">
                     Topmate
                   </span>
-                  <div className="w-7 h-7 rounded-lg bg-[#D6A84F]/20 flex items-center justify-center text-[#D6A84F]">
+                  <div className="w-7 h-7 rounded-lg bg-[#D6A84F]/20 flex items-center justify-center text-[#D6A84F] group-hover:scale-110 transition-transform">
                     <Award className="w-4 h-4" />
                   </div>
                 </div>
@@ -246,13 +268,14 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
                       Mentor
                     </span>
                   </div>
-                  <div className="mt-1.5">
+                  <div className="mt-1.5 flex items-center justify-between">
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#D6A84F]/15 text-[#E6BC65] border border-[#D6A84F]/30">
                       ★ Top Speaker 2024
                     </span>
+                    <span className="text-[10px] text-[#F2D082] opacity-0 group-hover:opacity-100 transition-opacity">Book 1:1 →</span>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* IT Industry Experience */}
               <div className="p-4 sm:p-5 rounded-xl bg-[#0E243A]/90 border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col justify-between shadow-lg">
@@ -279,8 +302,8 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
               </div>
             </div>
 
-            {onOpenPartnerModal && (
-              <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              {onOpenPartnerModal && (
                 <button
                   onClick={onOpenPartnerModal}
                   className="inline-flex items-center gap-2 bg-[#138A9E] hover:bg-[#0E6D82] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl shadow-md transition-all active:scale-[0.98]"
@@ -288,8 +311,18 @@ export const FounderVision: React.FC<FounderVisionProps> = ({ onOpenPartnerModal
                   <span>Request a session with leadership</span>
                   <span>→</span>
                 </button>
-              </div>
-            )}
+              )}
+              <a
+                href="https://topmate.io/pondara_jagadeesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#D6A84F] hover:bg-[#C2943D] text-[#0B1F33] text-xs sm:text-sm font-bold px-5 py-3 rounded-xl shadow-md transition-all active:scale-[0.98]"
+              >
+                <Award className="w-4 h-4 text-[#0B1F33]" />
+                <span>Book Mentorship on Topmate</span>
+                <span>↗</span>
+              </a>
+            </div>
 
           </div>
 

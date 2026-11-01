@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Mail, MapPin, Linkedin, ArrowUp, ExternalLink, Award, UserCheck, Calendar, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Youtube, ArrowUp, ExternalLink, Award, UserCheck, Calendar, ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   onOpenPartnerModal?: () => void;
@@ -46,12 +46,24 @@ export const Footer: React.FC<FooterProps> = ({
               <div className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4 text-[#0077b5]" />
                 <a
-                  href="https://www.linkedin.com/company/ctrl-data-grow/"
+                  href="https://www.linkedin.com/company/ctrl-data-grow/home/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#60A5FA] hover:text-white font-medium inline-flex items-center gap-1 transition-colors"
                 >
                   linkedin.com/company/ctrl-data-grow
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Youtube className="w-4 h-4 text-[#FF0000]" />
+                <a
+                  href="https://www.youtube.com/@CtrlDataJourney/videos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#60A5FA] hover:text-white font-medium inline-flex items-center gap-1 transition-colors"
+                >
+                  youtube.com/@CtrlDataJourney
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -151,15 +163,46 @@ export const Footer: React.FC<FooterProps> = ({
               </p>
             </div>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
-                href="https://www.linkedin.com/company/ctrl-data-grow/"
+                href="https://www.linkedin.com/company/ctrl-data-grow/home/"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#0077b5] flex items-center justify-center text-white hover:brightness-110 transition-colors shadow-sm"
-                title="LinkedIn Official Page"
+                className="h-9 px-3 rounded-lg bg-[#0077b5] flex items-center gap-1.5 text-white text-xs font-semibold hover:brightness-110 transition-all shadow-sm"
+                title="LinkedIn Official Company Page"
               >
                 <Linkedin className="w-4 h-4" />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@CtrlDataJourney/videos"
+                target="_blank"
+                rel="noreferrer"
+                className="h-9 px-3 rounded-lg bg-[#CC0000] hover:bg-[#FF0000] flex items-center gap-1.5 text-white text-xs font-semibold transition-all shadow-sm"
+                title="Ctrl + Data + Grow Official YouTube Channel"
+              >
+                <Youtube className="w-4 h-4" />
+                <span>YouTube</span>
+              </a>
+              <a
+                href="https://topmate.io/pondara_jagadeesh"
+                target="_blank"
+                rel="noreferrer"
+                className="h-9 px-3 rounded-lg bg-[#D6A84F] hover:bg-[#C2943D] text-[#0B1F33] flex items-center gap-1.5 text-xs font-bold transition-all shadow-sm"
+                title="Founder Mentorship on Topmate"
+              >
+                <Award className="w-4 h-4 text-[#0B1F33]" />
+                <span>Topmate</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pondara-jagadeesh/"
+                target="_blank"
+                rel="noreferrer"
+                className="h-9 px-3 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 flex items-center gap-1.5 text-white text-xs font-semibold transition-all shadow-sm"
+                title="Founder & CEO LinkedIn Profile"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#38bdf8]" />
+                <span>Founder</span>
               </a>
             </div>
           </div>
@@ -168,7 +211,25 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-sky-200/60 gap-4">
           <div>
-            © 2026 Ctrl + Data + Grow (CDG). All rights reserved. Founded by Jagadeesh Pondara.
+            © 2026 Ctrl + Data + Grow (CDG). All rights reserved. Founded by{' '}
+            <a
+              href="https://www.linkedin.com/in/pondara-jagadeesh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#60A5FA] hover:text-white font-medium underline underline-offset-2 transition-colors"
+            >
+              Jagadeesh Pondara
+            </a>
+            {' '}(
+            <a
+              href="https://topmate.io/pondara_jagadeesh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D6A84F] hover:text-[#F2D082] transition-colors"
+            >
+              Topmate ↗
+            </a>
+            ).
           </div>
 
           <div className="flex items-center gap-6">
