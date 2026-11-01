@@ -70,7 +70,7 @@ coverage/
 *.lcov
 .nyc_output/
 
-# Automation screenshot outputs & crops
+# Automation screenshot outputs & crops 
 public/*.png
 !public/logo-full.png
 !public/favicon.png
