@@ -90,32 +90,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPartnerModal, onExploreExperts
             {/* Left & Right Gradient Fade Masks */}
             <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
 
-            <div className="animate-marquee-infinite flex items-center gap-5 sm:gap-7 cursor-pointer select-none">
+            <div className="animate-marquee-infinite flex items-center gap-4 sm:gap-5 cursor-pointer select-none">
               {marqueeList.map((inst, idx) => (
                 <div
                   key={`${inst.tag}-${idx}`}
-                  className="flex items-center gap-3 px-4 py-2 rounded-xl bg-[#F8FCFE] border border-[#D7EDF4] hover:border-[#1286A0] hover:bg-white hover:shadow-sm transition-all duration-200 group flex-shrink-0"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F8FCFE] border border-[#D7EDF4] hover:border-[#1286A0] hover:bg-white hover:shadow-sm transition-all duration-150 group flex-shrink-0"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#EAF4F8] border border-[#C5E2EC] flex items-center justify-center text-[#153F60] font-extrabold text-[10px] sm:text-[11px] group-hover:border-[#1286A0] group-hover:text-[#1286A0] group-hover:bg-[#1286A0]/10 transition-colors shrink-0">
+                  <div className="w-6 h-6 rounded-md bg-[#EAF4F8] border border-[#C5E2EC] flex items-center justify-center text-[#153F60] font-bold text-[9.5px] group-hover:border-[#1286A0] group-hover:text-[#1286A0] group-hover:bg-[#1286A0]/10 transition-colors shrink-0">
                     {inst.tag}
                   </div>
-                  <div className="flex flex-col text-left">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs sm:text-sm font-bold text-[#153F60] group-hover:text-[#1286A0] transition-colors whitespace-nowrap tracking-tight">
-                        {inst.name}
-                      </span>
-                      {inst.location && (
-                        <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded border border-slate-200">
-                          {inst.location}
-                        </span>
-                      )}
-                    </div>
-                    {inst.program && (
-                      <span className="text-[11px] text-[#1286A0] font-medium whitespace-nowrap mt-0.5">
-                        {inst.program}
-                      </span>
-                    )}
-                  </div>
+                  <span className="text-[11.5px] sm:text-xs font-semibold text-[#153F60] group-hover:text-[#1286A0] transition-colors whitespace-nowrap tracking-tight">
+                    {inst.name}
+                  </span>
+                  {inst.location && (
+                    <span className="text-[9.5px] font-medium text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded border border-slate-200">
+                      {inst.location}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
