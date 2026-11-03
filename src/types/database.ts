@@ -18,6 +18,7 @@ export interface Speaker {
   fee_range?: string | null;
   agree_verify: boolean;
   resume_url?: string | null;
+  photo_url?: string | null;
   status: ApplicationStatus;
   internal_notes?: string | null;
   reviewed_by?: string | null;

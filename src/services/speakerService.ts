@@ -1,5 +1,5 @@
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
-import { Speaker, SpeakerInsert, ApplicationStatus, SubmissionResponse } from '../types/database';
+import { Speaker, ApplicationStatus, SubmissionResponse } from '../types/database';
 
 export interface SpeakerFormInput {
   fullName: string;
@@ -15,6 +15,8 @@ export interface SpeakerFormInput {
   feeRange?: string;
   agreeVerify: boolean;
   resumeUrl?: string;
+  photoUrl?: string;
+  photoFile?: File | null;
 }
 
 export interface SpeakerFilterOptions {
@@ -62,6 +64,81 @@ export const validateSpeakerInput = (input: SpeakerFormInput): { isValid: boolea
 };
 
 /**
+ * Compresses an image file client-side to ensure fast loading and zero storage bloat
+ */
+export const compressImageToDataUrl = (file: File, maxDim = 800, quality = 0.85): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        let width = img.width;
+        let height = img.height;
+        if (width > height) {
+          if (width > maxDim) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          }
+        } else {
+          if (height > maxDim) {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          resolve(e.target?.result as string);
+          return;
+        }
+        ctx.drawImage(img, 0, 0, width, height);
+        const dataUrl = canvas.toDataURL('image/jpeg', quality);
+        resolve(dataUrl);
+      };
+      img.onerror = () => reject(new Error('Failed to load image for processing'));
+      img.src = e.target?.result as string;
+    };
+    reader.onerror = () => reject(new Error('Failed to read image file'));
+    reader.readAsDataURL(file);
+  });
+};
+
+/**
+ * Upload speaker profile picture to Supabase Storage bucket ('speaker-resumes' or 'speaker-photos')
+ */
+export const uploadSpeakerPhoto = async (
+  file: File,
+  referenceId: string
+): Promise<string | null> => {
+  try {
+    if (!isSupabaseConfigured()) return null;
+    
+    const fileExt = file.name.split('.').pop() || 'jpg';
+    const filePath = `speakers/${referenceId}-${Date.now()}.${fileExt}`;
+    
+    const { error: uploadError } = await supabase.storage
+      .from('speaker-resumes')
+      .upload(filePath, file, {
+        cacheControl: '3600',
+        upsert: true,
+      });
+
+    if (uploadError) {
+      console.warn('Storage upload error, using fallback:', uploadError.message);
+      return null;
+    }
+
+    const { data } = supabase.storage.from('speaker-resumes').getPublicUrl(filePath);
+    return data?.publicUrl || filePath;
+  } catch (err) {
+    console.warn('Error uploading photo to Supabase storage:', err);
+    return null;
+  }
+};
+
+/**
  * Generate a unique client-side registration ID (SPK-YYYYMMDD-XXXXXX)
  */
 export const generateSpeakerReferenceId = (): string => {
@@ -92,7 +169,25 @@ export const submitSpeakerApplication = async (
 
   const generatedRef = generateSpeakerReferenceId();
 
-  const record: SpeakerInsert = {
+  // Process profile image attachment
+  let finalPhotoUrl = input.photoUrl || null;
+  if (input.photoFile) {
+    try {
+      // 1. Try uploading directly to Supabase storage
+      const uploadedUrl = await uploadSpeakerPhoto(input.photoFile, generatedRef);
+      if (uploadedUrl) {
+        finalPhotoUrl = uploadedUrl;
+      } else {
+        // 2. Fallback to optimized compressed data URL so the photo is never lost
+        finalPhotoUrl = await compressImageToDataUrl(input.photoFile, 600, 0.85);
+      }
+    } catch (photoErr) {
+      console.warn('Photo processing warning:', photoErr);
+      finalPhotoUrl = input.photoUrl || null;
+    }
+  }
+
+  const record: any = {
     registration_id: generatedRef,
     full_name: input.fullName.trim(),
     email: input.email.trim().toLowerCase(),
@@ -106,7 +201,8 @@ export const submitSpeakerApplication = async (
     speaking_experience: input.speakingExperience?.trim() || null,
     fee_range: input.feeRange?.trim() || null,
     agree_verify: input.agreeVerify,
-    resume_url: input.resumeUrl || null,
+    resume_url: finalPhotoUrl || input.resumeUrl || null,
+    photo_url: finalPhotoUrl || null,
     status: 'pending',
   };
 
@@ -117,9 +213,17 @@ export const submitSpeakerApplication = async (
 
   while (attempts <= maxAttempts) {
     try {
-      const { error } = await supabase
+      let { error } = await supabase
         .from('speakers')
         .insert([record]);
+
+      // If remote table schema doesn't have the photo_url column yet, retry gracefully with resume_url
+      if (error && (error.message?.includes('photo_url') || error.details?.includes('photo_url') || error.code === 'PGRST204')) {
+        const fallbackRecord = { ...record };
+        delete fallbackRecord.photo_url;
+        const retryResult = await supabase.from('speakers').insert([fallbackRecord]);
+        error = retryResult.error;
+      }
 
       if (error) {
         throw error;
@@ -245,6 +349,7 @@ export const exportSpeakersToCsv = (speakers: Speaker[]): string => {
     'Topics',
     'Speaking Experience',
     'Fee Range',
+    'Photo Attached',
     'Status',
     'Submitted At',
   ];
@@ -262,6 +367,7 @@ export const exportSpeakersToCsv = (speakers: Speaker[]): string => {
     `"${(s.topics || '').replace(/"/g, '""')}"`,
     `"${(s.speaking_experience || '').replace(/"/g, '""')}"`,
     `"${(s.fee_range || '').replace(/"/g, '""')}"`,
+    `"${(s.photo_url || s.resume_url) ? 'Yes' : 'No'}"`,
     `"${s.status || ''}"`,
     `"${new Date(s.created_at).toLocaleString()}"`,
   ]);

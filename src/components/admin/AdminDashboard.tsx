@@ -480,33 +480,48 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ isOpen, onClose 
                         key={spk.id}
                         className="p-3.5 sm:p-4 rounded-xl bg-[#0E243A] border border-[#1769AA]/30 hover:border-[#138A9E]/50 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
                       >
-                        <div className="space-y-1 min-w-0 flex-1">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <span className="font-mono text-[10px] text-[#138A9E] font-bold bg-[#138A9E]/10 px-2 py-0.5 rounded border border-[#138A9E]/20">
-                              {spk.registration_id}
-                            </span>
-                            <span className="font-bold text-white text-sm">{spk.full_name}</span>
-                            {renderStatusBadge(spk.status)}
+                        <div className="flex items-start gap-3 min-w-0 flex-1">
+                          {/* Speaker Avatar Thumbnail */}
+                          <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-[#071524] border border-[#1769AA]/40 shrink-0 flex items-center justify-center mt-0.5 shadow-sm">
+                            {(spk.photo_url || spk.resume_url) ? (
+                              <img
+                                src={spk.photo_url || spk.resume_url || ''}
+                                alt={spk.full_name}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <User className="w-5 h-5 text-slate-500" />
+                            )}
                           </div>
 
-                          <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300">
-                            <span className="flex items-center gap-1 text-slate-200">
-                              <Building className="w-3 h-3 text-[#138A9E]" />
-                              {spk.designation} at {spk.company}
-                            </span>
-                            <span className="flex items-center gap-1 text-slate-400">
-                              <Mail className="w-3 h-3" />
-                              {spk.email}
-                            </span>
-                            <span className="flex items-center gap-1 text-slate-400">
-                              <Phone className="w-3 h-3" />
-                              {spk.phone}
-                            </span>
-                          </div>
+                          <div className="space-y-1 min-w-0 flex-1">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="font-mono text-[10px] text-[#138A9E] font-bold bg-[#138A9E]/10 px-2 py-0.5 rounded border border-[#138A9E]/20">
+                                {spk.registration_id}
+                              </span>
+                              <span className="font-bold text-white text-sm">{spk.full_name}</span>
+                              {renderStatusBadge(spk.status)}
+                            </div>
 
-                          <p className="text-xs text-slate-400 line-clamp-1">
-                            <strong className="text-slate-300">Topics:</strong> {spk.topics}
-                          </p>
+                            <div className="flex flex-wrap items-center gap-3 text-xs text-slate-300">
+                              <span className="flex items-center gap-1 text-slate-200">
+                                <Building className="w-3 h-3 text-[#138A9E]" />
+                                {spk.designation} at {spk.company}
+                              </span>
+                              <span className="flex items-center gap-1 text-slate-400">
+                                <Mail className="w-3 h-3" />
+                                {spk.email}
+                              </span>
+                              <span className="flex items-center gap-1 text-slate-400">
+                                <Phone className="w-3 h-3" />
+                                {spk.phone}
+                              </span>
+                            </div>
+
+                            <p className="text-xs text-slate-400 line-clamp-1">
+                              <strong className="text-slate-300">Topics:</strong> {spk.topics}
+                            </p>
+                          </div>
                         </div>
 
                         {/* Status Changers & View button */}
@@ -627,6 +642,39 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ isOpen, onClose 
                 <X className="w-4 h-4" />
               </button>
             </div>
+
+            {/* Speaker Attached Photo Card */}
+            {(selectedSpeaker.photo_url || selectedSpeaker.resume_url) ? (
+              <div className="flex items-center gap-4 p-3 rounded-xl bg-[#071524] border border-[#1769AA]/40">
+                <div className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-[#138A9E] shrink-0 bg-slate-900 shadow-md">
+                  <img
+                    src={selectedSpeaker.photo_url || selectedSpeaker.resume_url || ''}
+                    alt={selectedSpeaker.full_name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#138A9E] block">
+                    Verified Profile Headshot
+                  </span>
+                  <p className="text-xs font-bold text-white mt-0.5">{selectedSpeaker.full_name}</p>
+                  <a
+                    href={selectedSpeaker.photo_url || selectedSpeaker.resume_url || '#'}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[11px] text-[#38BDF8] hover:underline inline-flex items-center gap-1 mt-1 font-medium"
+                  >
+                    <span>Open full photo</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="p-3 rounded-xl bg-[#071524] border border-white/5 text-slate-400 text-xs flex items-center gap-2">
+                <User className="w-4 h-4 text-slate-500" />
+                <span>No profile photo was attached with this registration.</span>
+              </div>
+            )}
 
             <div className="grid grid-cols-2 gap-3 text-xs">
               <div><strong className="text-slate-400">Designation:</strong> <p>{selectedSpeaker.designation}</p></div>

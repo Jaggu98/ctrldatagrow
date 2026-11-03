@@ -12,7 +12,10 @@ import {
   Phone,
   Briefcase,
   AlertCircle,
-  Loader2
+  Loader2,
+  Camera,
+  Upload,
+  Trash2
 } from 'lucide-react';
 import { submitSpeakerApplication } from '../services/speakerService';
 
@@ -41,6 +44,9 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
   onClose,
 }) => {
   const [formData, setFormData] = useState(initialFormState);
+  const [photoFile, setPhotoFile] = useState<File | null>(null);
+  const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+  const [photoError, setPhotoError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -48,13 +54,45 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
 
   if (!isOpen) return null;
 
+  const handlePhotoSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhotoError(null);
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      setPhotoError('Please upload an image file (JPG, PNG, or WebP).');
+      return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+      setPhotoError('Image size exceeds 5MB. Please upload a smaller image.');
+      return;
+    }
+
+    setPhotoFile(file);
+    const previewUrl = URL.createObjectURL(file);
+    setPhotoPreview(previewUrl);
+  };
+
+  const handleRemovePhoto = () => {
+    setPhotoFile(null);
+    if (photoPreview) {
+      URL.revokeObjectURL(photoPreview);
+      setPhotoPreview(null);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
     setLoading(true);
 
     try {
-      const result = await submitSpeakerApplication(formData);
+      const result = await submitSpeakerApplication({
+        ...formData,
+        photoFile,
+        photoUrl: photoPreview || undefined,
+      });
 
       if (result.success) {
         setRegistrationId(result.referenceId || '');
@@ -71,6 +109,7 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
 
   const handleReset = () => {
     setFormData(initialFormState);
+    handleRemovePhoto();
     setSubmitted(false);
     setErrorMessage(null);
     setRegistrationId('');
@@ -247,6 +286,104 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
                 </div>
               </div>
 
+              {/* Professional Profile Photo / Headshot Attachment */}
+              <div className="p-3.5 sm:p-4 rounded-xl bg-[#F0F7FB] border border-[#CDE5F1] space-y-2.5">
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
+                  <label className="text-[11px] font-bold text-[#0B1F33] flex items-center gap-1.5">
+                    <Camera className="w-3.5 h-3.5 text-[#138A9E]" />
+                    <span>Professional Profile Photo / Headshot *</span>
+                  </label>
+                  <span className="text-[10px] font-semibold text-[#138A9E] bg-[#138A9E]/10 px-2 py-0.5 rounded-full border border-[#138A9E]/20">
+                    JPG, PNG, WebP • Max 5MB
+                  </span>
+                </div>
+
+                {!photoPreview ? (
+                  <div>
+                    <label
+                      htmlFor="speaker-photo-upload"
+                      className="flex flex-col items-center justify-center p-4 border-2 border-dashed border-[#B8DCED] hover:border-[#138A9E] bg-white rounded-xl cursor-pointer transition-all hover:bg-[#F8FCFE] group text-center"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-[#138A9E]/10 flex items-center justify-center text-[#138A9E] group-hover:scale-110 group-hover:bg-[#138A9E] group-hover:text-white transition-all mb-2">
+                        <Upload className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-bold text-[#0B1F33] group-hover:text-[#138A9E]">
+                        Click to attach professional profile photo or drag &amp; drop
+                      </span>
+                      <span className="text-[11px] text-slate-500 mt-0.5">
+                        Square headshot, corporate portrait, or speaking stage picture
+                      </span>
+                      <input
+                        id="speaker-photo-upload"
+                        type="file"
+                        accept="image/jpeg,image/png,image/webp,image/jpg"
+                        onChange={handlePhotoSelect}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+                ) : (
+                  <div className="p-2.5 bg-white rounded-xl border border-[#CDE5F1] flex items-center justify-between gap-3 shadow-sm">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#138A9E] shrink-0 bg-slate-100 shadow-sm">
+                        <img
+                          src={photoPreview}
+                          alt="Profile Preview"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-xs font-bold text-[#0B1F33] truncate">
+                          {photoFile?.name || 'speaker-photo.jpg'}
+                        </p>
+                        <p className="text-[10px] text-slate-500">
+                          {photoFile ? `${(photoFile.size / 1024).toFixed(0)} KB • Ready for verification` : 'Attached'}
+                        </p>
+                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 mt-0.5">
+                          <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                          <span>Photo attached successfully</span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 shrink-0">
+                      <label
+                        htmlFor="speaker-photo-upload"
+                        className="px-2.5 py-1.5 rounded-lg text-[11px] font-semibold text-[#138A9E] hover:bg-[#138A9E]/10 cursor-pointer transition-colors border border-[#138A9E]/30"
+                      >
+                        Change
+                      </label>
+                      <button
+                        type="button"
+                        onClick={handleRemovePhoto}
+                        className="p-1.5 rounded-lg text-red-500 hover:bg-red-50 hover:text-red-700 cursor-pointer transition-colors"
+                        title="Remove photo"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                      <input
+                        id="speaker-photo-upload"
+                        type="file"
+                        accept="image/jpeg,image/png,image/webp,image/jpg"
+                        onChange={handlePhotoSelect}
+                        className="hidden"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {photoError && (
+                  <p className="text-[11px] text-red-600 font-semibold flex items-center gap-1">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    <span>{photoError}</span>
+                  </p>
+                )}
+
+                <p className="text-[10px] text-slate-500 leading-normal">
+                  📸 Your professional photo will be featured on your verified speaker card, college workshop flyers, and lecture hall announcements.
+                </p>
+              </div>
+
               {/* Row 5: Topics / Domains of Expertise */}
               <div>
                 <label className="text-[11px] font-bold text-[#0B1F33] mb-1 flex items-center justify-between">
@@ -341,7 +478,25 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
             <p className="text-sm text-[#4A6D88] mt-2 max-w-md mx-auto">
               Thank you, <span className="font-semibold text-[#0B1F33]">{formData.fullName}</span>. Your resource person application has been persistently saved in our accreditation desk.
             </p>
-            <div className="mt-5 p-4 rounded-xl bg-[#F4F9FC] border border-[#D7EAF3] max-w-sm mx-auto text-xs text-left space-y-1.5 text-slate-600">
+            <div className="mt-5 p-4 rounded-xl bg-[#F4F9FC] border border-[#D7EAF3] max-w-sm mx-auto text-xs text-left space-y-2 text-slate-600">
+              {photoPreview && (
+                <div className="flex items-center gap-3 pb-2.5 border-b border-[#D7EAF3]">
+                  <img
+                    src={photoPreview}
+                    alt={formData.fullName}
+                    className="w-12 h-12 rounded-xl object-cover border-2 border-[#138A9E] shadow-sm shrink-0"
+                  />
+                  <div className="min-w-0">
+                    <span className="text-[11px] font-bold text-[#0B1F33] block truncate">
+                      {photoFile?.name || 'Professional Headshot'}
+                    </span>
+                    <span className="text-[10px] text-emerald-600 font-semibold inline-flex items-center gap-1 mt-0.5">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                      <span>Photo Attached &amp; Archived</span>
+                    </span>
+                  </div>
+                </div>
+              )}
               {registrationId && (
                 <p>Registration ID: <strong className="text-[#138A9E] font-mono tracking-wide">{registrationId}</strong></p>
               )}
