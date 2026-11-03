@@ -94,14 +94,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPartnerModal, onExploreExperts
               {marqueeList.map((inst, idx) => (
                 <div
                   key={`${inst.tag}-${idx}`}
-                  className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-xl bg-[#F8FCFE] border border-[#D7EDF4] hover:border-[#1286A0] hover:bg-white hover:shadow-sm transition-all duration-200 group flex-shrink-0"
+                  className="flex items-center gap-3 px-4 py-2 rounded-xl bg-[#F8FCFE] border border-[#D7EDF4] hover:border-[#1286A0] hover:bg-white hover:shadow-sm transition-all duration-200 group flex-shrink-0"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-[#EAF4F8] border border-[#C5E2EC] flex items-center justify-center text-[#153F60] font-bold text-[11px] group-hover:border-[#1286A0] group-hover:text-[#1286A0] group-hover:bg-[#1286A0]/10 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-[#EAF4F8] border border-[#C5E2EC] flex items-center justify-center text-[#153F60] font-extrabold text-[10px] sm:text-[11px] group-hover:border-[#1286A0] group-hover:text-[#1286A0] group-hover:bg-[#1286A0]/10 transition-colors shrink-0">
                     {inst.tag}
                   </div>
-                  <span className="text-xs sm:text-sm font-bold text-[#153F60] group-hover:text-[#1286A0] transition-colors whitespace-nowrap tracking-tight">
-                    {inst.name}
-                  </span>
+                  <div className="flex flex-col text-left">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs sm:text-sm font-bold text-[#153F60] group-hover:text-[#1286A0] transition-colors whitespace-nowrap tracking-tight">
+                        {inst.name}
+                      </span>
+                      {inst.location && (
+                        <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded border border-slate-200">
+                          {inst.location}
+                        </span>
+                      )}
+                    </div>
+                    {inst.program && (
+                      <span className="text-[11px] text-[#1286A0] font-medium whitespace-nowrap mt-0.5">
+                        {inst.program}
+                      </span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

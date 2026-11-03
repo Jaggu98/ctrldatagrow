@@ -269,19 +269,60 @@ export const FAQ_DATA: FaqItem[] = [
   }
 ];
 
-export const INSTITUTIONS = [
-  { name: 'SRM University', tag: 'SRM' },
-  { name: 'GITAM University', tag: 'GITAM' },
-  { name: 'VIIT College', tag: 'VIIT' },
-  { name: 'VIT Vellore', tag: 'VIT' },
-  { name: 'IIT Delhi', tag: 'IITD' },
-  { name: 'IIT Bombay', tag: 'IITB' },
-  { name: 'BITS Pilani', tag: 'BITS' },
-  { name: 'NIT Trichy', tag: 'NITT' },
-  { name: 'IIIT Hyderabad', tag: 'IIITH' },
-  { name: 'Manipal Academy', tag: 'MAHE' },
-  { name: 'RV College of Engg', tag: 'RVCE' },
-  { name: 'PSG Tech Coimbatore', tag: 'PSG' },
-  { name: 'Thapar University', tag: 'TIET' },
-  { name: 'COEP Tech University', tag: 'COEP' },
+export interface InstitutionItem {
+  name: string;
+  tag: string;
+  location?: string;
+  program?: string;
+}
+
+export const INSTITUTIONS: InstitutionItem[] = [
+  {
+    name: 'Vignan Institute of Information Technology',
+    location: 'Visakhapatnam',
+    tag: 'VIIT',
+    program: 'Advanced Data Analytics 3 Days Workshop (IT Corporate)',
+  },
+  {
+    name: 'Artificial Intelligence & Data Science, VIIT',
+    location: 'Visakhapatnam',
+    tag: 'AI&DS',
+    program: 'AI & Data Science Specialized Sessions',
+  },
+  {
+    name: 'Dr. MGR Janaki College of Arts & Sciences',
+    location: 'Adyar, Chennai',
+    tag: 'MGR',
+    program: 'Campus Industry Lecture',
+  },
+  {
+    name: 'Frontlines Media Community',
+    location: 'Hyderabad',
+    tag: 'FLM',
+    program: 'Advanced Excel Workshop & Lecture on Business Analytics with AI',
+  },
+  {
+    name: 'Nadimpalli Satyanarayana Raju Institute of Technology',
+    location: 'Visakhapatnam',
+    tag: 'NSRIT',
+    program: 'Guest Lecture on Data Science & Analytics',
+  },
+  {
+    name: 'Anil Neerukonda Institute of Technology and Sciences',
+    location: 'Visakhapatnam',
+    tag: 'ANITS',
+    program: 'Expert Talk on Industry Tech & Analytics',
+  },
+  {
+    name: 'New Horizon College of Engineering',
+    location: 'Bangalore',
+    tag: 'NHCE',
+    program: 'Faculty Development Program (FDP)',
+  },
+  {
+    name: 'North Luxor',
+    location: 'Bangalore',
+    tag: 'NLX',
+    program: 'Microsoft Office Corporate Workshop',
+  },
 ];
