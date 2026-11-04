@@ -274,6 +274,7 @@ export interface InstitutionItem {
   tag: string;
   location?: string;
   program?: string;
+  logo?: string;
 }
 
 export const INSTITUTIONS: InstitutionItem[] = [
@@ -282,18 +283,21 @@ export const INSTITUTIONS: InstitutionItem[] = [
     location: 'Visakhapatnam',
     tag: 'VIIT',
     program: 'Advanced Data Analytics 3 Days Workshop (IT Corporate)',
+    logo: '/images/colleges/vignan.png',
   },
   {
     name: 'Artificial Intelligence & Data Science, VIIT',
     location: 'Visakhapatnam',
     tag: 'AI&DS',
     program: 'AI & Data Science Specialized Sessions',
+    logo: '/images/colleges/vignan.png',
   },
   {
     name: 'Dr. MGR Janaki College of Arts & Sciences',
     location: 'Adyar, Chennai',
     tag: 'MGR',
     program: 'Campus Industry Lecture',
+    logo: '/images/colleges/mgr-janaki.jpg',
   },
   {
     name: 'Frontlines Media Community',
@@ -306,18 +310,21 @@ export const INSTITUTIONS: InstitutionItem[] = [
     location: 'Visakhapatnam',
     tag: 'NSRIT',
     program: 'Guest Lecture on Data Science & Analytics',
+    logo: '/images/colleges/nsrit.png',
   },
   {
     name: 'Anil Neerukonda Institute of Technology and Sciences',
     location: 'Visakhapatnam',
     tag: 'ANITS',
     program: 'Expert Talk on Industry Tech & Analytics',
+    logo: '/images/colleges/anits.png',
   },
   {
     name: 'New Horizon College of Engineering',
     location: 'Bangalore',
     tag: 'NHCE',
     program: 'Faculty Development Program (FDP)',
+    logo: '/images/colleges/new-horizon.png',
   },
   {
     name: 'North Luxor',
