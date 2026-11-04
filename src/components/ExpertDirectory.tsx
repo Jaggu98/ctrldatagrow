@@ -184,13 +184,17 @@ export const ExpertDirectory: React.FC<ExpertDirectoryProps> = ({
                 Register as a CDG Resource Person. Share your expertise in SQL, Business Analytics, Python, Power BI, Tableau, Azure Databricks, and Decision Making with student communities across 50+ colleges.
               </p>
             </div>
-            <button
-              onClick={onOpenSpeakerModal}
+            <a
+              href="/register"
+              onClick={(e) => {
+                e.preventDefault();
+                onOpenSpeakerModal();
+              }}
               className="shrink-0 px-5 py-2.5 rounded-xl bg-[#1286A0] hover:bg-[#0E6D82] text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer flex items-center gap-2"
             >
-              <span>Enroll as Resource Person</span>
+              <span>Join as Resource Person</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         )}
 

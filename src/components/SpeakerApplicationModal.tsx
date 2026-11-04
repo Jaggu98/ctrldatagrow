@@ -134,7 +134,7 @@ export const SpeakerApplicationModal: React.FC<SpeakerApplicationModalProps> = (
             {/* Header matching Image 3 */}
             <div className="mb-4">
               <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#1769AA]/15 border border-[#1769AA]/30 text-[#1769AA] text-[10px] font-bold tracking-widest uppercase mb-1.5">
-                <span>Speaker Application • Verified Network</span>
+                <span>Resource Person Application • Verified Network</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-[#0B1F33] tracking-tight">
                 Apply to Become a <span className="text-[#138A9E]">Resource Person</span> for CDG

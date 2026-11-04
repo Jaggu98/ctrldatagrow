@@ -29,19 +29,47 @@ export function App() {
   const [selectedFormat, setSelectedFormat] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    // Check if URL contains #admin
-    if (window.location.hash === '#admin') {
-      setIsAdminModalOpen(true);
-    }
+    const syncRouteWithModals = () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
 
-    const handleHashChange = () => {
-      if (window.location.hash === '#admin') {
+      // Check for Admin
+      if (hash === '#admin' || path === '/admin') {
         setIsAdminModalOpen(true);
+      }
+
+      // Check for Register / Resource Person
+      if (
+        path === '/register' ||
+        path.startsWith('/register') ||
+        hash === '#register' ||
+        hash === '#register-speaker' ||
+        hash === '#resource-person'
+      ) {
+        setIsSpeakerModalOpen(true);
       }
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    syncRouteWithModals();
+
+    const handlePopState = () => {
+      syncRouteWithModals();
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+      if (!path.startsWith('/register') && hash !== '#register' && hash !== '#resource-person') {
+        setIsSpeakerModalOpen(false);
+      }
+      if (hash !== '#admin' && path !== '/admin') {
+        setIsAdminModalOpen(false);
+      }
+    };
+
+    window.addEventListener('hashchange', syncRouteWithModals);
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('hashchange', syncRouteWithModals);
+      window.removeEventListener('popstate', handlePopState);
+    };
   }, []);
 
   const handleOpenPartnerModal = (expert?: Expert | null, format?: string) => {
@@ -51,7 +79,19 @@ export function App() {
   };
 
   const handleOpenSpeakerModal = () => {
+    if (window.location.pathname !== '/register') {
+      window.history.pushState(null, '', '/register');
+    }
     setIsSpeakerModalOpen(true);
+  };
+
+  const handleCloseSpeakerModal = () => {
+    setIsSpeakerModalOpen(false);
+    if (window.location.pathname === '/register' || window.location.pathname.startsWith('/register')) {
+      window.history.pushState(null, '', '/');
+    } else if (window.location.hash === '#register' || window.location.hash === '#resource-person') {
+      window.history.pushState(null, '', window.location.pathname);
+    }
   };
 
   const handleOpenAmbassadorModal = () => {
@@ -180,10 +220,10 @@ export function App() {
         initialFormat={selectedFormat}
       />
 
-      {/* Brand Slide 3: Weekend Resource Person / Speaker Application Modal (with mandatory LinkedIn verification notice) */}
+      {/* Brand Slide 3: Weekend Resource Person Application Modal (with mandatory LinkedIn verification notice) */}
       <SpeakerApplicationModal
         isOpen={isSpeakerModalOpen}
-        onClose={() => setIsSpeakerModalOpen(false)}
+        onClose={handleCloseSpeakerModal}
       />
 
       {/* Brand Slide 2: Campus Ambassador Application Modal */}

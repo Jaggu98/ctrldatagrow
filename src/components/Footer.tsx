@@ -150,16 +150,20 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
             <div className="pt-1 space-y-2">
               {onOpenSpeakerModal && (
-                <button
-                  onClick={onOpenSpeakerModal}
+                <a
+                  href="/register"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onOpenSpeakerModal();
+                  }}
                   className="w-full text-xs font-bold py-2.5 px-3 rounded-lg bg-[#1286A0] hover:bg-[#0E6D82] text-white transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
                 >
                   <UserCheck className="w-4 h-4" />
-                  <span>Apply as Speaker (Weekend Sessions)</span>
-                </button>
+                  <span>Join as Resource Person</span>
+                </a>
               )}
               <p className="text-[11px] text-gray-400">
-                All speaker profiles are verified on LinkedIn before directory listing.
+                All resource person profiles are verified on LinkedIn before directory listing.
               </p>
             </div>
 
