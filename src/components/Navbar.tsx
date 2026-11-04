@@ -135,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       Join as Resource Person
                     </span>
                     <span className="text-[10px] text-[#1286A0] font-medium block">
-                      Teach &amp; mentor students on weekends
+                      Teach &amp; mentor students
                     </span>
                   </div>
                 </div>

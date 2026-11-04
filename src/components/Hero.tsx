@@ -1,13 +1,18 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, UserCheck } from 'lucide-react';
 import { INSTITUTIONS } from '../data/mockData';
 
 interface HeroProps {
   onOpenPartnerModal: () => void;
-  onExploreExperts: () => void;
+  onExploreExperts?: () => void;
+  onOpenSpeakerModal?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenPartnerModal, onExploreExperts }) => {
+export const Hero: React.FC<HeroProps> = ({
+  onOpenPartnerModal,
+  onExploreExperts,
+  onOpenSpeakerModal,
+}) => {
   // Duplicate institution list for seamless marquee loop
   const marqueeList = [...INSTITUTIONS, ...INSTITUTIONS];
 
@@ -42,12 +47,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenPartnerModal, onExploreExperts
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <button
-                onClick={onExploreExperts}
-                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F3F9FC] text-[#153F60] font-semibold text-sm sm:text-base px-6 py-3 rounded-xl border border-[#C5E2EC] shadow-sm hover:shadow-md transition-all duration-200 w-full sm:w-auto"
+              <a
+                href="/register"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (onOpenSpeakerModal) {
+                    onOpenSpeakerModal();
+                  } else if (onExploreExperts) {
+                    onExploreExperts();
+                  }
+                }}
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#F3F9FC] text-[#153F60] hover:text-[#1286A0] font-semibold text-sm sm:text-base px-6 py-3 rounded-xl border border-[#C5E2EC] shadow-sm hover:shadow-md transition-all duration-200 w-full sm:w-auto cursor-pointer"
               >
-                <span>Explore experts</span>
-              </button>
+                <UserCheck className="w-4 h-4 text-[#1286A0]" />
+                <span>Join as Resource Person</span>
+              </a>
             </div>
 
             {/* Clean Trust Strip */}

@@ -129,6 +129,7 @@ export function App() {
         <Hero
           onOpenPartnerModal={() => handleOpenPartnerModal()}
           onExploreExperts={handleExploreExperts}
+          onOpenSpeakerModal={handleOpenSpeakerModal}
         />
 
         {/* 3. Campus Session Planning Card */}
